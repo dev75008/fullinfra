@@ -46,5 +46,33 @@ export const microsoft365Sources = {
   "m365-exchange": {
     "title": "Exchange Online",
     "url": "https://learn.microsoft.com/fr-fr/exchange/exchange-online"
+  },
+  "m365-groups": {
+    "url": "https://learn.microsoft.com/fr-fr/microsoftteams/office-365-groups",
+    "title": "Groupes Microsoft 365 et Microsoft Teams - Microsoft Teams"
+  },
+  "m365-teams-exchange": {
+    "url": "https://learn.microsoft.com/fr-fr/microsoftteams/exchange-teams-interact",
+    "title": "Interaction entre Exchange et Microsoft Teams - Microsoft Teams"
+  },
+  "m365-teams-files": {
+    "url": "https://learn.microsoft.com/fr-fr/microsoftteams/sharepoint-onedrive-interact",
+    "title": "L’intégration Teams et le groupe SharePoint - SharePoint in Microsoft 365"
+  },
+  "m365-stream": {
+    "url": "https://learn.microsoft.com/fr-fr/stream/streamnew/new-stream",
+    "title": "Vue d’ensemble du lecteur vidéo, de la caméra et de la page d’accueil de Microsoft Clipchamp - Microsoft Clipchamp"
+  },
+  "m365-copilot": {
+    "url": "https://learn.microsoft.com/fr-fr/copilot/microsoft-365/microsoft-365-copilot-architecture",
+    "title": "Comment fonctionne Microsoft Copilot ?"
+  },
+  "m365-automate": {
+    "url": "https://learn.microsoft.com/fr-fr/power-automate/sharepoint-overview",
+    "title": "Utiliser SharePoint et Power Automate pour créer des workflows - Power Automate"
+  },
+  "m365-powerapps": {
+    "url": "https://learn.microsoft.com/fr-fr/power-apps/maker/canvas-apps/connections/connection-sharepoint-online",
+    "title": "Se connecter à SharePoint à partir d’une application canevas - Power Apps"
   }
 };

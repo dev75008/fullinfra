@@ -14,6 +14,14 @@ try {
   const { ecosystems } = await server.ssrLoadModule('/src/data/ecosystems.js');
   const { selectEcosystemEdges } = await server.ssrLoadModule('/src/data/ecosystemModel.js');
   const { microsoft365CommunicationMap:m365 } = await server.ssrLoadModule('/src/data/microsoft365Communications.js');
+  const { dependencyServices, dependencyLinks } = await server.ssrLoadModule('/src/data/microsoft365Dependencies.js');
+  assert.equal(dependencyServices.length,20);
+  assert.equal(dependencyLinks.length,36);
+  const dependencyIds=new Set(dependencyServices.map(service => service.id));
+  assert.equal(dependencyIds.size,20);
+  assert.equal(new Set(dependencyLinks.map(link => link.id)).size,36);
+  for (const link of dependencyLinks) assert.ok(dependencyIds.has(link.from) && dependencyIds.has(link.to));
+  for (const service of dependencyServices) assert.ok(dependencyLinks.some(link => link.from === service.id || link.to === service.id));
   const m365Nodes=new Set(m365.nodes.map(node => node.id));
   assert.equal(m365Nodes.size,13);
   assert.equal(m365.edges.length,24);

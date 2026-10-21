@@ -1,0 +1,18 @@
+.dependency-infographic{border:1px solid var(--border);margin:0 0 40px;background:#fff;border-radius:3px;overflow:hidden}
+.dependency-infographic>header{padding:30px;background:var(--surface-blue,#edf4fa)}
+.dependency-infographic h2{font-size:30px;line-height:1.3}.dependency-infographic header p{max-width:75ch;line-height:1.75;color:var(--muted)}
+.dependency-toolbar{padding:22px 26px;display:flex;align-items:end;flex-wrap:wrap;gap:18px}
+.dependency-toolbar label{display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600}
+.dependency-toolbar select{min-height:44px;padding:9px 12px;border:1px solid #7a8f9f;background:white;color:#242424;border-radius:2px;max-width:100%;font:inherit}
+.dependency-toolbar a{margin-left:auto;min-height:44px;font-size:13px}
+.dependency-infographic figure{margin:0}.dependency-scroll{overflow:auto;background:#f7fafc;scrollbar-color:#91acc1 #eef4f9}
+.dependency-svg{min-width:0}.dependency-svg svg{display:block;width:100%;height:auto}
+.dependency-infographic figcaption{padding:18px 26px;font-size:13px;line-height:1.8;border-block:1px solid var(--border);color:var(--muted)}
+.dependency-summary{padding:24px 26px 0}.dependency-summary h3{font-size:24px}.dependency-summary p{line-height:1.7;color:var(--muted)}
+.dependency-relations{padding:0 26px 26px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.dependency-relations article{padding:20px;background:var(--surface-soft,#f5f7f9);min-width:0}
+.dependency-kind{font-size:13px;font-weight:600}.dependency-relations h4{font-size:17px;margin:12px 0;line-height:1.6}.dependency-relations strong{font-size:14px}.dependency-relations p{font-size:14px;line-height:1.8}
+.dependency-infographic>.protocol-note{margin:0 26px 26px}
+@media(max-width:760px){.dependency-infographic>header{padding:24px 18px}.dependency-infographic h2{font-size:26px}.dependency-toolbar{padding:18px;display:grid;grid-template-columns:1fr}.dependency-toolbar label{min-width:0}.dependency-toolbar a{margin:0}.dependency-infographic figcaption{padding:16px 18px}.dependency-relations{grid-template-columns:1fr;padding:0 18px 18px}.dependency-summary{padding:22px 18px 0}.dependency-infographic>.protocol-note{margin:0 18px 20px}}
+
+.m365-network-map{margin-bottom:35px}.m365-network-map>summary{cursor:pointer;padding:18px;background:#edf4fa;color:#0067b8;font-weight:600;min-height:54px}.m365-network-map[open]>summary{margin-bottom:20px}

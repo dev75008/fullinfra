@@ -178,3 +178,13 @@ Les exemples réseau concernent le cloud Worldwide. Ils ne remplacent pas la lis
 Le domaine GitHub Pages est `fullinfra.duckdns.org`, configuré dans les paramètres Pages du dépôt. Le DNS DuckDNS pointe actuellement vers GitHub Pages (`185.199.108.153`). Le HTTPS est activé. Le workflow compile à la racine `/` ; aucun préfixe `/fullinfra/` n’est nécessaire sur le domaine personnalisé.
 
 Si un client de mise à jour automatique DuckDNS gère ce sous-domaine, conserver son adresse GitHub Pages plutôt que de la remplacer par l’adresse IP de la connexion Internet.
+
+### Infographie des dépendances Microsoft 365
+
+La rubrique commence par une infographie de 20 composants et 36 relations documentées. Elle précise notamment les dépendances de Teams vers Entra, les groupes Microsoft 365, Exchange, SharePoint et OneDrive. Planner, OneNote, la vidéo Clipchamp, Copilot et les intégrations SharePoint de Power Platform sont représentés dans leur périmètre documenté. Ce périmètre ne constitue pas un inventaire exhaustif de toutes les offres Microsoft 365.
+
+La sélection d’un service isole ses relations ; la liste de sélection fournit une alternative clavier. Un réglage permet d’agrandir la carte. L’infographie SVG téléchargeable inclut les 36 relations sous forme de liste. La carte précédente des accès réseau reste disponible dans un panneau dépliable.
+
+Données : `src/data/microsoft365Dependencies.js`. Générateur : `src/dependencySvg.js`. Après une modification des données, régénérer le fichier public avec `node scripts/generate-m365-infographic.mjs`. Le workflow vérifie sa synchronisation. Sept pages Microsoft Learn FR supplémentaires sont tracées dans le manifeste des sources Microsoft 365.
+
+Le rendu SVG a été rasterisé et inspecté pour vérifier les étiquettes. Cette vérification de l’illustration ne remplace pas une vérification du site dans un navigateur.

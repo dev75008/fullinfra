@@ -33,6 +33,7 @@ jobs:
       - run: npm run check:ui
       - run: npm run check:sources
       - run: npm run check:icons
+      - run: node scripts/generate-m365-infographic.mjs --check
       - run: npm run build
       - run: node scripts/check-pages.mjs
       - uses: actions/configure-pages@v5

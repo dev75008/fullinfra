@@ -107,6 +107,69 @@
       "ok": true,
       "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-exchange.md",
       "retrievedAt": "2026-10-19T02:28:13.739355+00:00"
+    },
+    {
+      "id": "m365-groups",
+      "url": "https://learn.microsoft.com/fr-fr/microsoftteams/office-365-groups",
+      "title": "Groupes Microsoft 365 et Microsoft Teams - Microsoft Teams",
+      "ok": true,
+      "sha256": "948a3a7788831f6003868f6909c2bae593cef92ad8165c122f7e76b4c01d1519",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-groups.md",
+      "retrievedAt": "2026-10-21T22:01:48.426387+00:00"
+    },
+    {
+      "id": "m365-teams-exchange",
+      "url": "https://learn.microsoft.com/fr-fr/microsoftteams/exchange-teams-interact",
+      "title": "Interaction entre Exchange et Microsoft Teams - Microsoft Teams",
+      "ok": true,
+      "sha256": "9de3354389e476d0610f3c3dcce22613379cd29de4d945b1e1c77ce85499b36d",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-teams-exchange.md",
+      "retrievedAt": "2026-10-21T22:01:48.463867+00:00"
+    },
+    {
+      "id": "m365-teams-files",
+      "url": "https://learn.microsoft.com/fr-fr/microsoftteams/sharepoint-onedrive-interact",
+      "title": "L’intégration Teams et le groupe SharePoint - SharePoint in Microsoft 365",
+      "ok": true,
+      "sha256": "712fa957af044f3cfb9e36622379cb81ec64f6ee2099cc1fb36f9d6b39e61685",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-teams-files.md",
+      "retrievedAt": "2026-10-21T22:01:53.701070+00:00"
+    },
+    {
+      "id": "m365-stream",
+      "url": "https://learn.microsoft.com/fr-fr/stream/streamnew/new-stream",
+      "title": "Vue d’ensemble du lecteur vidéo, de la caméra et de la page d’accueil de Microsoft Clipchamp - Microsoft Clipchamp",
+      "ok": true,
+      "sha256": "68dddc95e5fa478441770ad6c6d68a7cf18b61ef7ab90fe1ffd31d01a89a8f06",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-stream.md",
+      "retrievedAt": "2026-10-21T22:01:51.130344+00:00"
+    },
+    {
+      "id": "m365-copilot",
+      "url": "https://learn.microsoft.com/fr-fr/copilot/microsoft-365/microsoft-365-copilot-architecture",
+      "title": "Comment fonctionne Microsoft Copilot ?",
+      "ok": true,
+      "sha256": "f053a9d23551791c7093e5c990c3893b163b59247405ee2ce2db424df53c8dfc",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-copilot.md",
+      "retrievedAt": "2026-10-21T22:02:00.520781+00:00"
+    },
+    {
+      "id": "m365-automate",
+      "url": "https://learn.microsoft.com/fr-fr/power-automate/sharepoint-overview",
+      "title": "Utiliser SharePoint et Power Automate pour créer des workflows - Power Automate",
+      "ok": true,
+      "sha256": "724f45693278f539301dd764f61fbcf563b7f9b2b77fd01d9307a5a0371319d0",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-automate.md",
+      "retrievedAt": "2026-10-21T22:02:00.891795+00:00"
+    },
+    {
+      "id": "m365-powerapps",
+      "url": "https://learn.microsoft.com/fr-fr/power-apps/maker/canvas-apps/connections/connection-sharepoint-online",
+      "title": "Se connecter à SharePoint à partir d’une application canevas - Power Apps",
+      "ok": true,
+      "sha256": "e6eba6ff5d31e2f313243be98e47bb290e81043f5cc93cdb4190d0b38305688c",
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365-dependencies\\m365-powerapps.md",
+      "retrievedAt": "2026-10-21T22:02:03.670420+00:00"
     }
   ]
 }

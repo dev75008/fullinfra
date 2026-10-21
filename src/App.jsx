@@ -88,7 +88,7 @@ function Guides() {
   const category = categories.find(item => item.slug === slug);
   if (slug && !category) return <NotFound/>;
   const sections = slug === 'microsoft-365'
-    ? [['m365-communications','Communications'],['m365-topics','Fiches services']]
+    ? [['m365-dependencies','Infographie des dépendances'],['m365-communications','Accès et protocoles'],['m365-topics','Fiches services']]
     : slug ? [[slug === 'windows-server' ? 'windows-communications' : `${slug}-communications`,'Carte des échanges'],[slug === 'windows-server' ? 'windows-map' : `${slug}-map`,'Fiches technologies']] : [];
   if (slug === 'virtualisation') sections.push(['vmware-vsphere','VMware vSphere']);
   return <main className="container listing-page">
