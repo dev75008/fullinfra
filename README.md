@@ -169,7 +169,7 @@ Le [contrôle VMware](docs/VMWARE-VALIDATION.md) précise les versions, sources 
 
 ## Rubrique Microsoft 365
 
-La route `/microsoft-365` regroupe douze fiches et six scénarios de communication, avec deux guides dans le catalogue. Les contenus sont dans `src/data/microsoft365.js`, les articles dans `src/data/content.js` et les références dans `src/data/microsoft365Sources.js`. Les captures des douze pages Microsoft Learn FR sont tracées dans `docs/microsoft365-sources-audit.json`.
+La route `/microsoft-365` regroupe douze fiches et une carte interactive de 24 relations avec quatre scénarios thématiques, avec deux guides dans le catalogue. Les fiches sont dans `src/data/microsoft365.js`, la carte dans `src/data/microsoft365Communications.js`, les articles dans `src/data/content.js` et les références dans `src/data/microsoft365Sources.js`. Les captures des douze pages Microsoft Learn FR sont tracées dans `docs/microsoft365-sources-audit.json`.
 
 Les exemples réseau concernent le cloud Worldwide. Ils ne remplacent pas la liste d’endpoints Microsoft en vigueur. Les icônes Microsoft 365, Exchange, Teams et Microsoft 365 Apps utilisent des pictogrammes sémantiques ; aucun logo de produit n’est présenté comme officiel lorsqu’il ne l’est pas. Entra utilise l’icône officielle existante.
 

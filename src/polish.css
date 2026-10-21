@@ -118,3 +118,7 @@ button:active,.button:active{filter:brightness(.94)}
   .footer-bottom{font-size:12px}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+.communication-map[data-ecosystem="microsoft-365"] .hub-title{font-size:26px}
+.communication-map[data-ecosystem="microsoft-365"] .hub-clients{flex-wrap:wrap;justify-content:center;line-height:1.5}
+#m365-communications{margin-bottom:40px}

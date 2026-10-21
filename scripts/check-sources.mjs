@@ -12,6 +12,7 @@ try {
   const sources = {...learnSources,...broadcomSources};
   const { microsoft365Sources } = await server.ssrLoadModule('/src/data/microsoft365Sources.js');
   const { microsoft365Topics, microsoft365Flows } = await server.ssrLoadModule('/src/data/microsoft365.js');
+  const { microsoft365CommunicationMap } = await server.ssrLoadModule('/src/data/microsoft365Communications.js');
   Object.assign(sources,microsoft365Sources);
   const { windowsBranches } = await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { communicationEdges } = await server.ssrLoadModule('/src/data/windowsCommunications.js');
@@ -57,6 +58,8 @@ try {
     assert.equal(topic.points.length,3);
   }
   for (const flow of microsoft365Flows) verify(flow.sourceIds,flow.label);
+  assert.equal(microsoft365CommunicationMap.edges.length,24);
+  for (const flow of microsoft365CommunicationMap.edges) verify(flow.sourceIds,flow.label);
   assert.equal(vmwareFlows.length,6);
   assert.ok(vmwareFlows.some(row => row[1] === 'vCenter Server' && row[3] === 'TCP 902'));
   assert.ok(vmwareFlows.some(row => row[2] === 'vCenter Server' && row[3] === 'UDP 902'));
@@ -73,5 +76,5 @@ try {
   assert.equal(technologyCount,144);
   assert.equal(flowCount,84);
   assert.equal(articles.length,8);
-  console.log(`OK sources : ${technologyCount} technologies, ${flowCount} relations, 8 articles ; ${usedIds.size} références traçables ; 12 fiches et 6 scénarios Microsoft 365 ; 6 flux VMware directionnels.`);
+  console.log(`OK sources : ${technologyCount} technologies, ${flowCount} relations, 8 articles ; ${usedIds.size} références traçables ; 12 fiches, 24 relations et 4 scénarios Microsoft 365 ; 6 flux VMware directionnels.`);
 } finally { await server.close(); }

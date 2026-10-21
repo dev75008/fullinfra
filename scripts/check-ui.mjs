@@ -109,10 +109,22 @@ try {
   assert.equal(document.querySelectorAll('.m365-topic-grid details').length,12);
   for (const link of document.querySelectorAll('.section-navigation a')) assert.ok(document.getElementById(link.hash.slice(1)));
   assert.equal(document.querySelectorAll('.article-card').length,2);
-  assert.equal(document.querySelectorAll('.communication-map').length,0);
-  await click(document.querySelectorAll('.m365-flow-buttons button')[2]);
-  assert.match(document.querySelector('.m365-flow-detail').textContent,/3478/);
-  assert.equal(document.querySelectorAll('.m365-flow-buttons button[aria-pressed="true"]').length,1);
+  assert.equal(document.querySelectorAll('.communication-map').length,1);
+  assert.equal(document.querySelectorAll('.communication-node').length,13);
+  assert.equal(document.querySelectorAll('.communication-flow').length,24);
+  for (let index=0;index<5;index++) {
+    await click(document.querySelectorAll('.communication-controls button')[index]);
+    await click(document.querySelector('.communication-flow'));
+    assert.ok(document.querySelector('.communication-explanation .learn-source-links a'));
+  }
+  await click(document.querySelector('.communication-reset'));
+  await click([...document.querySelectorAll('.communication-flow')].find(item => /Transporter les médias/.test(item.textContent)));
+  assert.match(document.querySelector('.communication-explanation code').textContent,/3478/);
+  await click(document.querySelector('.communication-node'));
+  const m365BranchLink=document.querySelector('.communication-flow-header a');
+  assert.equal(m365BranchLink.hash,'#microsoft-365-administration');
+  await click(m365BranchLink);
+  assert.equal(document.getElementById('microsoft-365-administration').open,true);
   await click(document.querySelector('.m365-topics .section-heading button'));
   assert.ok([...document.querySelectorAll('.m365-topic-grid details')].every(item => item.open));
   await click(document.querySelector('.m365-topics .section-heading button'));

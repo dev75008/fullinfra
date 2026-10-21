@@ -13,6 +13,21 @@ try {
   const { communicationNodes, communicationEdges, communicationScenarios, selectCommunicationEdges } = await server.ssrLoadModule('/src/data/windowsCommunications.js');
   const { ecosystems } = await server.ssrLoadModule('/src/data/ecosystems.js');
   const { selectEcosystemEdges } = await server.ssrLoadModule('/src/data/ecosystemModel.js');
+  const { microsoft365CommunicationMap:m365 } = await server.ssrLoadModule('/src/data/microsoft365Communications.js');
+  const m365Nodes=new Set(m365.nodes.map(node => node.id));
+  assert.equal(m365Nodes.size,13);
+  assert.equal(m365.edges.length,24);
+  assert.equal(new Set(m365.edges.map(edge => edge.id)).size,24);
+  for (const edge of m365.edges) {
+    assert.ok(m365Nodes.has(edge.from) && m365Nodes.has(edge.to));
+    assert.notEqual(edge.from,edge.to);
+    assert.ok(['network','logical'].includes(edge.kind || 'network'));
+  }
+  for (const node of m365.nodes) assert.ok(selectEcosystemEdges(m365,'all',node.id).length > 0);
+  for (const scenario of m365.scenarios) {
+    assert.equal(selectEcosystemEdges(m365,scenario.id).length,scenario.edges.length);
+    for (const [id] of scenario.steps) assert.ok(scenario.edges.includes(id));
+  }
   const render = path => renderToString(React.createElement(MemoryRouter, { initialEntries: [path] }, React.createElement(App)));
   assert.match(render('/'), /Comprendre/);
   const windowsHtml = render('/windows-server');
