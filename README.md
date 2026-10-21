@@ -188,3 +188,7 @@ La sélection d’un service isole ses relations ; la liste de sélection fourni
 Données : `src/data/microsoft365Dependencies.js`. Générateur : `src/dependencySvg.js`. Après une modification des données, régénérer le fichier public avec `node scripts/generate-m365-infographic.mjs`. Le workflow vérifie sa synchronisation. Sept pages Microsoft Learn FR supplémentaires sont tracées dans le manifeste des sources Microsoft 365.
 
 Le rendu SVG a été rasterisé et inspecté pour vérifier les étiquettes. Cette vérification de l’illustration ne remplace pas une vérification du site dans un navigateur.
+
+### Image d’architecture Microsoft 365
+
+L’infographie affichée dans la rubrique Microsoft 365 est désormais l’image fournie par l’utilisateur, conservée sans modification dans `public/microsoft365-architecture.png` (1536 × 1024). Elle s’adapte à la largeur de l’écran et propose une ouverture en grand, un téléchargement et un résumé textuel. Les fiches techniques et la carte des accès réseau restent disponibles plus bas.

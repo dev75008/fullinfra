@@ -107,19 +107,14 @@ try {
   await click(document.querySelector('.site-header nav a[href="/microsoft-365"]'));
   assert.match(document.title,/Microsoft 365/);
   assert.ok(document.querySelector('.dependency-infographic'));
-  assert.equal(document.querySelectorAll('.dependency-svg [data-service]').length,20);
-  assert.equal(document.querySelector('.dependency-toolbar select').value,'teams');
-  assert.match(document.querySelector('.dependency-relations').textContent,/Fichiers des canaux/);
-  assert.match(document.querySelector('.dependency-relations').textContent,/Fichiers des conversations/);
-  await click(document.querySelector('.dependency-svg [data-service="copilot"]'));
-  assert.equal(document.querySelector('.dependency-toolbar select').value,'copilot');
-  assert.match(document.querySelector('.dependency-relations').textContent,/Ancrage sur les données/);
-  await act(async () => {
-    const select=document.querySelector('.dependency-toolbar select');
-    select.value='';select.dispatchEvent(new window.Event('change',{bubbles:true}));
-  });
-  assert.equal(document.querySelectorAll('.dependency-relations article').length,36);
-  assert.ok(document.querySelector('.dependency-toolbar a[download][href$=".svg"]'));
+  const architectureImage=document.querySelector('.m365-architecture-image');
+  assert.ok(architectureImage);
+  assert.match(architectureImage.getAttribute('src'),/microsoft365-architecture\.png$/);
+  assert.equal(architectureImage.getAttribute('width'),'1536');
+  assert.equal(architectureImage.getAttribute('height'),'1024');
+  assert.ok(architectureImage.alt.includes('Entra ID'));
+  assert.ok(document.querySelector('.dependency-toolbar a[download][href$=".png"]'));
+  assert.ok(document.querySelector('.infographic-transcript'));
   await click(document.querySelector('.m365-network-map>summary'));
   assert.equal(document.querySelectorAll('.m365-topic-grid details').length,12);
   for (const link of document.querySelectorAll('.section-navigation a')) assert.ok(document.getElementById(link.hash.slice(1)));

@@ -1,26 +1,25 @@
-import React, { useMemo, useState } from 'react';
-import { dependencyServices, dependencyLinks, dependencyKinds } from './data/microsoft365Dependencies';
-import { renderDependencySvg } from './dependencySvg';
-import SourceLinks from './SourceLinks';
+import React from 'react';
 import './microsoft365-dependencies.css';
 
 export default function Microsoft365Dependencies() {
-  const [selected,setSelected]=useState('teams');
-  const [zoom,setZoom]=useState('fit');
-  const svg=useMemo(() => renderDependencySvg(selected),[selected]);
-  const service=dependencyServices.find(item => item.id === selected);
-  const links=dependencyLinks.filter(link => !selected || link.from === selected || link.to === selected);
-  const name=id => dependencyServices.find(item => item.id === id).name;
-  return <section id="m365-dependencies" className="dependency-infographic" aria-labelledby="dependencies-title">
-    <header><h2 id="dependencies-title">Microsoft 365 : les services et leurs dépendances</h2><p>Suivez les liens entre les identités, les groupes, les fichiers, les applications et la sécurité. Choisissez un service pour lire ses relations.</p></header>
+  const image=`${import.meta.env.BASE_URL}microsoft365-architecture.png`;
+  return <section id="m365-dependencies" className="dependency-infographic supplied-infographic" aria-labelledby="dependencies-title">
+    <header><h2 id="dependencies-title">Microsoft 365 : architecture et fonctionnement</h2><p>Identité, collaboration, gestion des appareils, sécurité et données dans le cloud.</p></header>
     <div className="dependency-toolbar">
-      <label>Service à explorer<select value={selected} onChange={event => setSelected(event.target.value)}><option value="">Vue d’ensemble</option>{dependencyServices.map(item => <option key={item.id} value={item.id}>{item.name}</option>)}</select></label>
-      <label>Taille de la carte<select value={zoom} onChange={event => setZoom(event.target.value)}><option value="fit">Vue complète</option><option value="1400">Agrandir</option><option value="2000">Grande taille</option></select></label>
-      <a className="button secondary" download="fullinfra-microsoft365-dependances.svg" href={`${import.meta.env.BASE_URL}infographie-microsoft365.svg`}>Télécharger l’infographie SVG</a>
+      <a className="button primary" href={image} target="_blank" rel="noopener noreferrer">Ouvrir l’image en grand</a>
+      <a className="button secondary" href={image} download="fullinfra-microsoft365-architecture.png">Télécharger l’image</a>
     </div>
-    <figure><div className="dependency-scroll" tabIndex={0} role="region" aria-label="Infographie Microsoft 365, utilisez la liste de services pour une sélection au clavier"><div className="dependency-svg" style={{width:zoom === 'fit' ? '100%' : `${zoom}px`}} aria-hidden="true" onClick={event => {const id=event.target.closest('[data-service]')?.getAttribute('data-service');if (id) setSelected(id);}} dangerouslySetInnerHTML={{__html:svg}}/></div><figcaption>Flèche A → B : A utilise B ou agit sur B pour la fonction indiquée. Les pointillés décrivent des dépendances fonctionnelles ; ils ne représentent pas les transports internes Microsoft.</figcaption></figure>
-    <div className="dependency-summary" aria-live="polite"><h3>{service ? service.name : 'Vue d’ensemble des dépendances'}</h3><p>{service ? service.role : 'Tous les composants cartographiés et leurs relations.'} {links.length} relation{links.length > 1 ? 's' : ''} affichée{links.length > 1 ? 's' : ''}.</p></div>
-    <div className="dependency-relations">{links.map(link => <article key={link.id}><span className="dependency-kind" style={{color:dependencyKinds[link.kind].color}}>{dependencyKinds[link.kind].label}</span><h4>{name(link.from)} → {name(link.to)}</h4><strong>{link.label}</strong><p>{link.detail}</p><SourceLinks ids={link.sourceIds}/></article>)}</div>
-    <p className="protocol-note">Périmètre : 20 composants et 36 relations documentées. Cette carte couvre les principaux services et les intégrations représentées ; elle ne prétend pas inventorier toutes les applications, offres ni toutes leurs dépendances. Les exemples Planner concernent les plans de groupe. Les composants Power Platform et Copilot dépendent des offres souscrites. Les flèches ne constituent pas une matrice pare-feu.</p>
+    <figure>
+      <a href={image} target="_blank" rel="noopener noreferrer" aria-label="Agrandir l’infographie Microsoft 365 dans un nouvel onglet"><img className="m365-architecture-image" src={image} width="1536" height="1024" alt="Infographie Microsoft 365 : utilisateurs et appareils, identité et accès avec Entra ID, services collaboratifs, Intune et Defender, données cloud et parcours utilisateur."/></a>
+      <figcaption>Vue d’ensemble Microsoft 365. Ouvrez l’image en grand pour lire les détails.</figcaption>
+    </figure>
+    <details className="infographic-transcript"><summary>Lire le résumé de l’infographie</summary><ol>
+      <li><strong>Utilisateurs :</strong> collaborateurs et administrateurs, sur mobiles, PC Windows, Mac ou navigateur.</li>
+      <li><strong>Identité et accès :</strong> Entra ID, authentification, MFA, accès conditionnel et rôles.</li>
+      <li><strong>Collaboration :</strong> Outlook, Exchange Online, Teams, SharePoint, OneDrive, Word, Excel, PowerPoint, OneNote et Copilot.</li>
+      <li><strong>Appareils et sécurité :</strong> gestion des appareils et applications avec Intune, protection contre les menaces avec Defender.</li>
+      <li><strong>Données :</strong> messagerie, documents et fichiers dans les services cloud Microsoft.</li>
+      <li><strong>Parcours illustré :</strong> connexion, vérifications d’accès et de sécurité, utilisation des services et stockage des données.</li>
+    </ol></details>
   </section>;
 }
