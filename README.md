@@ -191,4 +191,4 @@ Le rendu SVG a été rasterisé et inspecté pour vérifier les étiquettes. Cet
 
 ### Image d’architecture Microsoft 365
 
-L’infographie affichée dans la rubrique Microsoft 365 est désormais l’image fournie par l’utilisateur, conservée sans modification dans `public/microsoft365-architecture.png` (1536 × 1024). Elle s’adapte à la largeur de l’écran et propose une ouverture en grand, un téléchargement et un résumé textuel. Les fiches techniques et la carte des accès réseau restent disponibles plus bas.
+L’infographie affichée dans la rubrique Microsoft 365 est désormais l’image fournie par l’utilisateur, conservée sans modification dans `public/microsoft365-architecture.png` (3072 × 2048). Elle s’adapte à la largeur de l’écran et propose une ouverture en grand, un téléchargement et un résumé textuel. Les fiches techniques et la carte des accès réseau restent disponibles plus bas.

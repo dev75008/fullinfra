@@ -109,11 +109,11 @@ try {
   assert.ok(document.querySelector('.dependency-infographic'));
   const architectureImage=document.querySelector('.m365-architecture-image');
   assert.ok(architectureImage);
-  assert.match(architectureImage.getAttribute('src'),/microsoft365-architecture\.png$/);
-  assert.equal(architectureImage.getAttribute('width'),'1536');
-  assert.equal(architectureImage.getAttribute('height'),'1024');
+  assert.match(architectureImage.getAttribute('src'),/microsoft365-architecture\.png\?v=/);
+  assert.equal(architectureImage.getAttribute('width'),'3072');
+  assert.equal(architectureImage.getAttribute('height'),'2048');
   assert.ok(architectureImage.alt.includes('Entra ID'));
-  assert.ok(document.querySelector('.dependency-toolbar a[download][href$=".png"]'));
+  assert.ok(document.querySelector('.dependency-toolbar a[download]'));
   assert.ok(document.querySelector('.infographic-transcript'));
   await click(document.querySelector('.m365-network-map>summary'));
   assert.equal(document.querySelectorAll('.m365-topic-grid details').length,12);
