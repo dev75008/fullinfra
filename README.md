@@ -1,4 +1,4 @@
-# InfraLab
+# FullInfra
 
 Site publié : **https://dev75008.github.io/fullinfra/**
 
@@ -73,7 +73,7 @@ sitefullinfra/
     ├── main.jsx              # Point d’entrée et BrowserRouter
     ├── App.jsx               # Navigation, routes et pages
     ├── Home.jsx              # Accueil et recherche vers le catalogue
-    ├── components.jsx        # Cartes et identité InfraLab
+    ├── components.jsx        # Cartes et identité FullInfra
     ├── TechnologyIcon.jsx    # Pictogrammes officiels ou sémantiques
     ├── SourceLinks.jsx       # Références documentaires affichées
     ├── CommunicationMap.jsx  # Carte de communication partagée

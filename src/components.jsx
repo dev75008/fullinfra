@@ -5,7 +5,7 @@ import { categories } from './data/content';
 import TechnologyIcon from './TechnologyIcon';
 import { categoryIconKeys } from './data/technologyIcons';
 
-export function Logo() { return <Link to="/" className="logo" aria-label="InfraLab, accueil"><span className="logo-symbol"><Network size={22}/></span>infra<span>lab<span className="logo-dot">.</span></span></Link>; }
+export function Logo() { return <Link to="/" className="logo" aria-label="FullInfra, accueil"><span className="logo-symbol"><Network size={22}/></span>full<span>infra<span className="logo-dot">.</span></span></Link>; }
 export function CategoryCard({ category }) {
   return <Link to={`/${category.slug}`} className={`category-card ${category.color}`}>
     <div className="card-top"><span className="icon-box"><TechnologyIcon name={categoryIconKeys[category.slug]} size={48}/></span></div>

@@ -21,7 +21,7 @@ function RouteEffects() {
   useEffect(() => {
     const article = articles.find(item => pathname === `/${item.category}/${item.slug}`);
     const category = categories.find(item => pathname === '/' + item.slug);
-    document.title = `${article?.title || category?.name || (pathname === '/guides' ? 'Tous les guides' : pathname === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable')} — InfraLab`;
+    document.title = `${article?.title || category?.name || (pathname === '/guides' ? 'Tous les guides' : pathname === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable')} — FullInfra`;
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = article?.excerpt || category?.description || 'Guides Windows Server, VMware, Azure et Microsoft 365 : services, protocoles et administration.';
     if (previousPath.current !== pathname) document.getElementById('content')?.focus({preventScroll:true});
@@ -56,7 +56,7 @@ function Header() {
     </nav><Link className="header-cta" to="/guides">Tous les guides <ArrowUpRight size={16} aria-hidden="true"/></Link>
   </div></header>;
 }
-function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} InfraLab. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 <span className="status-dot"/></span></div></div></footer>; }
+function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} FullInfra. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 <span className="status-dot"/></span></div></div></footer>; }
 function GuideList({ category }) {
   const [searchParams,setSearchParams] = useSearchParams();
   const query = searchParams.get('recherche') || '';
