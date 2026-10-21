@@ -1,21 +1,21 @@
 # FullInfra
 
-Site publié : **https://dev75008.github.io/fullinfra/**
+Site publié : **https://fullinfra.duckdns.org/**
 
 ## Publication GitHub Pages
 
-Le workflow `.github/workflows/pages.yml` teste, compile et publie le site après chaque push sur `main`. La compilation utilise `VITE_BASE_PATH=/fullinfra/` pour les routes et les ressources. Les ouvertures directes de sous-pages passent par une page 404 de redirection, puis restaurent le chemin, les paramètres et l’ancre dans le navigateur.
+Le workflow `.github/workflows/pages.yml` teste, compile et publie le site après chaque push sur `main`. La compilation utilise `VITE_BASE_PATH=/` pour les routes et les ressources. Les ouvertures directes de sous-pages passent par une page 404 de redirection, puis restaurent le chemin, les paramètres et l’ancre dans le navigateur.
 
 Pour tester cette compilation sous PowerShell :
 
 ```powershell
-$env:VITE_BASE_PATH='/fullinfra/'
+$env:VITE_BASE_PATH='/'
 npm run build
 node scripts/check-pages.mjs
 npm run preview
 ```
 
-L’aperçu de production est alors accessible à `http://127.0.0.1:4173/fullinfra/`. Pour revenir à la racine lors du développement, retirer la variable avec `Remove-Item Env:VITE_BASE_PATH`.
+L’aperçu de production est alors accessible à `http://127.0.0.1:4173/`. Pour revenir à la racine lors du développement, retirer la variable avec `Remove-Item Env:VITE_BASE_PATH`.
 
 Le [contrôle et les corrections du site](docs/CONTROLE-FINAL.md) détaillent les changements de navigation, de recherche, de rédaction et de présentation, ainsi que les limites de la vérification visuelle.
 
@@ -172,3 +172,9 @@ Le [contrôle VMware](docs/VMWARE-VALIDATION.md) précise les versions, sources 
 La route `/microsoft-365` regroupe douze fiches et six scénarios de communication, avec deux guides dans le catalogue. Les contenus sont dans `src/data/microsoft365.js`, les articles dans `src/data/content.js` et les références dans `src/data/microsoft365Sources.js`. Les captures des douze pages Microsoft Learn FR sont tracées dans `docs/microsoft365-sources-audit.json`.
 
 Les exemples réseau concernent le cloud Worldwide. Ils ne remplacent pas la liste d’endpoints Microsoft en vigueur. Les icônes Microsoft 365, Exchange, Teams et Microsoft 365 Apps utilisent des pictogrammes sémantiques ; aucun logo de produit n’est présenté comme officiel lorsqu’il ne l’est pas. Entra utilise l’icône officielle existante.
+
+## Domaine personnalisé
+
+Le domaine GitHub Pages est `fullinfra.duckdns.org`, configuré dans les paramètres Pages du dépôt. Le DNS DuckDNS pointe actuellement vers GitHub Pages (`185.199.108.153`). Le HTTPS est activé. Le workflow compile à la racine `/` ; aucun préfixe `/fullinfra/` n’est nécessaire sur le domaine personnalisé.
+
+Si un client de mise à jour automatique DuckDNS gère ce sous-domaine, conserver son adresse GitHub Pages plutôt que de la remplacer par l’adresse IP de la connexion Internet.

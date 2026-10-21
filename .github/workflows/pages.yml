@@ -1,4 +1,4 @@
-name: Publish InfraLab
+name: Publish FullInfra
 
 on:
   push:
@@ -17,6 +17,8 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    env:
+      VITE_BASE_PATH: /
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -32,8 +34,6 @@ jobs:
       - run: npm run check:sources
       - run: npm run check:icons
       - run: npm run build
-        env:
-          VITE_BASE_PATH: /fullinfra/
       - run: node scripts/check-pages.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
