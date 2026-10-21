@@ -1,0 +1,112 @@
+{
+  "sources": [
+    {
+      "id": "m365-home",
+      "title": "Documentation Microsoft 365",
+      "url": "https://learn.microsoft.com/fr-fr/microsoft-365/?view=o365-worldwide",
+      "sha256": "04ef90265ab2098bc26786b65ea86eb9f317e85898f5e942430435ab3918fcf6",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-home.md",
+      "retrievedAt": "2026-10-19T02:28:06.893403+00:00"
+    },
+    {
+      "id": "m365-admin",
+      "title": "Centre d’administration Microsoft 365 - Vue d’ensemble - Microsoft 365 admin",
+      "url": "https://learn.microsoft.com/fr-fr/microsoft-365/admin/admin-overview/admin-center-overview?view=o365-worldwide",
+      "sha256": "e4e1cf7516f8611d317419fbc9dceff2b46d13463863a519917b6e3f42414017",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-admin.md",
+      "retrievedAt": "2026-10-19T02:28:11.780595+00:00"
+    },
+    {
+      "id": "m365-network",
+      "title": "URL et plages d’adresses IP Microsoft 365 - Microsoft 365 Enterprise",
+      "url": "https://learn.microsoft.com/fr-fr/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide",
+      "sha256": "b9f06638ba0aa454d2b050fe533affec460467dd9bd7d7017ed21181ed00bec0",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-network.md",
+      "retrievedAt": "2026-10-19T02:28:11.054514+00:00"
+    },
+    {
+      "id": "m365-teams",
+      "title": "Administrateurs informatiques - Vue d’ensemble du déploiement de Microsoft Teams - Microsoft Teams",
+      "url": "https://learn.microsoft.com/fr-fr/microsoftteams/office-365-set-up",
+      "sha256": "18995046d743f51a96b563b17ea0f000dfb8a6af636af26fa46f8a5f6fe32905",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-teams.md",
+      "retrievedAt": "2026-10-19T02:28:09.036004+00:00"
+    },
+    {
+      "id": "m365-sharepoint",
+      "title": "Présentation de SharePoint et OneDrive dans Microsoft 365 pour les administrateurs - SharePoint in Microsoft 365",
+      "url": "https://learn.microsoft.com/fr-fr/sharepoint/introduction",
+      "sha256": "f2fddd201663f84f3c022e37718a2fd7bd68f7f6e09149c4196a97f002a71d4d",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-sharepoint.md",
+      "retrievedAt": "2026-10-19T02:28:08.624003+00:00"
+    },
+    {
+      "id": "m365-apps",
+      "title": "À propos de Microsoft 365 Apps dans l’entreprise - Microsoft 365 Apps",
+      "url": "https://learn.microsoft.com/fr-fr/microsoft-365-apps/deploy/about-microsoft-365-apps",
+      "sha256": "5c04d87038a906e7cc4784bff5d5d3aca4b9a115e77ba92e4e4f90cb0c5f5d16",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-apps.md",
+      "retrievedAt": "2026-10-19T02:28:08.954956+00:00"
+    },
+    {
+      "id": "m365-intune",
+      "title": "Comprendre Microsoft Intune - Microsoft Intune",
+      "url": "https://learn.microsoft.com/fr-fr/intune/intune-service/fundamentals/what-is-intune",
+      "sha256": "971a9a45aebcc75fc59f76a8fbcc30276fdc0f170c474009ed7bc520fec64f9b",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-intune.md",
+      "retrievedAt": "2026-10-19T02:28:11.310564+00:00"
+    },
+    {
+      "id": "m365-defender",
+      "title": "Qu’est-ce que Microsoft Defender XDR ? - Microsoft Defender XDR",
+      "url": "https://learn.microsoft.com/fr-fr/defender-xdr/microsoft-365-defender",
+      "sha256": "5e6ca1dac9e3aa19103c38b20ebbfc4a6153fc060e652da4c87bb74d194fd4f3",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-defender.md",
+      "retrievedAt": "2026-10-19T02:28:11.869608+00:00"
+    },
+    {
+      "id": "m365-purview",
+      "title": "En savoir plus sur Microsoft Purview",
+      "url": "https://learn.microsoft.com/fr-fr/purview/purview",
+      "sha256": "ae847d180866c82e08d39cd58230cbfab80cbcc0e5c8aa43aa14a4dd053f3357",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-purview.md",
+      "retrievedAt": "2026-10-19T02:28:12.637030+00:00"
+    },
+    {
+      "id": "m365-health",
+      "title": "Comment vérifier l’intégrité du service Microsoft 365 - Microsoft 365 Enterprise",
+      "url": "https://learn.microsoft.com/fr-fr/microsoft-365/enterprise/view-service-health?view=o365-worldwide",
+      "sha256": "711d4ade1709ba649271211dd225421af0b061e100deacd5c87270efb653ac7c",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-health.md",
+      "retrievedAt": "2026-10-19T02:28:11.413036+00:00"
+    },
+    {
+      "id": "m365-graph",
+      "title": "Présentation de Microsoft Graph - Microsoft Graph",
+      "url": "https://learn.microsoft.com/fr-fr/graph/overview",
+      "sha256": "d19e334e76798ffa4329f87e8f157285601a5501ab281b368f0e81d2f053f0d8",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-graph.md",
+      "retrievedAt": "2026-10-19T02:28:13.792044+00:00"
+    },
+    {
+      "id": "m365-exchange",
+      "title": "Exchange Online",
+      "url": "https://learn.microsoft.com/fr-fr/exchange/exchange-online",
+      "sha256": "89818fb31a1d2a39d1599473f18d7252867d5315612b5e6f3c5cd53a5ea05039",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\microsoft365\\m365-exchange.md",
+      "retrievedAt": "2026-10-19T02:28:13.739355+00:00"
+    }
+  ]
+}

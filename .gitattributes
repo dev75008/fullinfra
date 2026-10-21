@@ -1,0 +1,2 @@
+# Keep official icon bytes identical to their published integrity manifest.
+public/icons/microsoft/*.svg -text

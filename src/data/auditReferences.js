@@ -1,0 +1,76 @@
+// Références Microsoft Learn par technologie, dans l’ordre des quatre fiches de chaque branche.
+export const technologyReferences = {
+  'windows-server': {
+    'active-directory': [['ad'],['gpo'],['kerberos','ad'],['replication']],
+    reseau: [['dns'],['dhcp','ports'],['vpn'],['nps','ports']],
+    stockage: [['smb'],['dfs','dfsr'],['fsrm'],['storage-spaces','iscsi','dedup']],
+    securite: [['ad-security'],['firewall','defender'],['bitlocker','adcs'],['audit','wef']],
+    virtualisation: [['hyperv'],['hv-network'],['hv-migrate'],['hv-replica-config','hv-checkpoints','hv-backup']],
+    web: [['iis'],['iis'],['aspnet'],['iis']],
+    maintenance: [['wsus','wsus-config','update-manager'],['wsus'],['backup-state','backup-restore'],['perf']],
+    disponibilite: [['cluster'],['quorum'],['cluster','iscsi'],['asr']],
+    powershell: [['ps'],['ps-remoting','ps-ssh'],['scheduled-tasks'],['ps-errors','git']],
+    rds: [['rds'],['rds','rds-ports'],['rds','rds-ports'],['rds']],
+    hybride: [['arc','arc-network'],['filesync','filesync-network'],['az-vpn','expressroute'],['backup','asr']],
+    monitoring: [['wef'],['perf'],['alerts'],['monitor','loganalytics','ntp']],
+  },
+  virtualisation: {
+    hyperviseurs: [['hyperv'],['avs','avs-architecture'],['hv-architecture'],['hv-requirements','hv-nested']],
+    machines: [['hyperv'],['hv-memory'],['disks','hyperv'],['hv-integration']],
+    'reseaux-virtuels': [['hv-network'],['hv-network'],['dns','dhcp'],['hv-network','firewall']],
+    'stockage-virtuel': [['hyperv','avs-architecture'],['hv-smb'],['avs-anf','nfs'],['iscsi']],
+    gestion: [['avs-architecture','avs-network'],['hyperv','ps-remoting'],['avs-architecture','ad-security'],['hyperv']],
+    'disponibilite-vm': [['cluster'],['avs-architecture'],['quorum'],['cluster']],
+    mobilite: [['hv-migrate','hv-move'],['avs-hcx','avs-network'],['hv-move'],['hv-migrate','cluster']],
+    'sauvegarde-vm': [['hv-checkpoints'],['hv-backup'],['hv-replica-config'],['backup-restore']],
+    'securite-vm': [['ad-security','hyperv'],['hv-network','firewall'],['ps-remoting','hv-migrate'],['hyperv','wsus']],
+    'automatisation-vm': [['hv-powershell'],['avs-run'],['bicep','terraform'],['ps-errors']],
+    'supervision-vm': [['perf'],['monitor'],['wef'],['alerts']],
+    'hybride-vm': [['asr'],['arc','arc-network'],['containers'],['asr','hv-replica']],
+  },
+  azure: {
+    identites: [['entra','auth'],['rbac'],['managed-identity'],['conditional-access']],
+    'reseau-cloud': [['vnet'],['az-dns','private-dns'],['az-vpn','expressroute'],['private-endpoint']],
+    calcul: [['vm','vm-states'],['disks'],['bastion','bastion-ports'],['vmss']],
+    'stockage-cloud': [['blob'],['files','files-network'],['storage-sas','storage-auth'],['blob-version']],
+    'securite-cloud': [['nsg'],['az-firewall'],['keyvault','keyvault-network'],['defender-cloud']],
+    'applications-cloud': [['appservice'],['functions'],['appgateway','frontdoor'],['loadbalancer']],
+    'donnees-cloud': [['sql','sql-network'],['postgres','postgres-tls'],['sql-private'],['pooling']],
+    'disponibilite-cloud': [['zones'],['storage-redundancy'],['asr','asr-network'],['asr','failover-plans']],
+    'automatisation-cloud': [['arm'],['bicep'],['terraform'],['arm','ps']],
+    'sauvegarde-cloud': [['backup','backup-vm'],['backup'],['backup'],['backup-restore']],
+    'supervision-cloud': [['monitor','ama-network'],['loganalytics'],['appinsights'],['alerts']],
+    'gouvernance-cloud': [['resource-groups','arm'],['policy'],['tags'],['budgets','cost']],
+  },
+};
+
+export const flowReferences = {
+  'windows-server': {
+    dhcp:['dhcp','ports'],dns:['dns'],kerberos:['kerberos','ports'],'gpo-directory':['gpo','ports'],'gpo-sysvol':['gpo','smb'],share:['smb'],policy:['gpo'],acl:['smb'],
+    'web-request':['iis'],'web-files':['smb','iis'],'web-tls':['iis','adcs'],'rds-gateway':['rds-ports'],'rds-auth':['rds-ports'],'rds-radius':['rds-ports','nps'],'rds-profiles':['rds','smb'],
+    'admin-hyperv':['ps-remoting'],'admin-ad':['ps-ad','ports'],'admin-maintenance':['ps-remoting'],'hyperv-storage':['hv-smb','iscsi'],'cluster-vm':['cluster'],'cluster-witness':['quorum'],'cloud-witness':['quorum'],
+    'file-sync':['filesync-network'],'backup-cloud':['backup'],'patch-target':['wsus','wsus-config'],'events-ad':['wef'],'events-web':['wef'],'events-hyperv':['wef'],'monitor-cloud':['ama-network'],'vm-hosting':['hyperv','iis'],
+  },
+  virtualisation: {
+    console:['avs-network'],'manage-esxi':['avs-architecture'],'manage-hyperv':['ps-remoting'],'host-vm':['hyperv'],'vm-net':['hv-network'],'vm-service':['vm','rds-ports'],'net-dns':['dns'],
+    'storage-smb':['hv-smb'],'storage-nfs':['avs-anf'], 'storage-iscsi':['iscsi'],policy:['hv-network'],roles:['avs-architecture'],'live-migration':['hv-migrate'],vmotion:['avs-hcx'],ha:['cluster','avs-architecture'],
+    witness:['quorum'],backup:['hv-backup'],repository:['hv-backup'],replica:['hv-replica-config'],script:['ps'],api:['avs-run'],metrics:['perf','monitor'],logs:['wef'],'guest-metrics':['ama-network'],'cloud-api':['arc-network'],'network-path':['hv-network'],
+  },
+  azure: {
+    login:['auth'],deploy:['arm'],'vm-create':['vm-create'],'network-create':['vnet'],rbac:['rbac'],policy:['policy'],dns:['private-dns','az-dns'],'web-front':['appgateway'],
+    'web-backend':['appgateway'],'app-login':['auth','managed-identity'],secret:['keyvault-network'],sql:['sql-network','sql-private'],blob:['blob'],files:['files-network'],
+    'bastion-entry':['bastion-ports'],'private-path':['private-endpoint','sql-private'],nsg:['nsg'],zones:['zones'],delivery:['loadbalancer','appgateway'],protect:['backup-vm'],
+    'backup-transfer':['backup-vm'],recovery:['asr-network'],'vm-metrics':['ama-network'],'app-traces':['appinsights'],alert:['alerts'],costs:['budgets'],'storage-rbac':['storage-auth'],'vault-identity':['keyvault'],
+  },
+};
+
+export const articleReferences = {
+  'preparer-tenant':['m365-admin','m365-health'],
+  'teams-connectivite':['m365-teams','m365-network'],
+  'active-directory-fondations':['ad','gpo','replication'],
+  'hyper-v-commutateurs':['hv-network'],
+  'azure-premiere-vm':['vm-create','bastion','vm-states'],
+  'powershell-inventaire':['ps-cim','ps-errors','export-csv'],
+  'vmware-snapshots':['vmware-snapshots'],
+  'azure-gouvernance':['resource-groups','tags','budgets'],
+};

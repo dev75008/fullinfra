@@ -1,0 +1,120 @@
+/* InfraLab : lisibilité et navigation, dans la direction Microsoft Support. */
+:root {
+  --surface-soft:#f5f7f9;
+  --surface-blue:#edf4fa;
+  --ink:#242424;
+  --muted:#535b62;
+  --focus:#005a9e;
+}
+body{line-height:1.6}
+h1,h2,h3{text-wrap:balance}
+p,li{overflow-wrap:break-word}
+button,a,input,summary{touch-action:manipulation}
+:where(button,a,input,summary,[tabindex]):focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+button:active,.button:active{filter:brightness(.94)}
+[id]{scroll-margin-top:100px}
+.support-hero{background:var(--surface-blue);padding:68px 0 52px}
+.support-hero-description{max-width:65ch;margin-inline:auto}
+.home-search-label{display:block;margin:0 auto 12px;font-size:15px;font-weight:600;color:var(--ink)}
+.home-search{box-shadow:none;border-color:#6c8294}
+.home-search input{min-height:44px}
+.home-search button{min-height:44px;min-width:44px}
+.hero-suggestions a{display:inline-flex;align-items:center;min-height:36px}
+.section-heading h2{margin-top:0}
+.category-card{display:flex;flex-direction:column;background:#fff;box-shadow:none}
+.category-card:hover{box-shadow:none;border-color:var(--accent);background:#f8fbfe}
+.category-card h3{font-size:23px;line-height:1.35}
+.category-card p{min-height:0;font-size:15px;line-height:1.75;flex:1}
+.tags>span{font-size:12px}
+.card-bottom{font-size:14px;min-height:44px}
+.featured-guides{grid-template-columns:repeat(2,minmax(0,1fr))}
+.article-card{display:flex;flex-direction:column;box-shadow:none}
+.article-card:hover{box-shadow:none;border-color:#83aac8}
+.article-art,.article-art.layers,.article-art.cloud{background:var(--surface-blue)}
+.article-art.layers{background:#f2f0f7}
+.article-info{display:flex;flex-direction:column;flex:1}
+.article-info p{flex:1;font-size:15px;line-height:1.75}
+.article-meta{font-size:12px}
+.art-badge{font-size:12px;background:#fff}
+.read-link{font-size:14px;min-height:32px}
+.lab-banner{background:var(--surface-blue)}
+.lab-banner h2{margin-top:0}
+.page-intro p{max-width:min(70ch,calc(100% - 130px))}
+.page-intro h1{padding-right:130px}
+.mobile-guides-link{display:none!important}
+.section-navigation{display:flex;flex-wrap:wrap;gap:8px 24px;margin:0 0 32px;padding:16px 0;border-block:1px solid var(--border)}
+.section-navigation a{display:inline-flex;align-items:center;min-height:44px;color:var(--accent);font-weight:600;font-size:14px}
+.section-navigation a:hover{text-decoration:underline;text-underline-offset:4px}
+.guide-list{scroll-margin-top:100px}
+.guide-list>h2{font-size:30px;margin:0 0 24px}
+.list-toolbar{align-items:end}
+.filter-tabs button{min-height:44px;font-size:14px}
+.catalogue-search{min-width:250px}
+.catalogue-search>label{display:block;font-weight:600;font-size:14px;margin-bottom:8px}
+.search-box input{width:100%;min-width:0;font-size:15px}
+.result-count{font-size:14px}
+.empty-state h3{font-size:24px}
+.article-aside{grid-column:2;grid-row:1}
+.prose{grid-column:1;grid-row:1}
+.article-aside h2{font-size:17px}
+.article-aside>a{min-height:44px;font-size:14px}
+.article-title{max-width:850px}
+.article-title h1{font-size:clamp(32px,3.5vw,45px)}
+.article-layout{grid-template-columns:minmax(0,72ch) minmax(220px,1fr)}
+.prose p{line-height:1.85}
+.communication-controls button{min-height:44px;font-size:13px}
+.communication-heading h2{margin-top:0}
+.communication-context,.communication-instruction,.communication-disclaimer{font-size:14px}
+.communication-legend{font-size:12px}
+.communication-explanation button{min-height:44px}
+.communication-flow-header>a{min-height:44px;font-size:14px}
+.communication-scroll:focus-visible{outline-offset:-4px}
+.communication-flow-list{scroll-padding:8px}
+.map-heading h2{margin-top:0}
+.branch-summary{font-size:14px}
+.technology-points{font-size:15px;line-height:1.85}
+.technology-points li{font-size:15px}
+.map-branch dd{font-size:14px}
+.technology-protocols thead th{font-size:12px}
+.learn-source-links>span{font-size:12px;letter-spacing:0}
+.technology-points strong{font-weight:600}
+.learn-source-links{font-size:13px;line-height:1.75}
+.learn-source-links a{overflow-wrap:anywhere;text-underline-offset:3px}
+.map-sources a{font-size:13px}
+.m365-flow-detail,.m365-topics,.vmware-section{scroll-margin-top:100px}
+.footer-links a{min-height:32px;display:inline-flex;align-items:center;font-size:13px}
+@media(max-width:1100px){
+  .mobile-guides-link{display:flex!important}
+  .header-inner{gap:20px}
+  .site-header nav{gap:15px;font-size:13px}
+  .catalogue-search{width:100%}
+  .article-layout{grid-template-columns:minmax(0,1fr) 240px;gap:30px}
+}
+@media(min-width:761px) and (max-width:950px){
+  .site-header{height:auto;min-height:76px}
+  .header-inner{flex-wrap:wrap;gap:4px;padding-block:12px}
+  .site-header nav{width:100%;height:44px;justify-content:space-between;gap:10px}
+  .site-header nav a{min-height:44px}
+  .site-header nav a.active:after{bottom:0}
+  html{scroll-padding-top:140px}
+  [id]{scroll-margin-top:140px}
+}
+@media(max-width:760px){
+  .support-hero{padding:40px 0}
+  .home-search-label{text-align:left;font-size:14px}
+  .featured-guides{grid-template-columns:1fr}
+  .category-card h3{font-size:24px}
+  .page-intro h1{padding-right:0}
+  .page-intro p{max-width:100%}
+  .section-navigation{gap:4px 20px;padding-block:10px}
+  .guide-list>h2{font-size:26px}
+  .article-layout{display:flex;flex-direction:column}
+  .article-aside{display:block;position:static;order:-1;width:100%;padding:20px;background:var(--surface-soft)}
+  .article-aside>a{padding-top:12px}
+  .reading-meta{flex-wrap:wrap}
+  .site-header nav{gap:0}
+  .communication-disclaimer{font-size:13px}
+  .communication-legend{font-size:12px}
+  .footer-bottom{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}

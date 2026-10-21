@@ -1,0 +1,310 @@
+{
+  "sources": [
+    "https://learn.microsoft.com/fr-fr/azure/architecture/icons/",
+    "https://learn.microsoft.com/fr-fr/entra/architecture/architecture-icons"
+  ],
+  "usage": "Architecture diagrams and educational documentation only. Product names accompany icons. SVG files are unmodified. Microsoft retains its rights.",
+  "icons": [
+    {
+      "key": "azure",
+      "file": "azure.svg",
+      "original": "Azure_Public_Service_Icons/Icons/other/10018-icon-service-Azure-A.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "dcc1d690bc18e7c7401fb545c51790b4974a69c9d997b27c4fbd9f1f26fe6815"
+    },
+    {
+      "key": "vm",
+      "file": "vm.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10021-icon-service-Virtual-Machine.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "092d18ffadec9ec0e5af129186dc7bc2a80544011e55f965604ed4b13873e0fc"
+    },
+    {
+      "key": "disk",
+      "file": "disk.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10032-icon-service-Disks.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7ab5cc684d995ff898448b32424a55bbb5c6669a83a0bb7c547047fec21f292f"
+    },
+    {
+      "key": "vmss",
+      "file": "vmss.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10034-icon-service-VM-Scale-Sets.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "a53772c07fe89cdbb876ce77e22dba0863c1459173b77a1eec73fbdd2048637f"
+    },
+    {
+      "key": "powershell",
+      "file": "powershell.svg",
+      "original": "Azure_Public_Service_Icons/Icons/general/10825-icon-service-Powershell.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "5d9b105bc43a0ffd536590756fbb3639a1d2d881d12350aab584ebb4b0ff7e9e"
+    },
+    {
+      "key": "avs",
+      "file": "avs.svg",
+      "original": "Azure_Public_Service_Icons/Icons/other/01219-icon-service-Azure-VMware-Solution.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "d1ed36fccc4644e5adee7173ad5db9ab29e366cd07a59d5acdd922d0c76ce6ad"
+    },
+    {
+      "key": "bastion",
+      "file": "bastion.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/02422-icon-service-Bastions.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7d3c33e355b9e180bb96491492ff856e379c27b3e7920526e2552c9b1593d3cb"
+    },
+    {
+      "key": "managed-identity",
+      "file": "managed-identity.svg",
+      "original": "Azure_Public_Service_Icons/Icons/identity/10227-icon-service-Entra-Managed-Identities.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "2100bf636095348d0b75220450b5d88672c720f49c79972e95916e41e91ae169"
+    },
+    {
+      "key": "mfa",
+      "file": "mfa.svg",
+      "original": "Azure_Public_Service_Icons/Icons/identity/03256-icon-service-Multi-Factor-Authentication.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "b7ee3e3b80f9b98788c35efe95a57fac6abc65ad7bdf3fc6d4d2d659639cb269"
+    },
+    {
+      "key": "rbac",
+      "file": "rbac.svg",
+      "original": "Azure_Public_Service_Icons/Icons/identity/10340-icon-service-Entra-Identity-Roles-and-Administrators.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "5e88e52170776cc04df1ad5ffe86f0c76db85c29535a09433654368590bccb3c"
+    },
+    {
+      "key": "vnet",
+      "file": "vnet.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10061-icon-service-Virtual-Networks.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "64a5e75ecef2f9f69067faa2eb131266cb8f2858706f8ab74bfea5ad0d98b14d"
+    },
+    {
+      "key": "dns",
+      "file": "dns.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10064-icon-service-DNS-Zones.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "e6aaa1380e974af7d0aba1bb8380ecfab3f95182a595a28692aa3f963bcf9fac"
+    },
+    {
+      "key": "gateway",
+      "file": "gateway.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10063-icon-service-Virtual-Network-Gateways.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "5ed14416dafff4e946fae5b68b9c86e8c9a9bbaa37ab94324a5d94c5cfbcb106"
+    },
+    {
+      "key": "private-endpoint",
+      "file": "private-endpoint.svg",
+      "original": "Azure_Public_Service_Icons/Icons/other/02579-icon-service-Private-Endpoints.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "96de0bb7f0aeb1220d0fd6d337578d5e93dca017d6ea7d42d887aa329b2fd90d"
+    },
+    {
+      "key": "storage",
+      "file": "storage.svg",
+      "original": "Azure_Public_Service_Icons/Icons/storage/10086-icon-service-Storage-Accounts.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7190d3bb14ce30ce74bd0af873915830fe821e8c5f6ef6f3149e6f7cfb2aa4f7"
+    },
+    {
+      "key": "files",
+      "file": "files.svg",
+      "original": "Azure_Public_Service_Icons/Icons/storage/10400-icon-service-Azure-Fileshares.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "663097915add9d66e5b4973cb259b4c6fe5e3de86734e1467852d2483bd91d0b"
+    },
+    {
+      "key": "blob",
+      "file": "blob.svg",
+      "original": "Azure_Public_Service_Icons/Icons/general/10839-icon-service-Storage-Container.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "cc50afdf3d9386f6872d314fd4f570645a594680c727bc709dfe8c4d6e5a6b2a"
+    },
+    {
+      "key": "keyvault",
+      "file": "keyvault.svg",
+      "original": "Azure_Public_Service_Icons/Icons/security/10245-icon-service-Key-Vaults.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "712b426f54f0fc50d0816dc79df709daa7ac5f93ccaf4e9b3527f627f6e9ad97"
+    },
+    {
+      "key": "nsg",
+      "file": "nsg.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10067-icon-service-Network-Security-Groups.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "cf4023ddaa11961904e1e4601864ccd20b9f60686cb38ad7f8ff8385d855c4de"
+    },
+    {
+      "key": "firewall",
+      "file": "firewall.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10084-icon-service-Firewalls.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "154c416cc15b95b7c6c1ab61a5ecb33f14845197b7d163bd9dc6f1968c14be1e"
+    },
+    {
+      "key": "defender",
+      "file": "defender.svg",
+      "original": "Azure_Public_Service_Icons/Icons/security/10241-icon-service-Microsoft-Defender-for-Cloud.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "23ab6fbba1cd0ac5ffdc6ee7084e7cac3029c402dc18b8896331626f135c9513"
+    },
+    {
+      "key": "appservice",
+      "file": "appservice.svg",
+      "original": "Azure_Public_Service_Icons/Icons/app services/10035-icon-service-App-Services.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "529d83fc80637a96b6d27f6cfac7536e1c5f9b1b67f58aef4e2e3d6f47fd4925"
+    },
+    {
+      "key": "functions",
+      "file": "functions.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10029-icon-service-Function-Apps.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "1a6c9c108d5f63f7b78bc6fbc464059acd2eaa8c1d111e9bcd28a8b2cdf470b9"
+    },
+    {
+      "key": "appgateway",
+      "file": "appgateway.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10076-icon-service-Application-Gateways.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "531e668e47cf61872b2811ec67dcc103cee2ecc1d272f07132d6196d68ba6c19"
+    },
+    {
+      "key": "frontdoor",
+      "file": "frontdoor.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10073-icon-service-Front-Door-and-CDN-Profiles.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "b2e9c9a8b091a0694532257354dea94bb8c65b33876826e44dbc9b2aae01cf17"
+    },
+    {
+      "key": "loadbalancer",
+      "file": "loadbalancer.svg",
+      "original": "Azure_Public_Service_Icons/Icons/networking/10062-icon-service-Load-Balancers.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "169edfa4edbc0cab6fdc1eef9243925588504a16f7729734e0e2161a9ca1d16c"
+    },
+    {
+      "key": "sql",
+      "file": "sql.svg",
+      "original": "Azure_Public_Service_Icons/Icons/databases/10130-icon-service-SQL-Database.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "a26124a2b188ccf910520c935c726f7364e0f5935d7a4319ebcab9c80a40e475"
+    },
+    {
+      "key": "postgres",
+      "file": "postgres.svg",
+      "original": "Azure_Public_Service_Icons/Icons/databases/10131-icon-service-Azure-Database-PostgreSQL-Server.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "8232e8ecfbd607ce3b54646199805a823646d71e552f9aa71e7a3952cde35620"
+    },
+    {
+      "key": "availability",
+      "file": "availability.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10025-icon-service-Availability-Sets.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "9c2a26c99984f3f25d87fca6924582e6b35e883ab372a53b446f1de3e7d39c23"
+    },
+    {
+      "key": "automation",
+      "file": "automation.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/00022-icon-service-Automation-Accounts.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "4ad2825c024842fa6ea8875cf4098a8574b33b329301163282a7c6df43d6d7b4"
+    },
+    {
+      "key": "backup",
+      "file": "backup.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/00017-icon-service-Recovery-Services-Vaults.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "f086695b1a1afd7e2988e3a858e68105a0f3ad5ef798d7ab37f4266c4f32a6b8"
+    },
+    {
+      "key": "monitor",
+      "file": "monitor.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/00001-icon-service-Monitor.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "1396f59a7d8fd7505a423842b987c9b343a092263d1ab5c7b0d94d58d8b17448"
+    },
+    {
+      "key": "logs",
+      "file": "logs.svg",
+      "original": "Azure_Public_Service_Icons/Icons/analytics/00009-icon-service-Log-Analytics-Workspaces.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7a244a8d7260e84be5c904185db7b04994fe6ed345e2b224163bc5f7e3d97ce0"
+    },
+    {
+      "key": "insights",
+      "file": "insights.svg",
+      "original": "Azure_Public_Service_Icons/Icons/devops/00012-icon-service-Application-Insights.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "36c73dea8b1598fbfff84890a2b409600f1339eec8c1bf1a896439e9da8f9dca"
+    },
+    {
+      "key": "alerts",
+      "file": "alerts.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/00002-icon-service-Alerts.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7aef6aec8edcee33270555d2ed7cbaa65737266beced0649de3f484623512bc9"
+    },
+    {
+      "key": "policy",
+      "file": "policy.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/10316-icon-service-Policy.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "c3dc70003e793bf73b497f8d8501cdc81f930ce1777fdbfe9b7450afe477771a"
+    },
+    {
+      "key": "resource-group",
+      "file": "resource-group.svg",
+      "original": "Azure_Public_Service_Icons/Icons/general/10007-icon-service-Resource-Groups.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "4d2b2eacb37735849d2e556074ac8564f92fada70672b40985c77ea666e82977"
+    },
+    {
+      "key": "cost",
+      "file": "cost.svg",
+      "original": "Azure_Public_Service_Icons/Icons/general/00004-icon-service-Cost-Management-and-Billing.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "b44611f260bf85610a7442ac64b427030e835aa5339cb51f423dff6d1f3028d7"
+    },
+    {
+      "key": "arc",
+      "file": "arc.svg",
+      "original": "Azure_Public_Service_Icons/Icons/management + governance/00756-icon-service-Azure-Arc.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "00f4a57d6e0391bec619a9298d114f783dbb7dd4165d44242202ca37d00d9bfa"
+    },
+    {
+      "key": "filesync",
+      "file": "filesync.svg",
+      "original": "Azure_Public_Service_Icons/Icons/storage/10093-icon-service-Storage-Sync-Services.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "520f26b73e53e4c1b0024c23b88f3a428a1c406abf7e09b4838e1d190536811e"
+    },
+    {
+      "key": "netapp",
+      "file": "netapp.svg",
+      "original": "Azure_Public_Service_Icons/Icons/storage/10096-icon-service-Azure-NetApp-Files.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7602c24ecbcefe06bc16605f9ae2ba37aa1bca534cc2f1752a5b2926a1695d0a"
+    },
+    {
+      "key": "containers",
+      "file": "containers.svg",
+      "original": "Azure_Public_Service_Icons/Icons/compute/10104-icon-service-Container-Instances.svg",
+      "pack": "Azure Public Service Icons V24",
+      "sha256": "7d8c8ebd6a298a2cbc892b1ec73e9c379bd97ea5715ac5923d816bc132db7d77"
+    },
+    {
+      "key": "entra",
+      "file": "entra.svg",
+      "original": "Microsoft Entra architecture icons - Oct 2023/Microsoft Entra color icons SVG/Microsoft Entra ID color icon.svg",
+      "pack": "Microsoft Entra architecture icons - Oct 2023",
+      "sha256": "efd9f54562bfb78bf3c77aecdd5fc31b61fce8a1cec78c4370b41fc470e54eda"
+    }
+  ]
+}

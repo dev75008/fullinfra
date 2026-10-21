@@ -1,0 +1,1397 @@
+{
+  "recordedAt": "2026-10-19T01:50:25.636464+00:00",
+  "method": "Agent Reach / Jina Reader ; discovery via Exa restricted to learn.microsoft.com/fr-fr/",
+  "scope": "Microsoft Learn FR only; no external technical references retained",
+  "sources": [
+    {
+      "id": "docs",
+      "url": "https://learn.microsoft.com/fr-fr/docs/",
+      "title": "Documentation technique",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:23.835153+00:00",
+      "bytes": 15014,
+      "sha256": "9d793f8c18342924089c10b50964eeaba485e228e65b1f7d9da34ec1cc1bf7ae",
+      "cacheFile": "docs.md"
+    },
+    {
+      "id": "ad",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview",
+      "title": "Vue d’ensemble des services de domaine Active Directory",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:32.875859+00:00",
+      "bytes": 5896,
+      "sha256": "59929a90789790049fad5a9fc2e70c806e9ec0c580187ae6da5dcc80ecd1ac08",
+      "cacheFile": "ad.md"
+    },
+    {
+      "id": "gpo",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview",
+      "title": "Vue d’ensemble de la stratégie de groupe pour Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:26.753514+00:00",
+      "bytes": 11582,
+      "sha256": "55e3669fbb09df25179d87732302a6ad5c058943f74ebefa1f23a410df5397e4",
+      "cacheFile": "gpo.md"
+    },
+    {
+      "id": "kerberos",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/security/kerberos/kerberos-authentication-overview",
+      "title": "Vue d’ensemble de l’authentification Kerberos dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:25.252518+00:00",
+      "bytes": 8069,
+      "sha256": "b358c54c0a41101ee1b78abb46a06441a2980e3a841a303cc24bd2d930e98ac1",
+      "cacheFile": "kerberos.md"
+    },
+    {
+      "id": "replication",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/get-started/replication/active-directory-replication-concepts",
+      "title": "Concepts de réplication Active Directory",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:27.845892+00:00",
+      "bytes": 19159,
+      "sha256": "07f6188c44e0bf7d6a431583b8bbc90b6184ab68307802f96d6c78f95e48c4e8",
+      "cacheFile": "replication.md"
+    },
+    {
+      "id": "ports",
+      "url": "https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements",
+      "title": "Vue d’ensemble des services et exigences relatives aux ports réseau - Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:32.091174+00:00",
+      "bytes": 100523,
+      "sha256": "3ff548760f31984cafc445eaa7f411b64225c560d581021755b0edb9e8fe858b",
+      "cacheFile": "ports.md"
+    },
+    {
+      "id": "dns",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/networking/dns/dns-overview",
+      "title": "Système de noms de domaine (DNS) dans Windows et Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:29.512544+00:00",
+      "bytes": 5896,
+      "sha256": "5876655d39d5ad204356b2fb32c8cfa2acbb39526937f6e488aec35b8dab9ffd",
+      "cacheFile": "dns.md"
+    },
+    {
+      "id": "dhcp",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/networking/technologies/dhcp/dhcp-top",
+      "title": "Qu’est-ce que le serveur DHCP dans Windows Server ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:34.514177+00:00",
+      "bytes": 6950,
+      "sha256": "9c76e8d4c4e6950e33c7c77e4465ac865c886a16fb119175d85756e782f94557",
+      "cacheFile": "dhcp.md"
+    },
+    {
+      "id": "nps",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/networking/technologies/nps/nps-top",
+      "title": "Vue d’ensemble du serveur de stratégie réseau (NPS)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:33.156568+00:00",
+      "bytes": 23440,
+      "sha256": "1cc5532a47071645b5aaea7b4a68248e47b994f76ebf973eab3d8e67018bab99",
+      "cacheFile": "nps.md"
+    },
+    {
+      "id": "vpn",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/remote/remote-access/vpn/vpn-top",
+      "title": "Réseau privé virtuel (VPN)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:34.492413+00:00",
+      "bytes": 5787,
+      "sha256": "d87278f9087da90bcb629158c0d7d90ef696f448e15575fb2127fd45c995d780",
+      "cacheFile": "vpn.md"
+    },
+    {
+      "id": "smb",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/file-server/file-server-smb-overview",
+      "title": "Qu’est-ce que le partage de fichiers SMB pour Windows et Windows Server ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:35.498377+00:00",
+      "bytes": 15752,
+      "sha256": "ee7c628724720177009c5861e9e0a6763ed12e12be82d84b904b82411fbf0ef7",
+      "cacheFile": "smb.md"
+    },
+    {
+      "id": "dfs",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/dfs-namespaces/dfs-overview",
+      "title": "Vue d’ensemble des espaces de noms DFS dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:35.507759+00:00",
+      "bytes": 8856,
+      "sha256": "218a318e24cd49682c09178990f2b53cbd07e420fc2ca22b405b5d1abc7809ab",
+      "cacheFile": "dfs.md"
+    },
+    {
+      "id": "dfsr",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/dfs-replication/dfsr-overview",
+      "title": "Réplication du Système de Fichiers Distribué (DFS)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:36.973848+00:00",
+      "bytes": 8405,
+      "sha256": "841e5a15e0f2537efe276a1a1c66cd35a2cc5b3159b9962592c68d05053019b4",
+      "cacheFile": "dfsr.md"
+    },
+    {
+      "id": "fsrm",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/fsrm/fsrm-overview",
+      "title": "Vue d’ensemble des outils de gestion de ressources pour serveur de fichiers (FSRM)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:37.203297+00:00",
+      "bytes": 8787,
+      "sha256": "6c9fa459930a7a6059fcaa2d4393a0e08dfb53fea8586c17a55ff8ad7fd9153b",
+      "cacheFile": "fsrm.md"
+    },
+    {
+      "id": "storage-spaces",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/storage-spaces/overview",
+      "title": "Vue d’ensemble des espaces de stockage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:38.054159+00:00",
+      "bytes": 10858,
+      "sha256": "9d34c84ae1df09ec1cd6e53ab9e177126f0beb2258788623c2981b687018caf9",
+      "cacheFile": "storage-spaces.md"
+    },
+    {
+      "id": "iscsi",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/iscsi/iscsi-target-server",
+      "title": "Aperçu du serveur cible iSCSI",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:37.825582+00:00",
+      "bytes": 20190,
+      "sha256": "f3eb10c5a4d13697083ac9ad7e4dc6d7374562250dc9805aeb2982a5ed473e58",
+      "cacheFile": "iscsi.md"
+    },
+    {
+      "id": "dedup",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/data-deduplication/overview",
+      "title": "Vue d’ensemble de la déduplication des données",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:39.265569+00:00",
+      "bytes": 8183,
+      "sha256": "9bbd5246577f13457d4f03da905b7cc708bb09a0a32046e7e46198367d9480db",
+      "cacheFile": "dedup.md"
+    },
+    {
+      "id": "ad-security",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory",
+      "title": "Meilleures pratiques pour la sécurisation d’Active Directory",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:39.519095+00:00",
+      "bytes": 18583,
+      "sha256": "5fad366a127befd4ebfc3a6f6444f277832e550a4d0f1b9008da6b19cd210848",
+      "cacheFile": "ad-security.md"
+    },
+    {
+      "id": "firewall",
+      "url": "https://learn.microsoft.com/fr-fr/windows/security/operating-system-security/network-security/windows-firewall/",
+      "title": "Vue d’ensemble du Pare-feu Windows",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:42.539547+00:00",
+      "bytes": 9738,
+      "sha256": "02544b2556ea6f781e44ee4702807376dfa296b5db5b0b8599efb1839b7c27d9",
+      "cacheFile": "firewall.md"
+    },
+    {
+      "id": "defender",
+      "url": "https://learn.microsoft.com/fr-fr/defender-endpoint/microsoft-defender-antivirus-windows-server-configure",
+      "title": "Configurer l’antivirus Microsoft Defender sur Windows Server - Microsoft Defender for Endpoint",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:19.602442+00:00",
+      "bytes": 13531,
+      "sha256": "47f1c784901affe8a104fe27ba6cf5a7a9a52d8d7e981d09cf2edfe40df123b4",
+      "cacheFile": "defender.md"
+    },
+    {
+      "id": "bitlocker",
+      "url": "https://learn.microsoft.com/fr-fr/windows/security/operating-system-security/data-protection/bitlocker/",
+      "title": "Vue d’ensemble de BitLocker",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:44.848704+00:00",
+      "bytes": 17088,
+      "sha256": "5244fb505892be11b44be62dbffaa5b2664814a41cb05be9391f1d4097048cb2",
+      "cacheFile": "bitlocker.md"
+    },
+    {
+      "id": "adcs",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-cs/active-directory-certificate-services-overview",
+      "title": "Que sont les Services de certificats Active Directory dans Windows Server ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:42.310492+00:00",
+      "bytes": 6542,
+      "sha256": "5d0b1db381adcff6c04358a7f198b55529324a49114553cf7197b5af1aa00b0a",
+      "cacheFile": "adcs.md"
+    },
+    {
+      "id": "audit",
+      "url": "https://learn.microsoft.com/fr-fr/windows/security/threat-protection/auditing/advanced-security-auditing-faq",
+      "title": "Advanced security auditing FAQ - Windows 10",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:45.042309+00:00",
+      "bytes": 15571,
+      "sha256": "6b47c5d928e9d3fded4faaa40d0483a0bd68dcd249fb840f70c26b622f8ff2b4",
+      "cacheFile": "audit.md"
+    },
+    {
+      "id": "wef",
+      "url": "https://learn.microsoft.com/fr-fr/windows/security/operating-system-security/device-management/use-windows-event-forwarding-to-assist-in-intrusion-detection",
+      "title": "Utiliser Windows Event Forwarding pour optimiser la détection d’intrusion",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:45.936126+00:00",
+      "bytes": 53399,
+      "sha256": "eecf6b67a3d6a79cb307229fb8e6e16e635657ba0e278ef423a54edf58709de8",
+      "cacheFile": "wef.md"
+    },
+    {
+      "id": "winrm",
+      "url": "https://learn.microsoft.com/fr-fr/windows/win32/winrm/installation-and-configuration-for-windows-remote-management",
+      "title": "Installation et configuration de la gestion à distance de Windows - Win32 apps",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:48.196406+00:00",
+      "bytes": 24643,
+      "sha256": "adbe836ad6fb3cb5e680c74c5f212892f939ba9198d66e6b6addea77289c0924",
+      "cacheFile": "winrm.md"
+    },
+    {
+      "id": "hyperv",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/overview",
+      "title": "virtualisation Hyper-V dans Windows Server et Windows",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:49.395448+00:00",
+      "bytes": 21155,
+      "sha256": "55722c7bd8e224d895619499efea7a565b007640cc608ce8289666104a777cf5",
+      "cacheFile": "hyperv.md"
+    },
+    {
+      "id": "hv-requirements",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/host-hardware-requirements",
+      "title": "Configuration système requise pour Hyper-V sur Windows et Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:52.871333+00:00",
+      "bytes": 8211,
+      "sha256": "eacbbc96dc30faae474cb83b4882dda99eaf00b351111779e93ea2cc30c3f449",
+      "cacheFile": "hv-requirements.md"
+    },
+    {
+      "id": "hv-network",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/virtual-switch",
+      "title": "Hyper-V commutateur virtuel",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:52.344167+00:00",
+      "bytes": 8236,
+      "sha256": "e28fe7200aa4d28b9b35fcc5e46eb775c9da88b11282068efad21c142c012e4c",
+      "cacheFile": "hv-network.md"
+    },
+    {
+      "id": "hv-migrate",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/deploy/set-up-hosts-for-live-migration-without-failover-clustering",
+      "title": "Configurer des hôtes une migration dynamique sans clustering de basculement",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:44.418939+00:00",
+      "bytes": 13034,
+      "sha256": "6481eb691b8428120f65492d75442a8d077e9c9f1c3aa890ca3b4b220afef211",
+      "cacheFile": "hv-migrate.md"
+    },
+    {
+      "id": "hv-move",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/manage/use-live-migration-without-failover-clustering-to-move-a-virtual-machine",
+      "title": "Utiliser la migration dynamique sans clustering de basculement pour déplacer une machine virtuelle",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:53.941283+00:00",
+      "bytes": 5686,
+      "sha256": "400ced40b24ec018439545251808bb18ba3f9a80467b8acc9697cf44bb6b67d5",
+      "cacheFile": "hv-move.md"
+    },
+    {
+      "id": "hv-checkpoints",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/checkpoints",
+      "title": "Utilisation de points de contrôle",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:57.014724+00:00",
+      "bytes": 14833,
+      "sha256": "dd824b6622e990c6355b501120f73405d88b58c0805819a3fc2731890e385d31",
+      "cacheFile": "hv-checkpoints.md"
+    },
+    {
+      "id": "hv-replica",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/replication-overview",
+      "title": "Vue d’ensemble du réplica Hyper-V",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:50.587723+00:00",
+      "bytes": 18436,
+      "sha256": "b25360dfdc7fc3785868e15f043427dcb45da365999b6d663795c431e371b49a",
+      "cacheFile": "hv-replica.md"
+    },
+    {
+      "id": "hv-replica-config",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/configure-replication-single-host",
+      "title": "Activer Hyper-V réplica sur un seul hôte",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:35:59.998043+00:00",
+      "bytes": 11210,
+      "sha256": "d0450e6628340c044f2c990638dbf0fced3cb39124925711430599290691a2ec",
+      "cacheFile": "hv-replica-config.md"
+    },
+    {
+      "id": "hv-backup",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/backup-approaches",
+      "title": "approches de sauvegarde Hyper-V",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:56.223259+00:00",
+      "bytes": 4931,
+      "sha256": "cdfeecf96e6db74fe6046853bc00def110135cea1ff9fdc9c1ab74b34aac15df",
+      "cacheFile": "hv-backup.md"
+    },
+    {
+      "id": "hv-integration",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/manage/manage-hyper-v-integration-services",
+      "title": "Gérer les services d’intégration Hyper-V",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:02.283071+00:00",
+      "bytes": 12145,
+      "sha256": "8021cb2130f038136e6096b7e0e7341bea016b82a92d8708b2605e7c09fdc551",
+      "cacheFile": "hv-integration.md"
+    },
+    {
+      "id": "hv-smb",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/storage-architecture",
+      "title": "architectures de stockage Hyper-V dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:25.337819+00:00",
+      "bytes": 11122,
+      "sha256": "74d97bf85e21b71fbf5b07b25e70c6ba39e76a1738dfdd6e6a5055f6ce89f0fe",
+      "cacheFile": "hv-smb.md"
+    },
+    {
+      "id": "hv-memory",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/dynamic-memory",
+      "title": "Mémoire dynamique pour les machines virtuelles Hyper-V",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:00.873768+00:00",
+      "bytes": 12106,
+      "sha256": "4e600a0f25be0503533ba70cdadc2351a129b02b69a92dfc1d9b0831692cc462",
+      "cacheFile": "hv-memory.md"
+    },
+    {
+      "id": "hv-nested",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/enable-nested-virtualization",
+      "title": "Exécuter Hyper-V dans une machine virtuelle avec la virtualisation imbriquée",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:15.818572+00:00",
+      "bytes": 4969,
+      "sha256": "d132e18569963add89791cf3c7a81f23ee0c47f419904809eacad4ed1f376b61",
+      "cacheFile": "hv-nested.md"
+    },
+    {
+      "id": "iis",
+      "url": "https://learn.microsoft.com/fr-fr/iis/get-started/introduction-to-iis/introduction-to-iis-architecture",
+      "title": "Présentation des architectures IIS",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:03.144261+00:00",
+      "bytes": 29862,
+      "sha256": "7e7dba9103fe48a3d6b112bb3656941e94d1b4338cac91afb1cf8a91f8e38e2f",
+      "cacheFile": "iis.md"
+    },
+    {
+      "id": "aspnet",
+      "url": "https://learn.microsoft.com/fr-fr/aspnet/core/host-and-deploy/iis/?view=aspnetcore-10.0",
+      "title": "Héberger ASP.NET Core sur Windows avec IIS",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:10.327032+00:00",
+      "bytes": 123467,
+      "sha256": "09282e17935bc37cc3b2b5fd1bca5577e2b4cd1b97fd2ad83dc39471b2d9c3c9",
+      "cacheFile": "aspnet.md"
+    },
+    {
+      "id": "wsus",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/administration/windows-server-update-services/get-started/windows-server-update-services-wsus",
+      "title": "Vue d’ensemble de Windows Server Update Services (WSUS)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:22.552430+00:00",
+      "bytes": 5598,
+      "sha256": "572a6f53f04df3bc34dca4ff3e4f7781b4e4adae80f9ba9ded5f6da5d8d5ec93",
+      "cacheFile": "wsus.md"
+    },
+    {
+      "id": "wsus-config",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus",
+      "title": "Étape 2 : configurer WSUS",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:28.770953+00:00",
+      "bytes": 39554,
+      "sha256": "cab51eec666bac4f2f40c9c8d49f0d1bd0c5065f9b104ecd48da79f3c8c9f107",
+      "cacheFile": "wsus-config.md"
+    },
+    {
+      "id": "cluster",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/failover-clustering/failover-clustering-overview",
+      "title": "Clustering de basculement",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:34.897529+00:00",
+      "bytes": 15134,
+      "sha256": "48471150cb243759a59633faa45817700d2ab1899d790bc75748f53473209f94",
+      "cacheFile": "cluster.md"
+    },
+    {
+      "id": "quorum",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/failover-clustering/manage-cluster-quorum",
+      "title": "Déployer un témoin de quorum pour un cluster de basculement dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:45.436599+00:00",
+      "bytes": 19832,
+      "sha256": "c051038db394c28e89e8f7074d2821ab4f25f3b5bf8d76fc0934df0aed2b6955",
+      "cacheFile": "quorum.md"
+    },
+    {
+      "id": "cluster-ports",
+      "url": "https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/high-availability/troubleshoot-cluster-service-fails-to-start",
+      "title": "Guide de dépannage en cas d’échec du démarrage du service de cluster - Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:09.771644+00:00",
+      "bytes": 8687,
+      "sha256": "d6d77b4b6220629e4400310eead91f762fb159e2bb0edbc7e6f70e2a6fc0a123",
+      "cacheFile": "cluster-ports.md"
+    },
+    {
+      "id": "ps",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/scripting/overview?view=powershell-7.5",
+      "title": "Qu’est-ce que PowerShell ? - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:15.537887+00:00",
+      "bytes": 25781,
+      "sha256": "c7bbee3e35739ac8a367d001b82569e498870e6c3fe87852e5b42518d6f5605a",
+      "cacheFile": "ps.md"
+    },
+    {
+      "id": "ps-remoting",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/scripting/security/remoting/winrm-security?view=powershell-7.5",
+      "title": "Considérations relatives à la sécurité pour la communication à distance PowerShell à l’aide de WinRM - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:37:53.733312+00:00",
+      "bytes": 9928,
+      "sha256": "a14d9ee2c5b00b0b38c5d171fee399c7dcefd4dfb92d2fd46fddc73bf9f5a97d",
+      "cacheFile": "ps-remoting.md"
+    },
+    {
+      "id": "ps-ssh",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/scripting/security/remoting/ssh-remoting-in-powershell?view=powershell-7.5",
+      "title": "Communication à distance PowerShell via SSH - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:14.532508+00:00",
+      "bytes": 16288,
+      "sha256": "e51be3cb87d2c257b6ce2e15034fb97d22fb7eac1dbfc8cf221b99b8bec2d725",
+      "cacheFile": "ps-ssh.md"
+    },
+    {
+      "id": "ps-ad",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/activedirectory/?view=windowsserver2025-ps",
+      "title": "ActiveDirectory Module",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:00.532455+00:00",
+      "bytes": 33201,
+      "sha256": "ae9dbf3f796a036ef01fca0b1fb91ec2ba9071f444541149dd0777f3af6be92e",
+      "cacheFile": "ps-ad.md"
+    },
+    {
+      "id": "ps-cim",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/cimcmdlets/get-ciminstance?view=powershell-7.5",
+      "title": "Get-CimInstance (CimCmdlets) - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:06.407239+00:00",
+      "bytes": 29601,
+      "sha256": "2cb72ff8d5c8877b6f1ab6e7abfb9df2c3dad4f3dea25cd00e3c5944aef65053",
+      "cacheFile": "ps-cim.md"
+    },
+    {
+      "id": "ps-errors",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.core/about/about_try_catch_finally?view=powershell-7.5",
+      "title": "about_Try_Catch_Finally - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:14.177936+00:00",
+      "bytes": 11978,
+      "sha256": "81a89f85b1b42152fa6659e61c2408e216b46a5518c824ddb18c1ba3e0cc9636",
+      "cacheFile": "ps-errors.md"
+    },
+    {
+      "id": "rds",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/remote/remote-desktop-services/remote-desktop-services-overview",
+      "title": "Vue d’ensemble des services Bureau à distance dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:22.013423+00:00",
+      "bytes": 11662,
+      "sha256": "8a99a3df99aa0e525c8581add678855219d368ef95819421f49cb70ffc6704ad",
+      "cacheFile": "rds.md"
+    },
+    {
+      "id": "rds-ports",
+      "url": "https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/remote/ports-used-by-rds",
+      "title": "Ports utilisés par les services Bureau à distance - Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:17.852883+00:00",
+      "bytes": 31591,
+      "sha256": "479ff851e2569004079bf4e137074fc8d23b8d37905cb36ccbddafb2c0dfc8f9",
+      "cacheFile": "rds-ports.md"
+    },
+    {
+      "id": "arc",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-arc/servers/overview",
+      "title": "Vue d’ensemble des serveurs avec Azure Arc - Azure Arc",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:31.902734+00:00",
+      "bytes": 11624,
+      "sha256": "057722b1a6e2579e4ec307f449fc2da34baea0b486b52726c86d930fe2402775",
+      "cacheFile": "arc.md"
+    },
+    {
+      "id": "arc-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-arc/servers/network-requirements",
+      "title": "Configuration réseau requise pour l’agent de machine connectée - Azure Arc",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:21.405673+00:00",
+      "bytes": 21172,
+      "sha256": "2c31ebe07a7eec87f4666b9dc9ca3e70cee4912d9570034a7aaaaddddabf8dcf",
+      "cacheFile": "arc-network.md"
+    },
+    {
+      "id": "filesync",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/file-sync/file-sync-introduction",
+      "title": "Qu’est-ce que Azure File Sync ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:41.968317+00:00",
+      "bytes": 26085,
+      "sha256": "9ec8ac5aefd112787e60802a424a28bb7000c011aa6bdd1e538d21d458db6237",
+      "cacheFile": "filesync.md"
+    },
+    {
+      "id": "filesync-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/file-sync/file-sync-firewall-and-proxy",
+      "title": "Paramètres du pare-feu et du proxy pour Azure File Sync local",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:50.887250+00:00",
+      "bytes": 28248,
+      "sha256": "aea0cf06c2507aab3004e40d35bfd8edf6713773d2c5f8f37a0a1733da8bf1d1",
+      "cacheFile": "filesync-network.md"
+    },
+    {
+      "id": "avs",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/introduction",
+      "title": "Introduction - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:38:58.108500+00:00",
+      "bytes": 33408,
+      "sha256": "690a8155b841bc8bce82666480fd63a62ecbe0ed78738e4385a11e7873cf2853",
+      "cacheFile": "avs.md"
+    },
+    {
+      "id": "avs-architecture",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/architecture-private-clouds",
+      "title": "Architecture pour les clouds privés et les clusters - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:24.871330+00:00",
+      "bytes": 30138,
+      "sha256": "104401e2fa34d14a0cb8f1e5bcc335da5033733cc9ed4ce67f8b0e9ee448a3e9",
+      "cacheFile": "avs-architecture.md"
+    },
+    {
+      "id": "avs-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/tutorial-network-checklist",
+      "title": "Tutoriel - Liste de vérification pour la planification réseau - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:04.349828+00:00",
+      "bytes": 13735,
+      "sha256": "6869860011777448aff8ab85b86b6670da615e605afe116722df4c85610e824f",
+      "cacheFile": "avs-network.md"
+    },
+    {
+      "id": "avs-hcx",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/configure-vmware-hcx",
+      "title": "Configurer VMware HCX dans Azure VMware Solution - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:10.809877+00:00",
+      "bytes": 21037,
+      "sha256": "c33dec1f6f1db4fc4ebdb24382e103ce008eccc17dd21ca6a29cde4452a33de9",
+      "cacheFile": "avs-hcx.md"
+    },
+    {
+      "id": "avs-snapshots",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/ecosystem-disaster-recovery-vms",
+      "title": "Solutions de récupération d’urgence pour machines virtuelles Azure VMware Solution - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:31.966935+00:00",
+      "bytes": 7634,
+      "sha256": "ffbd713e45f90d6adaf97113229d4648d5426bdef3bf207fb09fd5fc841d7bfe",
+      "cacheFile": "avs-snapshots.md"
+    },
+    {
+      "id": "containers",
+      "url": "https://learn.microsoft.com/fr-fr/virtualization/windowscontainers/about/",
+      "title": "À propos des conteneurs Windows",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:17.367669+00:00",
+      "bytes": 14569,
+      "sha256": "fa6e7fe8d91113c10da2cd836e1d17526bc7f210b0c7125886b9ecb99ba1c987",
+      "cacheFile": "containers.md"
+    },
+    {
+      "id": "vm",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-machines/overview",
+      "title": "Vue d’ensemble des machines virtuelles dans Azure - Azure Virtual Machines",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:31.157999+00:00",
+      "bytes": 26282,
+      "sha256": "e276114f9dc3c69124c207cdfc86f55fb35a586bbf9c4b71c0f09ff3eb7a0389",
+      "cacheFile": "vm.md"
+    },
+    {
+      "id": "vm-states",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-machines/states-billing",
+      "title": "États et statut de facturation - Azure Virtual Machines",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:23.486065+00:00",
+      "bytes": 9127,
+      "sha256": "281d58fc5d0e553924057fa4394d7b52b4eb15ee3993ee63bb29cd7b2555b2c0",
+      "cacheFile": "vm-states.md"
+    },
+    {
+      "id": "vm-create",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-machines/windows/quick-create-portal",
+      "title": "Démarrage rapide : Créer une machine virtuelle Windows dans le portail Azure - Azure Virtual Machines",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:29.926372+00:00",
+      "bytes": 7867,
+      "sha256": "b64d4b1f889e907b28245e49e87d6f72d5179202d202567674aa933bc3ca6293",
+      "cacheFile": "vm-create.md"
+    },
+    {
+      "id": "vmss",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-machine-scale-sets/overview",
+      "title": "Vue d’ensemble des ensembles de machines virtuelles Azure - Azure Virtual Machine Scale Sets",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:40.146550+00:00",
+      "bytes": 7814,
+      "sha256": "6423e1a966751ee4891b25653145c6f5566c29da2d895ef0aad4846f0040634e",
+      "cacheFile": "vmss.md"
+    },
+    {
+      "id": "disks",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-machines/managed-disks-overview",
+      "title": "Vue d’ensemble du Stockage sur disque Azure - Azure Virtual Machines",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:33.330998+00:00",
+      "bytes": 19827,
+      "sha256": "5eb71a70a99e231dca7d1c4ea340b8baf11e31ae4922780b98d1ca4e60433089",
+      "cacheFile": "disks.md"
+    },
+    {
+      "id": "vnet",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-network/virtual-networks-overview",
+      "title": "Présentation du réseau virtuel Azure",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:47.147329+00:00",
+      "bytes": 12329,
+      "sha256": "0dd16df48d869537dbe00f30cc035c06e0f1b5e166af1bba4e22c8705473b8ab",
+      "cacheFile": "vnet.md"
+    },
+    {
+      "id": "nsg",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-network/network-security-groups-overview",
+      "title": "Vue d’ensemble des groupes de sécurité réseau Azure",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:39:55.065558+00:00",
+      "bytes": 24421,
+      "sha256": "c4369b525aeabe07bc94c1f56c63a39b0c0af0bf63f67bb5aaf64469e11d0d75",
+      "cacheFile": "nsg.md"
+    },
+    {
+      "id": "az-dns",
+      "url": "https://learn.microsoft.com/fr-fr/azure/dns/dns-overview",
+      "title": "Vue d’ensemble d’Azure DNS : Hébergement et résolution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:02.990105+00:00",
+      "bytes": 6808,
+      "sha256": "4f320f26077351bfb68318f5b00633d161dc4e124f0d01a80eb40b6ca8a26637",
+      "cacheFile": "az-dns.md"
+    },
+    {
+      "id": "private-dns",
+      "url": "https://learn.microsoft.com/fr-fr/azure/dns/private-dns-overview",
+      "title": "DNS privé Azure : DNS sécurisé pour les réseaux virtuels",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:36:36.843255+00:00",
+      "bytes": 9324,
+      "sha256": "ad4ca0bdb7cdd555661327c49ae48a7a45d87b67ba00dda2b89ea5ab121a70a1",
+      "cacheFile": "private-dns.md"
+    },
+    {
+      "id": "private-endpoint",
+      "url": "https://learn.microsoft.com/fr-fr/azure/private-link/private-endpoint-overview",
+      "title": "Qu’est-ce qu’un point de terminaison privé ? - Azure Private Link",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:06.866967+00:00",
+      "bytes": 23959,
+      "sha256": "3b8e691abad15844563932141eef05a7a0933ce846c4cb957da6ea4a68af0a2e",
+      "cacheFile": "private-endpoint.md"
+    },
+    {
+      "id": "az-vpn",
+      "url": "https://learn.microsoft.com/fr-fr/azure/vpn-gateway/vpn-gateway-about-vpngateways",
+      "title": "À propos de Passerelle VPN Azure",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:15.261652+00:00",
+      "bytes": 16073,
+      "sha256": "cc58d7797a6e7c9781845f998b4e339e9f5e4f72f7e24eb1e8862ed72a59bca4",
+      "cacheFile": "az-vpn.md"
+    },
+    {
+      "id": "expressroute",
+      "url": "https://learn.microsoft.com/fr-fr/azure/expressroute/expressroute-introduction",
+      "title": "vue d’ensemble de Azure ExpressRoute : Se connecter via une connexion privée",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:22.151374+00:00",
+      "bytes": 15553,
+      "sha256": "c1b0324b21a06fa2d734b5da24aba5da9cd2329ecf6c7fe99ebc1743716ca38c",
+      "cacheFile": "expressroute.md"
+    },
+    {
+      "id": "bastion",
+      "url": "https://learn.microsoft.com/fr-fr/azure/bastion/bastion-overview",
+      "title": "Qu’est-ce que Azure Bastion ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:30.052525+00:00",
+      "bytes": 8304,
+      "sha256": "839946b4a035d0b8f6f50f0632809f13dbfb82edc1f2e05aa73d6e2d8fec1a6a",
+      "cacheFile": "bastion.md"
+    },
+    {
+      "id": "bastion-ports",
+      "url": "https://learn.microsoft.com/fr-fr/azure/bastion/bastion-nsg",
+      "title": "Configurer des règles de groupe de sécurité réseau pour Azure Bastion",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:37.978459+00:00",
+      "bytes": 9314,
+      "sha256": "f1d281bc402e7498daa711df41053c99858741cef915748f2808809c2064bdc2",
+      "cacheFile": "bastion-ports.md"
+    },
+    {
+      "id": "blob",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/blobs/storage-blobs-overview",
+      "title": "À propos du Stockage (d’objets) Blob - Azure Storage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:43.802604+00:00",
+      "bytes": 24697,
+      "sha256": "2e7dfbcea51634b27b35b697572b211801c6f4dfe629196efac99fb816a8a00f",
+      "cacheFile": "blob.md"
+    },
+    {
+      "id": "files",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/files/storage-files-introduction",
+      "title": "Qu’est-ce qu’Azure Files ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:50.371509+00:00",
+      "bytes": 26952,
+      "sha256": "5f7e6bfd248b3a4f912d6a3702b522810f7a4ea16477fd2d886d8f5b20fbafd1",
+      "cacheFile": "files.md"
+    },
+    {
+      "id": "files-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/files/storage-files-networking-overview",
+      "title": "Considérations relatives à la mise en réseau pour Azure Files",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:40:59.249250+00:00",
+      "bytes": 20603,
+      "sha256": "d4a9d4660b266d6f0b53d157edf0ef23ad1acd2b4f2de608e5fb7be78e4bf9a6",
+      "cacheFile": "files-network.md"
+    },
+    {
+      "id": "storage-sas",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/common/storage-sas-overview",
+      "title": "Accorder un accès limité aux données avec des signatures d'accès partagé (SAP) - Azure Storage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:05.458961+00:00",
+      "bytes": 25338,
+      "sha256": "c3e1393ca59b8daf0952e098be14d8d816a47c5986c3e3487e7b1b38e9d710c1",
+      "cacheFile": "storage-sas.md"
+    },
+    {
+      "id": "blob-version",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/blobs/versioning-overview",
+      "title": "Contrôle de version des objets blob dans stockage Azure - Azure Storage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:11.943604+00:00",
+      "bytes": 39703,
+      "sha256": "e5f5306abb46362e99b6e45cf1f64169cdddd9d7f470c1461828e5b97a31b616",
+      "cacheFile": "blob-version.md"
+    },
+    {
+      "id": "storage-auth",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/blobs/authorize-access-azure-active-directory",
+      "title": "Autoriser l’accès aux objets blob avec Microsoft Entra ID - Azure Storage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:21.985220+00:00",
+      "bytes": 32556,
+      "sha256": "88be49b7a008e6f4e1a3eda4c42a001a675e8aa66162533c17d5182c2b312c46",
+      "cacheFile": "storage-auth.md"
+    },
+    {
+      "id": "entra",
+      "url": "https://learn.microsoft.com/fr-fr/entra/fundamentals/whatis",
+      "title": "Qu’est-ce que Microsoft Entra ? - Microsoft Entra",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:27.886663+00:00",
+      "bytes": 12604,
+      "sha256": "5ae331043c2a09439308343308dc15ea8c9b8e42fdbe64f97b8659bb11b49cc4",
+      "cacheFile": "entra.md"
+    },
+    {
+      "id": "rbac",
+      "url": "https://learn.microsoft.com/fr-fr/azure/role-based-access-control/overview",
+      "title": "Qu’est-ce que le contrôle d’accès en fonction du rôle Azure (RBAC Azure) ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:38.444636+00:00",
+      "bytes": 13086,
+      "sha256": "2ed407363b8489918943b56e947ab832c75d330243e31af503f4daf398c94e72",
+      "cacheFile": "rbac.md"
+    },
+    {
+      "id": "managed-identity",
+      "url": "https://learn.microsoft.com/fr-fr/entra/identity/managed-identities-azure-resources/overview",
+      "title": "Identités managées pour les ressources Azure - Managed identities for Azure resources",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:48.447431+00:00",
+      "bytes": 12170,
+      "sha256": "3948bb6a58108a01f500334c0497241e88326b1dbd7508099194274850e9f714",
+      "cacheFile": "managed-identity.md"
+    },
+    {
+      "id": "conditional-access",
+      "url": "https://learn.microsoft.com/fr-fr/entra/identity/conditional-access/overview",
+      "title": "Accès conditionnel Microsoft Entra : moteur de stratégie Confiance nulle - Microsoft Entra ID",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:41:55.219626+00:00",
+      "bytes": 12336,
+      "sha256": "a54ee677b0bf8a9f566c197c86213bcbe9f468a3836010a6a14c44d512e30586",
+      "cacheFile": "conditional-access.md"
+    },
+    {
+      "id": "auth",
+      "url": "https://learn.microsoft.com/fr-fr/entra/identity-platform/v2-protocols-oidc",
+      "title": "OpenID Connect (OIDC) sur la plateforme d’identité Microsoft - Microsoft identity platform",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:04.100754+00:00",
+      "bytes": 39381,
+      "sha256": "b3e2bb8c50a3dfdd60fabb44d4cd5e96fcc9f7063234f011b6d6d5daf3ff337b",
+      "cacheFile": "auth.md"
+    },
+    {
+      "id": "keyvault",
+      "url": "https://learn.microsoft.com/fr-fr/azure/key-vault/general/overview",
+      "title": "Vue d’ensemble d’Azure Key Vault - Azure Key Vault",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:12.468637+00:00",
+      "bytes": 9159,
+      "sha256": "cf98a09db54b0406336bd800abea188611d2449a10904ffe4a6deac8b27725ec",
+      "cacheFile": "keyvault.md"
+    },
+    {
+      "id": "keyvault-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/key-vault/general/access-behind-firewall",
+      "title": "Accéder au Coffre de Clés derrière un pare-feu - Azure Key Vault",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:20.438162+00:00",
+      "bytes": 7726,
+      "sha256": "d003e5b661d17dee88315d4d4f2c63acb9aa7915109c3c8347aa0630f11fa2af",
+      "cacheFile": "keyvault-network.md"
+    },
+    {
+      "id": "az-firewall",
+      "url": "https://learn.microsoft.com/fr-fr/azure/firewall/overview",
+      "title": "Qu’est-ce qu’un pare-feu Azure ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:26.081895+00:00",
+      "bytes": 7068,
+      "sha256": "7633c0ddb3a1acb2dc3465391880c213ab71da147218bbbfa9be8badc3326b26",
+      "cacheFile": "az-firewall.md"
+    },
+    {
+      "id": "defender-cloud",
+      "url": "https://learn.microsoft.com/fr-fr/azure/defender-for-cloud/defender-for-cloud-introduction",
+      "title": "Vue d’ensemble de Microsoft Defender for Cloud - Microsoft Defender for Cloud",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:38.038581+00:00",
+      "bytes": 29143,
+      "sha256": "0d4eda2486032894f3f9d5e220cc9848a8aa038882034491372dc0a1e3cfd15b",
+      "cacheFile": "defender-cloud.md"
+    },
+    {
+      "id": "appservice",
+      "url": "https://learn.microsoft.com/fr-fr/azure/app-service/overview",
+      "title": "Vue d’ensemble d’Azure App Service - Azure App Service",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:41.044604+00:00",
+      "bytes": 8889,
+      "sha256": "3b1c354a93f66f481148e9f78f04429daa0d1a8568599aefbabfd855a89e9b01",
+      "cacheFile": "appservice.md"
+    },
+    {
+      "id": "functions",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-functions/functions-overview",
+      "title": "Vue d’ensemble de Azure Functions",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:46.903464+00:00",
+      "bytes": 6874,
+      "sha256": "5c2ff36d00414e0515a58a1f011f7f3506c3a8b3a1045cc88b11ea69b3fa15d5",
+      "cacheFile": "functions.md"
+    },
+    {
+      "id": "appgateway",
+      "url": "https://learn.microsoft.com/fr-fr/azure/application-gateway/overview",
+      "title": "Qu’est-ce qu’Azure Application Gateway",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:52.939584+00:00",
+      "bytes": 9162,
+      "sha256": "b7425896c4e9f44a2669af31e480115c04d537a4e6ec9e63ff71ba4578f3997f",
+      "cacheFile": "appgateway.md"
+    },
+    {
+      "id": "frontdoor",
+      "url": "https://learn.microsoft.com/fr-fr/azure/frontdoor/front-door-overview",
+      "title": "Vue d’ensemble d’Azure Front Door",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:42:59.075846+00:00",
+      "bytes": 9384,
+      "sha256": "8ffa46fbd4fd2f9454a98f412143e444b70bb443e05af90b1408990c633c6d5b",
+      "cacheFile": "frontdoor.md"
+    },
+    {
+      "id": "loadbalancer",
+      "url": "https://learn.microsoft.com/fr-fr/azure/load-balancer/load-balancer-overview",
+      "title": "Qu’est-ce qu’Azure Load Balancer ? - Azure Load Balancer",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:04.971343+00:00",
+      "bytes": 11885,
+      "sha256": "cbb68a224d077c1533fd0a0563f2479c6758d5e21c04649e9c605c0cf9383496",
+      "cacheFile": "loadbalancer.md"
+    },
+    {
+      "id": "sql",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-sql/database/sql-database-paas-overview",
+      "title": "Qu’est-ce que le service Azure SQL Database ? - Azure SQL Database",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:12.219985+00:00",
+      "bytes": 46934,
+      "sha256": "355c2d9e7b4aaa6939ab4a45c035c876cbacb38048ec8d292f038826791b7606",
+      "cacheFile": "sql.md"
+    },
+    {
+      "id": "sql-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-sql/database/connectivity-architecture",
+      "title": "Architecture de connectivité - Azure SQL Database and SQL database in Fabric",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:22.357713+00:00",
+      "bytes": 41428,
+      "sha256": "843fdec23f94c998423f78adf24bfd23ba424d60634cfa614b8464332dbfc705",
+      "cacheFile": "sql-network.md"
+    },
+    {
+      "id": "sql-private",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-sql/database/private-endpoint-overview",
+      "title": "Azure Private Link - Azure SQL Database",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:35.804631+00:00",
+      "bytes": 23177,
+      "sha256": "7ccdeddfc676f3f1771d662083dd87cdd95f5e41215bb2b60a696b9cd6af9a6f",
+      "cacheFile": "sql-private.md"
+    },
+    {
+      "id": "postgres",
+      "url": "https://learn.microsoft.com/fr-fr/azure/postgresql/flexible-server/overview",
+      "title": "Qu’est-ce qu’un serveur flexible Azure Database pour PostgreSQL ? - Azure Database for PostgreSQL",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:41.847304+00:00",
+      "bytes": 19308,
+      "sha256": "555801e7d613e017556b043ad2f9b0460092327b50fbee2c4b86a35520fad1eb",
+      "cacheFile": "postgres.md"
+    },
+    {
+      "id": "postgres-tls",
+      "url": "https://learn.microsoft.com/fr-fr/azure/postgresql/flexible-server/security-connect-tls",
+      "title": "Configurer une connexion TLS sur Azure Database pour PostgreSQL - Serveur flexible - Azure Database for PostgreSQL",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:51.683125+00:00",
+      "bytes": 16833,
+      "sha256": "393dd1d5afe6c98fe3e008db33e432b2fac818180e575184d29d848650500b77",
+      "cacheFile": "postgres-tls.md"
+    },
+    {
+      "id": "zones",
+      "url": "https://learn.microsoft.com/fr-fr/azure/reliability/availability-zones-overview",
+      "title": "Qu’est-ce que Azure Zones de disponibilité ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:43:58.933874+00:00",
+      "bytes": 20147,
+      "sha256": "5067bf8bf7d1102823060f9d0a19a16b38bb4afe66b7cd17c984d464f86ad373",
+      "cacheFile": "zones.md"
+    },
+    {
+      "id": "asr",
+      "url": "https://learn.microsoft.com/fr-fr/azure/site-recovery/site-recovery-overview",
+      "title": "À propos d’Azure Site Recovery - Azure Site Recovery",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:06.611193+00:00",
+      "bytes": 12681,
+      "sha256": "6bde14f8e96e044e5694585a6e5bb36e92b41fd51c3ab51f5256cb4fb94c325f",
+      "cacheFile": "asr.md"
+    },
+    {
+      "id": "asr-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/site-recovery/azure-to-azure-about-networking",
+      "title": "Informations sur les réseaux dans la récupération d'urgence de machines virtuelles Azure avec Azure Site Recovery - Azure Site Recovery",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:16.577895+00:00",
+      "bytes": 13306,
+      "sha256": "b75f08dcee227d95c54cf3b5c8e50ffbcd708ece2fdf427db38d059b5af55347",
+      "cacheFile": "asr-network.md"
+    },
+    {
+      "id": "backup",
+      "url": "https://learn.microsoft.com/fr-fr/azure/backup/backup-overview",
+      "title": "Qu’est-ce qu’Sauvegarde Azure ? - Azure Backup",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:26.737787+00:00",
+      "bytes": 16906,
+      "sha256": "5107404090518a34dfc5714ea47081baee9748868ebf90bb8fb1d117c2fd3552",
+      "cacheFile": "backup.md"
+    },
+    {
+      "id": "backup-vm",
+      "url": "https://learn.microsoft.com/fr-fr/azure/backup/backup-azure-vms-introduction",
+      "title": "À propos de la sauvegarde de machine virtuelle Azure - Azure Backup",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:32.633425+00:00",
+      "bytes": 27475,
+      "sha256": "853833aff35dfff07c13c84a1ede7967680537dad3e85f10e61f362758b97ed7",
+      "cacheFile": "backup-vm.md"
+    },
+    {
+      "id": "backup-restore",
+      "url": "https://learn.microsoft.com/fr-fr/azure/backup/backup-azure-arm-restore-vms",
+      "title": "Restaurer des machines virtuelles à l’aide du portail Azure à l’aide de Sauvegarde Azure - Azure Backup",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:41.358081+00:00",
+      "bytes": 69124,
+      "sha256": "2ce6f8e1b29b3c08879cf2d8178a1cb3dfe76216129e3415a80d22c688b7ae83",
+      "cacheFile": "backup-restore.md"
+    },
+    {
+      "id": "arm",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-resource-manager/management/overview",
+      "title": "Qu’est-ce qu’Azure Resource Manager ? - Azure Resource Manager",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:44:51.783625+00:00",
+      "bytes": 20571,
+      "sha256": "435cc1fcaf23d90742f8594fb22955ccbd746e10bb162ff68945483a35d11ef2",
+      "cacheFile": "arm.md"
+    },
+    {
+      "id": "bicep",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-resource-manager/bicep/overview",
+      "title": "Qu’est-ce que Bicep ? - Azure Resource Manager",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:02.796500+00:00",
+      "bytes": 13470,
+      "sha256": "7453cbfec1aed479bb3c090098341cd86e260bba8efe9d097fe6dbea230dfb54",
+      "cacheFile": "bicep.md"
+    },
+    {
+      "id": "terraform",
+      "url": "https://learn.microsoft.com/fr-fr/azure/developer/terraform/overview",
+      "title": "Vue d’ensemble de Terraform sur Azure - Qu’est-ce que Terraform ?",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:08.815076+00:00",
+      "bytes": 28482,
+      "sha256": "73351825083f427943b628d7559ebcb25ebe68ef064df20703607c6be8703e7d",
+      "cacheFile": "terraform.md"
+    },
+    {
+      "id": "monitor",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-monitor/fundamentals/overview",
+      "title": "Vue d’ensemble d’Azure Monitor - Azure Monitor",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:14.521044+00:00",
+      "bytes": 12589,
+      "sha256": "23d49d4bbd2cb1631594a228dc2749546273d3dd3a260bd6b0ecb1fcb465efc5",
+      "cacheFile": "monitor.md"
+    },
+    {
+      "id": "ama-network",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-monitor/agents/azure-monitor-agent-network-configuration",
+      "title": "Configuration réseau de l’agent Azure Monitor - Azure Monitor",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:24.299738+00:00",
+      "bytes": 59758,
+      "sha256": "5928f71ed000dcca87538bc99eb94294a3a9214cec7977427869fa3881b6ad27",
+      "cacheFile": "ama-network.md"
+    },
+    {
+      "id": "loganalytics",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-monitor/logs/log-analytics-overview",
+      "title": "Présentation de Log Analytics dans Azure Monitor - Azure Monitor",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:34.827748+00:00",
+      "bytes": 22176,
+      "sha256": "0961f701c92746314345375cf840b5344442251f4dcb9dd89ac78b1637b55bd3",
+      "cacheFile": "loganalytics.md"
+    },
+    {
+      "id": "appinsights",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-monitor/app/app-insights-overview",
+      "title": "Vue d’ensemble de l’observabilité d’Application Insights OpenTelemetry - Azure Monitor",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:40.815736+00:00",
+      "bytes": 11774,
+      "sha256": "45ff41913af98664e768c5577d7643e825db5becd3df24b9495509b11248cdfb",
+      "cacheFile": "appinsights.md"
+    },
+    {
+      "id": "alerts",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-monitor/alerts/alerts-overview",
+      "title": "Vue d’ensemble des alertes Azure Monitor - Azure Monitor",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:46.796324+00:00",
+      "bytes": 17380,
+      "sha256": "beeea901869ad61c16dc202b6b69aed98b1ea8ec9fd003817d87e7e306a0a775",
+      "cacheFile": "alerts.md"
+    },
+    {
+      "id": "policy",
+      "url": "https://learn.microsoft.com/fr-fr/azure/governance/policy/overview",
+      "title": "Présentation de la stratégie Azure - Azure Policy",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:45:52.876422+00:00",
+      "bytes": 30926,
+      "sha256": "c362d46ef151409a0d6ff1bcc01a39fce9011f648b8a2f80fa90f2a17a08c7d7",
+      "cacheFile": "policy.md"
+    },
+    {
+      "id": "resource-groups",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-resource-manager/management/manage-resource-groups-portal",
+      "title": "Utiliser le portail Azure et Azure Resource Manager pour gérer des groupes de ressources - Azure Resource Manager",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:46:00.475105+00:00",
+      "bytes": 10894,
+      "sha256": "9adc1e4fea46cfc96d94b2e9279ddd652780f0dda126f8d4cd4166bd4ceff3f8",
+      "cacheFile": "resource-groups.md"
+    },
+    {
+      "id": "budgets",
+      "url": "https://learn.microsoft.com/fr-fr/azure/cost-management-billing/costs/tutorial-acm-create-budgets",
+      "title": "Tutoriel : Créer et gérer des budgets - Microsoft Cost Management",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:47.497468+00:00",
+      "bytes": 22310,
+      "sha256": "6ea223fc7a03f97012864d34e44d80451a9040c87d30ecff9f2f50fec062906b",
+      "cacheFile": "budgets.md"
+    },
+    {
+      "id": "cost",
+      "url": "https://learn.microsoft.com/fr-fr/azure/cost-management-billing/costs/quick-acm-cost-analysis",
+      "title": "Démarrage rapide - Démarrer à l’aide de l’analyse des coûts - Microsoft Cost Management",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:52.709402+00:00",
+      "bytes": 20756,
+      "sha256": "59580931e38ee4ccdc862e02aa69a69a61922a40d2f15d89ef52e2ac0eef9445",
+      "cacheFile": "cost.md"
+    },
+    {
+      "id": "tags",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-resource-manager/management/tag-resources",
+      "title": "Utiliser des étiquettes pour organiser vos ressources Azure et votre hiérarchie de gestion - Azure Resource Manager",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:46:22.984876+00:00",
+      "bytes": 10979,
+      "sha256": "fa45fa0489ce1755dba3e4f4bd86a214df632402f34d53604fa9a7c3189d6ef9",
+      "cacheFile": "tags.md"
+    },
+    {
+      "id": "update-manager",
+      "url": "https://learn.microsoft.com/fr-fr/azure/update-manager/overview",
+      "title": "Vue d’ensemble d’Azure Update Manager",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:46:28.724600+00:00",
+      "bytes": 8996,
+      "sha256": "1f8d88d882463878a49b797d0f6459d99db8e95df3131e3b89eac92183878aff",
+      "cacheFile": "update-manager.md"
+    },
+    {
+      "id": "perf",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/administration/windows-commands/perfmon",
+      "title": "perfmon",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:47:58.774685+00:00",
+      "bytes": 44138,
+      "sha256": "a0558610ec924cbd8bbbaa59f13f9ccc33d1bf95fa5af550f9c1991e5e7b4dc2",
+      "cacheFile": "perf.md"
+    },
+    {
+      "id": "scheduled-tasks",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/administration/windows-commands/schtasks",
+      "title": "schtasks commands",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:04.993076+00:00",
+      "bytes": 48369,
+      "sha256": "c14a5970fa2bb81568cf56a9320a3b9bd632909ee69acf75da2130c22bbe6b18",
+      "cacheFile": "scheduled-tasks.md"
+    },
+    {
+      "id": "export-csv",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/microsoft.powershell.utility/export-csv?view=powershell-7.5",
+      "title": "Export-Csv (Microsoft.PowerShell.Utility) - PowerShell",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:14.463450+00:00",
+      "bytes": 43478,
+      "sha256": "29d70afe2f34d82ccc10bc65c90944bfa6ad087160191e3a92e08a86deab2700",
+      "cacheFile": "export-csv.md"
+    },
+    {
+      "id": "nat",
+      "url": "https://learn.microsoft.com/fr-fr/virtualization/hyper-v-on-windows/user-guide/setup-nat-network",
+      "title": "Configurer un réseau NAT",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:21.708508+00:00",
+      "bytes": 15029,
+      "sha256": "07e528928333bb39207f2d2c3a3a771accc87e71583a97f5103c6d178270bf72",
+      "cacheFile": "nat.md"
+    },
+    {
+      "id": "nfs",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/storage/nfs/nfs-overview",
+      "title": "Vue d’ensemble du système de fichiers réseau (NFS) dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:27.420236+00:00",
+      "bytes": 10094,
+      "sha256": "1b0f9818107cf8b39cf5ceb02321be0a7f8f8066afede0e26c6248faf56ad751",
+      "cacheFile": "nfs.md"
+    },
+    {
+      "id": "ntp",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/networking/windows-time-service/windows-time-service-top",
+      "title": "Service de temps Windows (W32Time)",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:33.339544+00:00",
+      "bytes": 5481,
+      "sha256": "a933a54da5a0a0019ef864a5c92e3e55332a8dc7d446df333ea44208d202f3e6",
+      "cacheFile": "ntp.md"
+    },
+    {
+      "id": "avs-backup",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/ecosystem-back-up-vms",
+      "title": "Solutions de sauvegarde pour les machines virtuelles Azure VMware Solution - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:39.059247+00:00",
+      "bytes": 3613,
+      "sha256": "d1e8af339a3ee75d3af804c154bed209ca49ede273664a931eeaf181cb4632a4",
+      "cacheFile": "avs-backup.md"
+    },
+    {
+      "id": "avs-anf",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/attach-azure-netapp-files-to-azure-vmware-solution-hosts",
+      "title": "Attacher les espaces de stockage Azure NetApp Files à des hôtes Azure VMware Solution - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:48.288997+00:00",
+      "bytes": 31707,
+      "sha256": "f29a71b0d93c33090ca255da5507318c795b738343f6229f6a545dd3b5780a9e",
+      "cacheFile": "avs-anf.md"
+    },
+    {
+      "id": "storage-redundancy",
+      "url": "https://learn.microsoft.com/fr-fr/azure/storage/common/storage-redundancy",
+      "title": "Redondance des données - Azure Storage",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:48:54.084850+00:00",
+      "bytes": 29851,
+      "sha256": "062b96ad2673131b759c1440493fd5753f9781ffbd6df4f9e70a7a772bb41eb8",
+      "cacheFile": "storage-redundancy.md"
+    },
+    {
+      "id": "pooling",
+      "url": "https://learn.microsoft.com/fr-fr/dotnet/framework/data/adonet/sql-server-connection-pooling",
+      "title": "Regroupement de connexions SQL Server - ADO.NET",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:02.014648+00:00",
+      "bytes": 17864,
+      "sha256": "780d0a4a1420afe516fd329f2792ef3868326d395f6fbb0bde5813badaa8f569",
+      "cacheFile": "pooling.md"
+    },
+    {
+      "id": "hv-powershell",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/hyper-v/?view=windowsserver2025-ps",
+      "title": "Hyper-V Module",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:10.094085+00:00",
+      "bytes": 43352,
+      "sha256": "ddc6d05e0727d1385d3549b89ec70dab99e80d3a3dd52175441c610eb46e0a5b",
+      "cacheFile": "hv-powershell.md"
+    },
+    {
+      "id": "hv-architecture",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/virtualization/hyper-v/architecture",
+      "title": "Hyper-v Architecture",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:17.897372+00:00",
+      "bytes": 8905,
+      "sha256": "7aa41f0c736e3a8532abd9f1d28dc8d9b41d88b18524a838aaf3eb1b4b804d91",
+      "cacheFile": "hv-architecture.md"
+    },
+    {
+      "id": "avs-run",
+      "url": "https://learn.microsoft.com/fr-fr/azure/azure-vmware/using-run-command",
+      "title": "Utiliser les commandes d’exécution dans Azure VMware Solution - Azure VMware Solution",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:26.694738+00:00",
+      "bytes": 25261,
+      "sha256": "6212d367c6cb63b295cc4800931889794dfabf52963309fa3227a34da2d5bd29",
+      "cacheFile": "avs-run.md"
+    },
+    {
+      "id": "iis-logs",
+      "url": "https://learn.microsoft.com/fr-fr/iis/manage/provisioning-and-managing-iis/configure-logging-in-iis",
+      "title": "Configurer la journalisation dans IIS",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:32.344565+00:00",
+      "bytes": 22911,
+      "sha256": "328bed8f7dd92e766f24c100ac65b03410fef0e80d18c64cebe5e6286a7087fc",
+      "cacheFile": "iis-logs.md"
+    },
+    {
+      "id": "git",
+      "url": "https://learn.microsoft.com/fr-fr/azure/devops/repos/git/overview",
+      "title": "Documentation Git d’Azure Repos",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:41.340261+00:00",
+      "bytes": 22680,
+      "sha256": "e8aee851cb08c69830f40f99e513dcd9ad80a17d4387d403331397ae32154b84",
+      "cacheFile": "git.md"
+    },
+    {
+      "id": "backup-state",
+      "url": "https://learn.microsoft.com/fr-fr/azure/backup/backup-azure-system-state",
+      "title": "Sauvegarder l’état du système Windows sur Azure à l’aide de Azure Backup - Azure Backup",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:51.493521+00:00",
+      "bytes": 21012,
+      "sha256": "20c386578898229e0a0b1f66ceb445e95001ce13c6f686d177cce3a23776712f",
+      "cacheFile": "backup-state.md"
+    },
+    {
+      "id": "failover-plans",
+      "url": "https://learn.microsoft.com/fr-fr/azure/site-recovery/recovery-plan-overview",
+      "title": "Informations sur les plans de récupération dans Azure Site Recovery - Azure Site Recovery",
+      "ok": true,
+      "retrievedAt": "2026-10-19T01:49:58.271633+00:00",
+      "bytes": 8250,
+      "sha256": "ddb91d3162efc2e56da47ef094f6253ec23875db8c4a06b2520c3fc1a83cd64b",
+      "cacheFile": "failover-plans.md"
+    }
+  ]
+}

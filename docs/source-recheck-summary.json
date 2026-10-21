@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-19",
+  "attempted": 155,
+  "retrieved": 21,
+  "rateLimited": 134,
+  "successfulIds": [
+    "docs",
+    "ad",
+    "gpo",
+    "kerberos",
+    "replication",
+    "ports",
+    "dns",
+    "dhcp",
+    "nps",
+    "vpn",
+    "smb",
+    "dfs",
+    "dfsr",
+    "fsrm",
+    "storage-spaces",
+    "iscsi",
+    "dedup",
+    "firewall",
+    "defender",
+    "bitlocker",
+    "hv-powershell"
+  ],
+  "cacheIndex": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\recheck\\index.json",
+  "note": "Les captures precedentes restent la base documentaire. Le controle Web integral de toutes les pages n est pas revendique."
+}

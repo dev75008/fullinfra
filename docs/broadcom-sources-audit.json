@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "id": "broadcom-education",
+      "url": "https://www.broadcom.com/support/education/vmware",
+      "sha256": "e95f25edaa3546a9efac5564e7222cda064920b98abe6ef6161c86a15eea52bb",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\broadcom\\broadcom-education.md",
+      "retrievedAt": "2026-10-19T02:23:48.286430+00:00"
+    },
+    {
+      "id": "vmware-snapshots",
+      "url": "https://knowledge.broadcom.com/external/article/318825/best-practices-for-using-vmware-snapshot.html",
+      "sha256": "860088d977670b843d7e58811bb0e0021c3f60a3b13abda4b55dcd02ba5261fd",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\broadcom\\vmware-snapshots.md",
+      "retrievedAt": "2026-10-19T02:23:52.096580+00:00"
+    },
+    {
+      "id": "vmware-ports",
+      "url": "https://knowledge.broadcom.com/external/article?legacyId=2039095",
+      "sha256": "e455ab9328a1739f0968216cebe4a340cd85b2721fc565d09001f15bd3421217",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\broadcom\\vmware-ports.md",
+      "retrievedAt": "2026-10-19T02:23:52.123773+00:00"
+    },
+    {
+      "id": "vmware-connectivity",
+      "url": "https://knowledge.broadcom.com/external/article/432374/esxi-host-disconnects-from-vcenter-serve.html",
+      "sha256": "981557ad589e53373c7bd60e3faf358d9eddee4eacb9912fce263d41cca86914",
+      "ok": true,
+      "cacheFile": "C:\\Users\\NH\\.agent-reach\\audits\\sitefullinfra\\broadcom\\vmware-connectivity.md",
+      "retrievedAt": "2026-10-19T02:23:53.748353+00:00"
+    }
+  ]
+}
