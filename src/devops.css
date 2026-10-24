@@ -1,0 +1,5 @@
+.devops-example{padding:14px 16px;margin:20px 0;background:#edf4fa;border-left:3px solid #0067b8;font-size:14px;line-height:1.85;color:var(--muted)}
+.devops-practice-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 30px}.devops-practice-grid h3{font-size:22px;line-height:1.4}
+@media(max-width:760px){.devops-practice-grid{grid-template-columns:1fr}}
+/* Keep the six-category menu readable on tablet and compact desktop widths. */
+@media(min-width:761px) and (max-width:1250px){.site-header{height:auto;min-height:76px}.header-inner{flex-wrap:wrap;gap:4px;padding-block:12px}.site-header nav{width:100%;height:auto;min-height:44px;flex-wrap:wrap;justify-content:flex-start;column-gap:20px;row-gap:0}.site-header nav a{min-height:44px;height:44px}.site-header nav a.active:after{bottom:0}.site-header .header-cta{display:none}html{scroll-padding-top:180px}[id]{scroll-margin-top:180px}}

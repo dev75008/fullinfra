@@ -10,6 +10,9 @@ try {
   const { networkTopics }=await server.ssrLoadModule('/src/data/networkAddressing.js');
   assert.ok(availableTechnologyIcons.has(categoryIconKeys['adressage-reseau']));
   for(const topic of networkTopics) assert.ok(availableTechnologyIcons.has(topic.icon),`Missing network icon: ${topic.id}`);
+  const { devopsTopics }=await server.ssrLoadModule('/src/data/devops.js');
+  assert.ok(availableTechnologyIcons.has(categoryIconKeys.devops));
+  for(const topic of devopsTopics) assert.ok(availableTechnologyIcons.has(topic.icon),`Missing DevOps icon: ${topic.id}`);
   const { windowsBranches }=await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { ecosystems }=await server.ssrLoadModule('/src/data/ecosystems.js');
   let technologies=0;

@@ -1,6 +1,17 @@
 // Références Microsoft Learn récupérées via le lecteur Jina de la procédure Agent Reach.
 // Traçabilité des captures : docs/learn-sources-audit.json.
 export const learnSources = {
+"devops-iac":{"url":"https://learn.microsoft.com/fr-fr/devops/deliver/what-is-infrastructure-as-code","title":"Qu’est-ce que l’infrastructure en tant que code (IaC) ? - Azure DevOps"},
+"devops-cd":{"url":"https://learn.microsoft.com/fr-fr/devops/deliver/what-is-continuous-delivery","title":"Qu’est-ce que la livraison continue ? - Azure DevOps"},
+"devops-artifacts":{"url":"https://learn.microsoft.com/fr-fr/azure/devops/artifacts/overview?view=azure-devops","title":"Qu’est-ce qu’Azure Artifacts ? - Azure Artifacts"},
+"devops-security":{"url":"https://learn.microsoft.com/fr-fr/devops/operate/security-in-devops","title":"Sécurité dans DevOps (DevSecOps) - Azure DevOps"},
+"devops-containers":{"url":"https://learn.microsoft.com/fr-fr/dotnet/architecture/microservices/container-docker-introduction/docker-defined","title":"Qu’est-ce que Docker ? - .NET"},
+"devops-agents":{"url":"https://learn.microsoft.com/fr-fr/azure/devops/pipelines/agents/agents?view=azure-devops","title":"Agents Azure Pipelines - Azure Pipelines"},
+"devops-git":{"url":"https://learn.microsoft.com/fr-fr/devops/develop/git/what-is-git","title":"Qu’est-ce que Git ? - Azure DevOps"},
+"devops-monitor":{"url":"https://learn.microsoft.com/fr-fr/devops/operate/what-is-monitoring","title":"Qu’est-ce que la surveillance ? - Azure DevOps"},
+"devops-ci":{"url":"https://learn.microsoft.com/fr-fr/devops/develop/what-is-continuous-integration","title":"Utiliser l’intégration continue - Azure DevOps"},
+"devops-kubernetes":{"url":"https://learn.microsoft.com/fr-fr/azure/aks/concepts-clusters-workloads","title":"Concepts de base d’Azure Kubernetes Service (AKS) - Azure Kubernetes Service"},
+"devops-overview":{"url":"https://learn.microsoft.com/fr-fr/devops/what-is-devops","title":"Qu’est-ce que DevOps ? - Azure DevOps"},
 "ip-subnets":{"url":"https://learn.microsoft.com/fr-fr/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting","title":"Adresses et sous-réseaux TCP/IP"},
 "ip-v6":{"url":"https://learn.microsoft.com/fr-fr/dotnet/fundamentals/networking/ipv6-overview","title":"Vue d’ensemble de l’adressage IPv6"},
 "ip-planning":{"url":"https://learn.microsoft.com/fr-fr/azure/virtual-network/virtual-networks-faq","title":"Réseau virtuel Azure : plages privées et réservations de sous-réseaux"},

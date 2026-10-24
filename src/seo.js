@@ -8,12 +8,13 @@ export const canonicalPath = pathname => {
 };
 const categoryTitles = {
   'adressage-reseau':'Adressage IP : IPv4, IPv6, CIDR et sous-réseaux',
+  devops:'DevOps : Git, CI/CD, conteneurs, Kubernetes et IaC',
   'windows-server':'Windows Server : Active Directory, FSMO et PowerShell',
   virtualisation:'Virtualisation : Hyper-V, VMware et machines virtuelles',
   azure:'Azure : réseau, machines virtuelles et services cloud',
   'microsoft-365':'Microsoft 365 : identités, sécurité et collaboration',
 };
-const images = {'windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png'};
+const images = {'windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};
 
 export function getPageMetadata(pathname) {
   const path = pathname.replace(/\/+$/,'') || '/';
@@ -22,7 +23,7 @@ export function getPageMetadata(pathname) {
   const known = contentPaths.includes(path);
   const headline = article?.title || (category ? categoryTitles[category.slug] || category.name : path === '/guides' ? 'Tous les guides infrastructure informatique' : path === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable');
   const title = `${headline} — FullInfra`;
-  const description = article?.excerpt || category?.description || (path === '/guides' ? 'Retrouvez les guides FullInfra sur Windows Server, Active Directory, Hyper-V, VMware, Azure et Microsoft 365, avec leurs sources officielles.' : 'Guides et infographies pour comprendre Windows Server, Active Directory, Hyper-V, VMware, Azure et Microsoft 365 : services, protocoles et administration.');
+  const description = article?.excerpt || category?.description || (path === '/guides' ? 'Retrouvez les guides FullInfra : Windows Server, virtualisation, Azure, Microsoft 365, adressage réseau et DevOps, avec leurs sources officielles.' : 'Guides et infographies pour comprendre Windows Server, la virtualisation, Azure, Microsoft 365, l’adressage IP et DevOps.');
   const canonical = `${siteUrl}${canonicalPath(path)}`;
   const image = `${siteUrl}/${images[category?.slug] || images['windows-server']}`;
   const organization = {'@type':'Organization',name:'FullInfra',url:siteUrl};

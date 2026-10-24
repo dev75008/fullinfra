@@ -1472,6 +1472,116 @@
       "bytes": 28383,
       "sha256": "adba7cea54319b32b27b39b56813542ff9d13f74481d6ce21c49774702210974",
       "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-commands.txt"
+    },
+    {
+      "id": "devops-iac",
+      "url": "https://learn.microsoft.com/fr-fr/devops/deliver/what-is-infrastructure-as-code",
+      "title": "Qu’est-ce que l’infrastructure en tant que code (IaC) ? - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.608Z",
+      "bytes": 5097,
+      "sha256": "867e7aaf0ddb0b0df5e906ce9ff4664957b68471329bae660b8cc186045269f4",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-iac.txt"
+    },
+    {
+      "id": "devops-cd",
+      "url": "https://learn.microsoft.com/fr-fr/devops/deliver/what-is-continuous-delivery",
+      "title": "Qu’est-ce que la livraison continue ? - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.631Z",
+      "bytes": 5196,
+      "sha256": "4186c44cebc4900d47e618bedf6c7e255ab17d09ed5ae5a5bac5c684a8344056",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-cd.txt"
+    },
+    {
+      "id": "devops-artifacts",
+      "url": "https://learn.microsoft.com/fr-fr/azure/devops/artifacts/overview?view=azure-devops",
+      "title": "Qu’est-ce qu’Azure Artifacts ? - Azure Artifacts",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.631Z",
+      "bytes": 9390,
+      "sha256": "86febd04de50333869c0715eb947855c66395c843cb6cd86fdf544c97295a01c",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-artifacts.txt"
+    },
+    {
+      "id": "devops-security",
+      "url": "https://learn.microsoft.com/fr-fr/devops/operate/security-in-devops",
+      "title": "Sécurité dans DevOps (DevSecOps) - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.632Z",
+      "bytes": 17905,
+      "sha256": "e74d4d4fbcc935448c56dc88bb9a1c0fba1e8726d6af74310076df188009bcee",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-security.txt"
+    },
+    {
+      "id": "devops-containers",
+      "url": "https://learn.microsoft.com/fr-fr/dotnet/architecture/microservices/container-docker-introduction/docker-defined",
+      "title": "Qu’est-ce que Docker ? - .NET",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.633Z",
+      "bytes": 10082,
+      "sha256": "4e95e3a6771f6dbcd2b1d7fc84d0eaade3d9ccdcddd113d431d47d673259fe5e",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-containers.txt"
+    },
+    {
+      "id": "devops-agents",
+      "url": "https://learn.microsoft.com/fr-fr/azure/devops/pipelines/agents/agents?view=azure-devops",
+      "title": "Agents Azure Pipelines - Azure Pipelines",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 56920,
+      "sha256": "638e116b74ac4ddfc712ef85d81248b0f960c501c5ee9d4fca89c4be5bf7539e",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-agents.txt"
+    },
+    {
+      "id": "devops-git",
+      "url": "https://learn.microsoft.com/fr-fr/devops/develop/git/what-is-git",
+      "title": "Qu’est-ce que Git ? - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 7892,
+      "sha256": "fafa1ede6613b01847f3b1538e143ffd0dd0f46a207b1534ba3f8da879439ef2",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-git.txt"
+    },
+    {
+      "id": "devops-monitor",
+      "url": "https://learn.microsoft.com/fr-fr/devops/operate/what-is-monitoring",
+      "title": "Qu’est-ce que la surveillance ? - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 4779,
+      "sha256": "a797c143821ebf2cf1169c9bde692c7e7313a0eb68ee23f24085d41496b71eb6",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-monitor.txt"
+    },
+    {
+      "id": "devops-ci",
+      "url": "https://learn.microsoft.com/fr-fr/devops/develop/what-is-continuous-integration",
+      "title": "Utiliser l’intégration continue - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 17263,
+      "sha256": "b4b6222470b1a194674a99f57d52ac6d790b062a558d13028c992c481b6ec59c",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-ci.txt"
+    },
+    {
+      "id": "devops-kubernetes",
+      "url": "https://learn.microsoft.com/fr-fr/azure/aks/concepts-clusters-workloads",
+      "title": "Concepts de base d’Azure Kubernetes Service (AKS) - Azure Kubernetes Service",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 19208,
+      "sha256": "a9ff09901071146cbd011ab2dc772b42086f5373b12f183c94ecd342139d5316",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-kubernetes.txt"
+    },
+    {
+      "id": "devops-overview",
+      "url": "https://learn.microsoft.com/fr-fr/devops/what-is-devops",
+      "title": "Qu’est-ce que DevOps ? - Azure DevOps",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:50:21.634Z",
+      "bytes": 21361,
+      "sha256": "078f01a96c54c6cfb40d2f0b9279fc3904897df1180240875eab06494a4d135d",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/devops/devops-overview.txt"
     }
   ]
 }

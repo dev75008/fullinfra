@@ -11,7 +11,7 @@ for (const [,asset] of index.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)) {
 }
 const sitemap=new JSDOM(await readFile(new URL('sitemap.xml',dist),'utf8'),{contentType:'text/xml'});
 const urls=[...sitemap.window.document.querySelectorAll('loc')].map(node=>node.textContent);
-assert.equal(urls.length,17);
+assert.equal(urls.length,21);
 assert.equal(new Set(urls).size,urls.length);
 const titles=new Set(),descriptions=new Set();
 for(const url of urls) {
@@ -53,7 +53,7 @@ missing.window.close();
 // Execute the production bundle against the actual generated HTML, including hydration.
 const asset=index.match(/src="([^"]+\.js)"/)[1];
 const code=await readFile(new URL(asset.slice(base.length),dist),'utf8');
-for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/microsoft-365/','/adressage-reseau/','/adressage-reseau/calculer-sous-reseau-ipv4/','/windows-server/active-directory-fondations/','/guides/?recherche=Hyper-V','/missing-page/']) {
+for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/microsoft-365/','/adressage-reseau/','/devops/','/devops/comprendre-pipeline-ci-cd/','/adressage-reseau/calculer-sous-reseau-ipv4/','/windows-server/active-directory-fondations/','/guides/?recherche=Hyper-V','/missing-page/']) {
   const pathname=route.split('?')[0];
   const html=pathname==='/missing-page/' ? fallback : await readFile(new URL(`${pathname.slice(1)}index.html`,dist),'utf8');
   const errors=[];
@@ -82,4 +82,4 @@ for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/micros
   assert.deepEqual(errors,[],`${route}: interaction errors`);
   dom.window.close();
 }
-console.log('OK SEO : 17 HTML complets, métadonnées uniques, canonicals, schémas JSON-LD, sitemap, robots, vraie 404 ; hydratation, filtres et navigation testés sur le build.');
+console.log(`OK SEO : ${urls.length} HTML complets, métadonnées uniques, canonicals, schémas JSON-LD, sitemap, robots, vraie 404 ; hydratation, filtres et navigation testés sur le build.`);

@@ -65,6 +65,9 @@ export const flowReferences = {
 };
 
 export const articleReferences = {
+  'comprendre-pipeline-ci-cd':['devops-ci','devops-cd','devops-agents','devops-monitor'],
+  'infrastructure-comme-code':['devops-iac','devops-security'],
+  'conteneurs-et-kubernetes':['devops-containers','devops-kubernetes','devops-security'],
   'calculer-sous-reseau-ipv4':['ip-subnets','ip-planning'],
   'comprendre-adresse-ipv6':['ip-v6','ip-commands'],
   'preparer-tenant':['m365-admin','m365-health'],

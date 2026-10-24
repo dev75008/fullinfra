@@ -17,6 +17,7 @@ try {
   Object.assign(sources,microsoft365Sources);
   const { windowsBranches } = await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { networkTopics, subnetExample, cidrExamples } = await server.ssrLoadModule('/src/data/networkAddressing.js');
+  const { devopsTopics, devopsPipeline } = await server.ssrLoadModule('/src/data/devops.js');
   const { fsmoRoles } = await server.ssrLoadModule('/src/data/fsmo.js');
   assert.equal(fsmoRoles.length,5);
   assert.equal(new Set(fsmoRoles.map(role => role.key)).size,5);
@@ -59,6 +60,12 @@ try {
   assert.equal(networkTopics.length,12);
   assert.equal(new Set(networkTopics.map(topic=>topic.id)).size,12);
   for (const topic of networkTopics) verify(topic.sourceIds,topic.title);
+  assert.equal(devopsTopics.length,12);
+  assert.equal(new Set(devopsTopics.map(topic=>topic.id)).size,12);
+  for(const topic of devopsTopics) {verify(topic.sourceIds,topic.title);assert.equal(topic.points.length,4);assert.ok(topic.example.length>50);}
+  assert.equal(devopsPipeline.length,8);
+  assert.equal(new Set(devopsPipeline.map(step=>step.id)).size,8);
+  for(const step of devopsPipeline) assert.ok(step.input && step.check && step.output);
   const ipNumber=ip=>ip.split('.').reduce((value,octet)=>value*256+Number(octet),0);
   assert.equal(subnetExample.length,4);
   for (const [index,row] of subnetExample.entries()) {
@@ -91,7 +98,7 @@ try {
   assert.ok(vmwareFlows.some(row => row[1] === 'vCenter Server' && row[3] === 'TCP 902'));
   assert.ok(vmwareFlows.some(row => row[2] === 'vCenter Server' && row[3] === 'UDP 902'));
   const collectedUrls=new Set(evidence.sources.filter(source => source.ok).map(source => source.url));
-  for (const path of ['/','/guides','/windows-server','/virtualisation','/azure','/microsoft-365','/adressage-reseau',...articles.map(article => `/${article.category}/${article.slug}`)]) {
+  for (const path of ['/','/guides','/windows-server','/virtualisation','/azure','/microsoft-365','/adressage-reseau','/devops',...articles.map(article => `/${article.category}/${article.slug}`)]) {
     const html=renderToString(React.createElement(MemoryRouter,{initialEntries:[path]},React.createElement(App)));
     for (const [,value] of html.matchAll(/href="(https?:[^\"]+)"/g)) {
       const href=value.replaceAll('&amp;','&');
@@ -102,6 +109,6 @@ try {
   }
   assert.equal(technologyCount,144);
   assert.equal(flowCount,84);
-  assert.equal(articles.length,10);
+  assert.equal(articles.length,13);
   console.log(`OK sources : ${technologyCount} technologies, ${flowCount} relations, ${articles.length} articles ; ${usedIds.size} références traçables ; 12 thèmes réseau, sous-réseaux et CIDR vérifiés ; Microsoft 365 et VMware validés.`);
 } finally { await server.close(); }
