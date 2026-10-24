@@ -1392,6 +1392,36 @@
       "bytes": 8250,
       "sha256": "ddb91d3162efc2e56da47ef094f6253ec23875db8c4a06b2520c3fc1a83cd64b",
       "cacheFile": "failover-plans.md"
+    },
+    {
+      "id": "fsmo",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-fsmo-roles",
+      "title": "Comprendre les cinq rôles FSMO dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-24T22:59:12.032Z",
+      "bytes": 8114,
+      "sha256": "c787db5b2695dc28ef60e8ce67e5cdff10b239e610238371179a9ac128b11782",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/fsmo/fsmo.txt"
+    },
+    {
+      "id": "fsmo-manage",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/manage-fsmo-roles",
+      "title": "Transférer les rôles FSMO dans Windows Server",
+      "ok": true,
+      "retrievedAt": "2026-10-24T22:59:12.033Z",
+      "bytes": 9983,
+      "sha256": "fcca0964aa3a5d60c6c61fff74f9a3421ee96bb5cd92554800850e4b7c2c3e72",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/fsmo/fsmo-manage.txt"
+    },
+    {
+      "id": "fsmo-recovery",
+      "url": "https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/active-directory/fsmo-transfer-seizure-process",
+      "title": "Transfert et saisie des rôles FSMO",
+      "ok": true,
+      "retrievedAt": "2026-10-24T22:59:12.034Z",
+      "bytes": 6242,
+      "sha256": "17daa959457e2af17a51c26d57e876e82aa79f2949941cc6290f689bf1c978a5",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/fsmo/fsmo-recovery.txt"
     }
   ]
 }

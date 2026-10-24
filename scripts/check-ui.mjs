@@ -30,6 +30,7 @@ try {
     assert.equal(document.querySelectorAll('.communication-map').length,0,'These categories must omit communication maps');
     assert.equal(document.querySelectorAll('.windows-map').length,1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
+    assert.equal(document.querySelectorAll('.fsmo-grid article').length,slug === 'windows-server' ? 5 : 0,'Five FSMO roles belong in Windows Server');
     assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be absent in every category');
     assert.equal(document.querySelector('.m365-architecture-image').parentElement.tagName,'FIGURE','Infographics must not be links');
     for (const type of ['click','dblclick']) assert.equal(document.querySelector('.m365-architecture-image').dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true})),false,'Infographic must cancel clicks');

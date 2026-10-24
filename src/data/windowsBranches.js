@@ -8,7 +8,7 @@ const branchOverview = [
     id: 'active-directory', title: 'Active Directory', icon: 'identity',
     summary: 'Centraliser les identités et organiser les accès.',
     details: [
-      ['AD DS', 'Domaines, forêts et contrôleurs de domaine pour gérer les comptes et les ordinateurs.'],
+      ['AD DS et rôles FSMO', 'Domaines, forêts et contrôleurs de domaine ; cinq rôles FSMO pour les opérations à maître unique.'],
       ['Organisation et GPO', 'Unités d’organisation, délégation et stratégies de groupe pour appliquer les configurations.'],
       ['Authentification', 'Kerberos, groupes de sécurité et relations d’approbation pour contrôler les accès.'],
       ['Réplication', 'Sites et sous-réseaux pour structurer les échanges entre contrôleurs de domaine.'],

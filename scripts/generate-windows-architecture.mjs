@@ -12,7 +12,7 @@ await icon('vm',35,25,70); text(125,80,'Windows Server',61,'#0b4876',700); text(
 row(1,150,180,['Utilisateurs','et accès'],['Accès aux ressources','de l’infrastructure']);
 for (const [i,[name,title,desc]] of [['m365-concept-desktop','PC Windows','Postes de travail'],['m365-concept-admin','Administrateurs','Administration des serveurs'],['appservice','Applications','Services et applications métiers'],['gateway','Accès distant','VPN, RDS et passerelles']].entries()) { const x=360+i*495; await icon(name,x+165,170,58); text(x+45,265,title,30,'#173654',650); text(x+45,305,desc,24,'#526b82'); }
 row(2,350,310,['Identité','et réseau'],['Découverte des services','et authentification']);
-await card(340,370,970,195,'Active Directory','m365-concept-people',['AD DS · Utilisateurs et groupes','Kerberos · LDAP · Stratégies de groupe (GPO)']);
+await card(340,370,970,225,'Active Directory','m365-concept-people',['AD DS · Utilisateurs et groupes · Kerberos · LDAP · GPO','FSMO forêt : Schéma · Noms de domaine','FSMO domaine : RID · PDC · Infrastructure']);
 await card(1330,370,1020,195,'Services réseau','dns',['DNS · Résolution des noms et des services','DHCP · Configuration IP · VPN / RRAS']);
 text(365,615,'1. DNS découvre les services du domaine',26,'#0067b8',600); text(1320,615,'2. Le client s’authentifie auprès d’AD DS',26,'#0067b8',600);
 row(3,680,260,['Services','et données'],['Fichiers, applications','et sessions distantes']);

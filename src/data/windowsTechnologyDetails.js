@@ -2,7 +2,7 @@
 export const windowsTechnologyDetails = {
   'active-directory': [
     [
-      'Annuaire : AD DS stocke les objets utilisateurs, groupes et ordinateurs avec leurs attributs.',
+      'Annuaire : AD DS stocke les objets utilisateurs, groupes et ordinateurs. Les rôles FSMO réservent certaines opérations à un détenteur unique : schéma et noms de domaine par forêt ; RID, émulateur PDC et infrastructure par domaine.',
       'Domaine : il regroupe des objets partageant une base d’annuaire et un cadre d’administration. Une forêt contient un ou plusieurs domaines partageant notamment le schéma.',
       'Contrôleur de domaine : ce serveur héberge l’annuaire et traite les demandes d’authentification. Un poste joint au domaine peut utiliser ces identités pour accéder aux ressources.',
     ],

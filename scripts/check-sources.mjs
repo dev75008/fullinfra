@@ -16,6 +16,11 @@ try {
   const { dependencyServices, dependencyLinks } = await server.ssrLoadModule('/src/data/microsoft365Dependencies.js');
   Object.assign(sources,microsoft365Sources);
   const { windowsBranches } = await server.ssrLoadModule('/src/data/windowsBranches.js');
+  const { fsmoRoles } = await server.ssrLoadModule('/src/data/fsmo.js');
+  assert.equal(fsmoRoles.length,5);
+  assert.equal(new Set(fsmoRoles.map(role => role.key)).size,5);
+  assert.equal(fsmoRoles.filter(role => role.scope === 'Forêt').length,2);
+  assert.equal(fsmoRoles.filter(role => role.scope === 'Domaine').length,3);
   const { communicationEdges } = await server.ssrLoadModule('/src/data/windowsCommunications.js');
   const { ecosystems } = await server.ssrLoadModule('/src/data/ecosystems.js');
   const { articles } = await server.ssrLoadModule('/src/data/content.js');

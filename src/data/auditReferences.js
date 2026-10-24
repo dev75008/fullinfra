@@ -1,7 +1,7 @@
 // Références Microsoft Learn par technologie, dans l’ordre des quatre fiches de chaque branche.
 export const technologyReferences = {
   'windows-server': {
-    'active-directory': [['ad'],['gpo'],['kerberos','ad'],['replication']],
+    'active-directory': [['ad','fsmo'],['gpo'],['kerberos','ad'],['replication']],
     reseau: [['dns'],['dhcp','ports'],['vpn'],['nps','ports']],
     stockage: [['smb'],['dfs','dfsr'],['fsrm'],['storage-spaces','iscsi','dedup']],
     securite: [['ad-security'],['firewall','defender'],['bitlocker','adcs'],['audit','wef']],
@@ -67,7 +67,7 @@ export const flowReferences = {
 export const articleReferences = {
   'preparer-tenant':['m365-admin','m365-health'],
   'teams-connectivite':['m365-teams','m365-network'],
-  'active-directory-fondations':['ad','gpo','replication'],
+  'active-directory-fondations':['ad','gpo','replication','fsmo','fsmo-manage','fsmo-recovery'],
   'hyper-v-commutateurs':['hv-network'],
   'azure-premiere-vm':['vm-create','bastion','vm-states'],
   'powershell-inventaire':['ps-cim','ps-errors','export-csv'],

@@ -1,6 +1,9 @@
 // Références Microsoft Learn récupérées via le lecteur Jina de la procédure Agent Reach.
 // Traçabilité des captures : docs/learn-sources-audit.json.
 export const learnSources = {
+"fsmo":{"url":"https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-fsmo-roles","title":"Comprendre les cinq rôles FSMO dans Windows Server"},
+"fsmo-manage":{"url":"https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/manage-fsmo-roles","title":"Transférer les rôles FSMO dans Windows Server"},
+"fsmo-recovery":{"url":"https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/active-directory/fsmo-transfer-seizure-process","title":"Transfert et saisie des rôles FSMO"},
   "docs": {
     "url": "https://learn.microsoft.com/fr-fr/docs/",
     "title": "Documentation technique"

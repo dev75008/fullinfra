@@ -5,6 +5,7 @@ import { articles, categories } from './data/content';
 import { Logo, ArticleCard } from './components';
 import WindowsInfographic from './WindowsInfographic';
 import WindowsArchitecture from './WindowsArchitecture';
+import FsmoSection from './FsmoSection';
 import VirtualisationArchitecture from './VirtualisationArchitecture';
 import AzureArchitecture from './AzureArchitecture';
 import TechnologyInfographic from './TechnologyInfographic';
@@ -93,13 +94,14 @@ function Guides() {
     : slug ? [[slug === 'windows-server' ? 'windows-map' : `${slug}-map`,'Fiches technologies']] : [];
   if (slug === 'virtualisation') sections.push(['vmware-vsphere','VMware vSphere']);
   if (slug === 'windows-server') sections.unshift(['windows-architecture','Infographie de l’architecture']);
+  if (slug === 'windows-server') sections.splice(1,0,['windows-fsmo','Rôles FSMO']);
   if (slug === 'virtualisation') sections.unshift(['virtualisation-architecture','Infographie de l’architecture']);
   if (slug === 'azure') sections.unshift(['azure-architecture','Infographie de l’architecture']);
   return <main className="container listing-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
     <section className={`page-intro ${category?.color || 'green'}`}><span className="icon-box"><TechnologyIcon name={category ? categoryIconKeys[slug] : 'guides'} size={60}/></span><h1>{category?.name || 'Tous les guides'}</h1><p>{category?.description || 'Recherchez un sujet ou choisissez un environnement pour retrouver un guide.'}</p></section>
     {category && <nav className="section-navigation" aria-label="Dans cette rubrique">{[...sections,['guides-rubrique','Guides pratiques']].map(([id,label]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav>}
-    {slug === 'windows-server' && <><WindowsArchitecture/><WindowsInfographic/></>}
+    {slug === 'windows-server' && <><WindowsArchitecture/><FsmoSection/><WindowsInfographic/></>}
     {slug === 'virtualisation' && <VirtualisationArchitecture/>}
     {slug === 'azure' && <AzureArchitecture/>}
     {ecosystems[slug] && <TechnologyInfographic key={`map-${slug}`} ecosystem={ecosystems[slug]}/>}
