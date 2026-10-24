@@ -6,6 +6,7 @@ import { windowsBranches } from './data/windowsBranches';
 import { referenceTuples } from './data/referenceCatalog';
 import './windows-infographic.css';
 import SourceLinks from './SourceLinks';
+import FsmoTechnologyDetails from './FsmoTechnologyDetails';
 
 const windowsEcosystem = {slug:'windows-server',title:'Windows Server',branches:windowsBranches,sources:referenceTuples(['ad','dfs','hv-replica-config','rds','ports','rds-ports','winrm','filesync-network','arc-network']),
   subtitle:'LE SOCLE DE VOTRE INFRASTRUCTURE', note:'Les fonctionnalités disponibles dépendent de la version, de l’édition et des licences.'};
@@ -63,6 +64,7 @@ export default function TechnologyInfographic({ ecosystem = windowsEcosystem }) 
                       const separator = point.indexOf(' : ');
                       return <li key={point}>{separator < 0 ? point : <><strong>{point.slice(0, separator)}</strong>{point.slice(separator)}</>}</li>;
                     })}</ul>
+                    {ecosystem.slug === 'windows-server' && branch.id === 'active-directory' && technologyIndex === 0 && <FsmoTechnologyDetails/>}
                     <div className="technology-protocols">
                       <table>
                         <caption>Protocoles et ports — {title}</caption>

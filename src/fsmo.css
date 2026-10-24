@@ -7,3 +7,7 @@
 .fsmo-section code{overflow-wrap:anywhere;color:#005a9e;font-size:14px}.fsmo-operations{padding:0 26px 22px}.fsmo-operations h3{font-size:23px;margin:22px 0 12px}
 .fsmo-operations pre{background:#f3f7fb;border:1px solid var(--border,#d5dfe8);padding:20px;white-space:pre-wrap}.fsmo-section>.learn-source-links{margin:0 26px 26px}
 @media(max-width:1000px){.fsmo-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.fsmo-grid{grid-template-columns:1fr;padding:18px}.fsmo-section>header{padding:24px 18px}.fsmo-operations{padding:0 18px 18px}.fsmo-section h2{font-size:26px}}
+.fsmo-technology-details{margin:22px 0;padding:20px;border:1px solid #cbddeb;background:#f8fbfd;overflow-wrap:anywhere}
+.fsmo-technology-details h4{font-size:19px;line-height:1.5;margin:18px 0 12px;color:#173654}.fsmo-technology-details>h4:first-child{margin-top:0}
+.fsmo-role-detail{padding:18px 0;border-bottom:1px solid #dbe6ee}.fsmo-role-detail h5{font-size:18px;line-height:1.5;margin:0 0 12px;color:#005a9e}
+.fsmo-technology-details p{line-height:1.85}.fsmo-technology-details code{font-size:13px;color:#005a9e}.fsmo-technology-details pre{padding:16px;background:#edf4fa;white-space:pre-wrap;overflow-wrap:anywhere}

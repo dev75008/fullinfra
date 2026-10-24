@@ -31,6 +31,15 @@ try {
     assert.equal(document.querySelectorAll('.windows-map').length,1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
     assert.equal(document.querySelectorAll('.fsmo-grid article').length,slug === 'windows-server' ? 5 : 0,'Five FSMO roles belong in Windows Server');
+    if (slug === 'windows-server') {
+      const branch=document.getElementById('branche-active-directory');
+      await click(branch.querySelector('summary'));
+      assert.equal(branch.open,true);
+      const detail=branch.querySelector('dd .fsmo-technology-details');
+      assert.ok(detail,'FSMO explanations must be inside the AD DS technology');
+      assert.equal(detail.querySelectorAll('.fsmo-role-detail').length,5);
+      assert.match(detail.textContent,/Get-ADDomainController/);
+    }
     assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be absent in every category');
     assert.equal(document.querySelector('.m365-architecture-image').parentElement.tagName,'FIGURE','Infographics must not be links');
     for (const type of ['click','dblclick']) assert.equal(document.querySelector('.m365-architecture-image').dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true})),false,'Infographic must cancel clicks');
