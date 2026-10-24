@@ -5,7 +5,7 @@ export default function Microsoft365Dependencies() {
   const image=`${import.meta.env.BASE_URL}microsoft365-architecture.svg?v=icones-2`;
   return <section id="m365-dependencies" className="dependency-infographic supplied-infographic" aria-labelledby="dependencies-title">
     <header><h2 id="dependencies-title">Microsoft 365 : architecture et fonctionnement</h2><p>Identité, collaboration, gestion des appareils, sécurité et données dans le cloud.</p></header>
-    <figure>
+    <figure onClickCapture={event => { event.preventDefault(); event.stopPropagation(); }} onDoubleClickCapture={event => { event.preventDefault(); event.stopPropagation(); }}>
       <img draggable={false} className="m365-architecture-image" src={image} width="2400" height="1800" alt="Infographie Microsoft 365 : utilisateurs et appareils, identité et accès avec Entra ID, services collaboratifs, Intune et Defender, données cloud et parcours utilisateur."/>
       <figcaption>Texte vectoriel en Segoe UI, net au zoom.</figcaption>
     </figure>
