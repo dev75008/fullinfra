@@ -4,10 +4,8 @@ import './microsoft365-dependencies.css';
 
 export default function VirtualisationArchitecture() {
   const image = `${import.meta.env.BASE_URL}virtualisation-architecture.svg?v=1`;
-  const png = `${import.meta.env.BASE_URL}virtualisation-architecture-hd.png?v=1`;
   return <section id="virtualisation-architecture" className="dependency-infographic supplied-infographic" aria-labelledby="virtualisation-architecture-title">
     <header><h2 id="virtualisation-architecture-title">Virtualisation : architecture et communications</h2><p>Du matériel physique aux machines virtuelles : hyperviseurs, réseau, stockage, disponibilité et administration.</p></header>
-    <div className="dependency-toolbar"><a className="button primary" href={image} target="_blank" rel="noopener noreferrer">Ouvrir l’image en grand</a><a className="button secondary" href={png} download="fullinfra-virtualisation-architecture-hd.png">Télécharger le PNG haute résolution</a><a className="button secondary" href={image} download="fullinfra-virtualisation-architecture.svg">Télécharger le SVG</a></div>
     <figure><a href={image} target="_blank" rel="noopener noreferrer" aria-label="Agrandir l’infographie Virtualisation dans un nouvel onglet"><img className="m365-architecture-image" src={image} width="2400" height="1800" alt="Architecture de virtualisation : ressources physiques, Hyper-V et VMware vSphere, gestion, machines virtuelles, réseaux et stockage, haute disponibilité, migration, sauvegarde, sécurité, automatisation, supervision et cloud."/></a><figcaption>Texte vectoriel en Segoe UI, net au zoom. Les flux dépendent de la plateforme et de sa version : consultez les fiches et les références avant de configurer les accès réseau.</figcaption></figure>
     <details className="infographic-transcript"><summary>Lire le résumé de l’infographie</summary><ol>
       <li>Les hôtes fournissent processeurs, mémoire, disques et interfaces réseau aux hyperviseurs.</li>

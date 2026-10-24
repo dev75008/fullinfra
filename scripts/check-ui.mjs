@@ -30,6 +30,7 @@ try {
     assert.equal(document.querySelectorAll('.communication-map').length,0,'These categories must omit communication maps');
     assert.equal(document.querySelectorAll('.windows-map').length,1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
+    assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be absent in every category');
     for (const link of document.querySelectorAll('.section-navigation a')) {
       assert.ok(document.getElementById(link.hash.slice(1)),`Unresolved section navigation: ${link.hash}`);
     }
@@ -91,7 +92,7 @@ try {
   assert.ok(document.querySelector('.dependency-infographic'));
   const architectureImage=document.querySelector('.m365-architecture-image');
   assert.ok(architectureImage);
-  assert.ok(document.querySelector('.dependency-toolbar a[download]'));
+  assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be removed');
   assert.ok(document.querySelector('.infographic-transcript'));
   await click(document.querySelector('.m365-network-map>summary'));
   assert.equal(document.querySelectorAll('.m365-topic-grid details').length,12);
