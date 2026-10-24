@@ -16,16 +16,13 @@ import TechnologyIcon from './TechnologyIcon';
 import VMwareSection from './VMwareSection';
 import Microsoft365Section from './Microsoft365Section';
 import { categoryIconKeys } from './data/technologyIcons';
+import { getPageMetadata, applyPageMetadata } from './seo';
 
 function RouteEffects() {
   const { pathname, hash } = useLocation();
   const previousPath = useRef(pathname);
   useEffect(() => {
-    const article = articles.find(item => pathname === `/${item.category}/${item.slug}`);
-    const category = categories.find(item => pathname === '/' + item.slug);
-    document.title = `${article?.title || category?.name || (pathname === '/guides' ? 'Tous les guides' : pathname === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable')} — FullInfra`;
-    const description = document.querySelector('meta[name="description"]');
-    if (description) description.content = article?.excerpt || category?.description || 'Guides Windows Server, VMware, Azure et Microsoft 365 : services, protocoles et administration.';
+    applyPageMetadata(document,getPageMetadata(pathname));
     if (previousPath.current !== pathname) document.getElementById('content')?.focus({preventScroll:true});
     previousPath.current = pathname;
     let target = null;

@@ -4,7 +4,7 @@ Site publié : **https://fullinfra.duckdns.org/**
 
 ## Publication GitHub Pages
 
-Le workflow `.github/workflows/pages.yml` teste, compile et publie le site après chaque push sur `main`. La compilation utilise `VITE_BASE_PATH=/` pour les routes et les ressources. Les ouvertures directes de sous-pages passent par une page 404 de redirection, puis restaurent le chemin, les paramètres et l’ancre dans le navigateur.
+Le workflow `.github/workflows/pages.yml` teste, compile et publie le site après chaque push sur `main`. La compilation utilise `VITE_BASE_PATH=/` et génère une page HTML complète par rubrique et par article. Les URL publiques canoniques se terminent par `/` et sont servies directement par GitHub Pages ; les anciennes URL sans `/` restent utilisables. Les URL inconnues affichent une vraie page 404, sans redirection vers l’accueil.
 
 Pour tester cette compilation sous PowerShell :
 
