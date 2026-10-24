@@ -91,9 +91,9 @@ try {
     assert.ok(html.includes(`id="${ecosystem.slug}-communication-title"`));
     assert.ok(html.includes(`id="${ecosystem.slug}-map"`));
     assert.ok(!html.includes('NaN') && !html.includes('undefined'));
-    assert.equal((html.match(/<details /g) || []).length, ecosystem.slug === 'virtualisation' ? 13 : 12);
+    assert.equal((html.match(/<details /g) || []).length, 13);
     assert.equal((html.match(/<dt>/g) || []).length, 48);
-    assert.equal((html.match(/<li>/g) || []).length, ecosystem.slug === 'virtualisation' ? 150 : 144);
+    assert.equal((html.match(/<li>/g) || []).length, 150);
     assert.equal((html.match(/class="technology-protocols"/g) || []).length, 48);
     assert.equal((html.match(/class="branch-example"/g) || []).length, 12);
     assert.equal(ecosystem.nodes.length, 13);
