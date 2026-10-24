@@ -17,7 +17,7 @@
 
 .m365-network-map{margin-bottom:35px}.m365-network-map>summary{cursor:pointer;padding:18px;background:#edf4fa;color:#0067b8;font-weight:600;min-height:54px}.m365-network-map[open]>summary{margin-bottom:20px}
 
-.supplied-infographic figure>a{display:block}.m365-architecture-image{display:block;width:100%;height:auto;object-fit:contain}
+.supplied-infographic figure{pointer-events:none;cursor:default}.m365-architecture-image{display:block;width:100%;height:auto;object-fit:contain;pointer-events:none;user-select:none;-webkit-user-drag:none}
 .supplied-infographic .dependency-toolbar{justify-content:flex-start}.supplied-infographic .dependency-toolbar a{margin-left:0}
 .infographic-transcript{padding:20px 26px}.infographic-transcript summary{min-height:44px;cursor:pointer;color:var(--accent);font-weight:600}.infographic-transcript ol{padding-left:22px;line-height:1.85}.infographic-transcript li+li{margin-top:8px}
 @media(max-width:760px){.infographic-transcript{padding:18px}}
