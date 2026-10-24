@@ -28,7 +28,7 @@ try {
   assert.match(document.title, /Comprendre/);
   for (const slug of ['windows-server','virtualisation','azure']) {
     await click(document.querySelector(`.site-header nav a[href="/${slug}"]`));
-    assert.equal(document.querySelectorAll('.communication-map').length,1,'Only the current category map must remain mounted');
+    assert.equal(document.querySelectorAll('.communication-map').length,slug === 'virtualisation' ? 0 : 1,'Virtualisation must omit the communication map');
     assert.equal(document.querySelectorAll('.windows-map').length,1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
     for (const link of document.querySelectorAll('.section-navigation a')) {
@@ -40,6 +40,7 @@ try {
       assert.ok(document.querySelector('.vmware-section a[href*="broadcom.com/support/education/vmware"]'));
       assert.match(document.querySelector('.vmware-section table caption').textContent,/7.0 et 8.0/);
     }
+    if (slug !== 'virtualisation') {
     const scenarios = slug === 'windows-server' ? communicationScenarios : ecosystems[slug].scenarios;
     for (let index=0; index<scenarios.length; index++) {
       await click(document.querySelectorAll('.communication-controls button')[index]);
@@ -57,6 +58,7 @@ try {
     assert.ok(target, 'Branch detail anchor must resolve');
     await click(branchLink);
     assert.equal(target.open,true,'Branch navigation must open its details');
+    }
     await click(document.querySelector('.map-heading button'));
     assert.ok([...document.querySelectorAll('.map-branch')].every(item => item.open));
     await click(document.querySelector('.map-heading button'));
@@ -97,7 +99,7 @@ try {
   assert.equal(document.getElementById('branche-active-directory').open,true,'Product shortcut must open its target details');
   for (const slug of ['azure','virtualisation','windows-server','azure','windows-server']) {
     await click(document.querySelector(`.site-header nav a[href="/${slug}"]`));
-    assert.equal(document.querySelectorAll('.communication-map').length,1);
+    assert.equal(document.querySelectorAll('.communication-map').length,slug === 'virtualisation' ? 0 : 1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
     assert.equal(document.querySelectorAll('.article-card').length,2);
     assert.equal(document.querySelectorAll('.technology-heading > [data-icon]').length,48);

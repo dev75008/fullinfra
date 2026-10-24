@@ -95,7 +95,7 @@ function Guides() {
     : slug ? [[slug === 'windows-server' ? 'windows-communications' : `${slug}-communications`,'Carte des échanges'],[slug === 'windows-server' ? 'windows-map' : `${slug}-map`,'Fiches technologies']] : [];
   if (slug === 'virtualisation') sections.push(['vmware-vsphere','VMware vSphere']);
   if (slug === 'windows-server') sections.unshift(['windows-architecture','Infographie de l’architecture']);
-  if (slug === 'virtualisation') sections.unshift(['virtualisation-architecture','Infographie de l’architecture']);
+  if (slug === 'virtualisation') { sections.splice(0,1); sections.unshift(['virtualisation-architecture','Infographie de l’architecture']); }
   if (slug === 'azure') sections.unshift(['azure-architecture','Infographie de l’architecture']);
   return <main className="container listing-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
@@ -104,7 +104,7 @@ function Guides() {
     {slug === 'windows-server' && <><WindowsArchitecture/><WindowsCommunicationMap/><WindowsInfographic/></>}
     {slug === 'virtualisation' && <VirtualisationArchitecture/>}
     {slug === 'azure' && <AzureArchitecture/>}
-    {ecosystems[slug] && <React.Fragment key={`map-${slug}`}><CommunicationMap ecosystem={ecosystems[slug]}/><TechnologyInfographic ecosystem={ecosystems[slug]}/></React.Fragment>}
+    {ecosystems[slug] && <React.Fragment key={`map-${slug}`}>{slug !== 'virtualisation' && <CommunicationMap ecosystem={ecosystems[slug]}/>}<TechnologyInfographic ecosystem={ecosystems[slug]}/></React.Fragment>}
     {slug === 'virtualisation' && <VMwareSection/>}{slug === 'microsoft-365' && <Microsoft365Section/>}
     <GuideList key={`guides-${slug || 'all'}`} category={category}/>
   </main>;

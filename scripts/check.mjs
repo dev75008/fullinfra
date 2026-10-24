@@ -88,7 +88,7 @@ try {
   }
   for (const ecosystem of Object.values(ecosystems)) {
     const html = render(`/${ecosystem.slug}`);
-    assert.ok(html.includes(`id="${ecosystem.slug}-communication-title"`));
+    assert.equal(html.includes(`id="${ecosystem.slug}-communication-title"`), ecosystem.slug !== 'virtualisation');
     assert.ok(html.includes(`id="${ecosystem.slug}-map"`));
     assert.ok(!html.includes('NaN') && !html.includes('undefined'));
     assert.equal((html.match(/<details /g) || []).length, 13);
