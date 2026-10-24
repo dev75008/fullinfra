@@ -1422,6 +1422,56 @@
       "bytes": 6242,
       "sha256": "17daa959457e2af17a51c26d57e876e82aa79f2949941cc6290f689bf1c978a5",
       "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/fsmo/fsmo-recovery.txt"
+    },
+    {
+      "id": "ip-subnets",
+      "url": "https://learn.microsoft.com/fr-fr/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting",
+      "title": "Adresses et sous-réseaux TCP/IP",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:33:59.547Z",
+      "bytes": 19359,
+      "sha256": "9b20ff4b2abdfa85ada8630423b4d8c03cc9c45f9a4167d9023d6c7f6affce9b",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-subnets.txt"
+    },
+    {
+      "id": "ip-v6",
+      "url": "https://learn.microsoft.com/fr-fr/dotnet/fundamentals/networking/ipv6-overview",
+      "title": "Vue d’ensemble de l’adressage IPv6",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:33:59.572Z",
+      "bytes": 14004,
+      "sha256": "cf7215e77df30c822b4a9cc03e68db5dc46a42d2b51a6136806dedfe21254682",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-v6.txt"
+    },
+    {
+      "id": "ip-planning",
+      "url": "https://learn.microsoft.com/fr-fr/azure/virtual-network/virtual-networks-faq",
+      "title": "Réseau virtuel Azure : plages privées et réservations de sous-réseaux",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:33:59.573Z",
+      "bytes": 52962,
+      "sha256": "6379ea3ccd1ca9c2acdb86ab92b85458f81e7fed2d966a3d27189299d685ca3e",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-planning.txt"
+    },
+    {
+      "id": "ip-dhcp-diagnostic",
+      "url": "https://learn.microsoft.com/fr-fr/windows-server/troubleshoot/troubleshoot-dhcp-issue",
+      "title": "Diagnostiquer les échanges et les baux DHCP",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:33:59.573Z",
+      "bytes": 19701,
+      "sha256": "09f32f02a98e5ceef6e7838341de88b46d3d4dffad50aaa43abfcf8b2e06bbb4",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-dhcp-diagnostic.txt"
+    },
+    {
+      "id": "ip-commands",
+      "url": "https://learn.microsoft.com/fr-fr/powershell/module/nettcpip/",
+      "title": "Commandes PowerShell du module NetTCPIP",
+      "ok": true,
+      "retrievedAt": "2026-10-24T23:33:59.573Z",
+      "bytes": 28383,
+      "sha256": "adba7cea54319b32b27b39b56813542ff9d13f74481d6ce21c49774702210974",
+      "cacheFile": "C:/Users/NH/.agent-reach/audits/sitefullinfra/addressing/ip-commands.txt"
     }
   ]
 }

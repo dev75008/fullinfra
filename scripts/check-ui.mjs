@@ -60,7 +60,7 @@ try {
   }
   await click(document.querySelector('.header-cta'));
   assert.match(document.title,/Tous les guides/,'Catalogue title must describe the page');
-  assert.equal(document.querySelectorAll('.article-card').length,8);
+  assert.equal(document.querySelectorAll('.article-card').length,10);
   await click(document.querySelectorAll('.filter-tabs button')[1]);
   assert.equal(document.querySelectorAll('.article-card').length,2);
   const input=document.querySelector('.search-box input');
@@ -70,7 +70,7 @@ try {
   });
   assert.equal(document.querySelectorAll('.article-card').length,0,'Search must filter displayed content');
   await click(document.querySelector('.empty-state button'));
-  assert.equal(document.querySelectorAll('.article-card').length,8,'Reset must clear search and category');
+  assert.equal(document.querySelectorAll('.article-card').length,10,'Reset must clear search and category');
   await click(document.querySelector('.article-card'));
   assert.ok(document.querySelector('.prose'));
   assert.ok(!document.title.includes('introuvable'));
@@ -162,10 +162,22 @@ try {
   await searchFor('guide-inexistant-xyz');
   await click(document.querySelector('.empty-state button'));
   assert.equal(document.querySelector('#guide-search').value,'');
-  assert.equal(document.querySelectorAll('.article-card').length,8);
+  assert.equal(document.querySelectorAll('.article-card').length,10);
   await click(document.querySelector('.site-header nav a[href="/windows-server"]'));
   assert.equal(document.querySelectorAll('.filter-tabs button').length,3,'Category filters should only list topics with articles');
   console.log('OK UX : menu courant, Échap, focus, libellés, filtres annoncés, recherche sans accents et liens de section.');
+  await click(document.querySelector('.site-header nav a[href="/adressage-reseau"]'));
+  assert.match(document.title,/Adressage IP/);
+  assert.equal(document.querySelectorAll('.addressing-topic-grid article').length,12);
+  assert.equal(document.querySelectorAll('.article-card').length,2);
+  assert.equal(document.querySelector('.m365-architecture-image').parentElement.tagName,'FIGURE');
+  for (const type of ['click','dblclick']) assert.equal(document.querySelector('.m365-architecture-image').dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true})),false);
+  assert.equal(document.querySelectorAll('#adressage-exemple table')[0].querySelectorAll('tbody tr').length,4);
+  for (const link of document.querySelectorAll('.section-navigation a')) assert.ok(document.getElementById(link.hash.slice(1)));
+  await click(document.querySelector('.article-card'));
+  assert.match(document.querySelector('h1').textContent,/IPv4/);
+  assert.ok(document.querySelector('.prose a[href*="tcpip-addressing-and-subnetting"]'));
+  console.log('OK réseau : 12 thèmes, 4 sous-réseaux /26, image non cliquable, navigation et guides.');
   await act(async () => {root.render(React.createElement(MemoryRouter,{key:'wrong-category',initialEntries:['/inconnu/azure-premiere-vm']},React.createElement(App)));});
   assert.ok(document.querySelector('.not-found'));
   assert.match(document.title,/Page introuvable/,'A known slug under the wrong category must keep its 404 title');

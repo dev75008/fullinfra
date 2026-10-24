@@ -102,6 +102,8 @@ sitefullinfra/
 
 ## Modifier le contenu
 
+La rubrique **Adressage réseau** est accessible à `/adressage-reseau/`. Ses douze thèmes, les exemples de sous-réseaux, les repères CIDR et ses deux guides sont regroupés dans `src/data/networkAddressing.js`. L’affichage se trouve dans `src/NetworkAddressingSection.jsx`. L’infographie autonome se régénère avec `node scripts/generate-network-architecture.mjs` ; le SVG affiché n’est pas cliquable. Les ajouts d’articles et de rubriques sont pris en compte par le pré-rendu et le sitemap lors de `npm run build`.
+
 Les articles se modifient dans `src/data/content.js`. Pour ajouter un article, ajouter un objet au tableau `sampleArticles` ; le tableau exporté `articles` y ajoute ses références et calcule son temps de lecture :
 
 ```js

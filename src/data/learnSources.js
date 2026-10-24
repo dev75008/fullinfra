@@ -1,6 +1,11 @@
 // Références Microsoft Learn récupérées via le lecteur Jina de la procédure Agent Reach.
 // Traçabilité des captures : docs/learn-sources-audit.json.
 export const learnSources = {
+"ip-subnets":{"url":"https://learn.microsoft.com/fr-fr/troubleshoot/windows-client/networking/tcpip-addressing-and-subnetting","title":"Adresses et sous-réseaux TCP/IP"},
+"ip-v6":{"url":"https://learn.microsoft.com/fr-fr/dotnet/fundamentals/networking/ipv6-overview","title":"Vue d’ensemble de l’adressage IPv6"},
+"ip-planning":{"url":"https://learn.microsoft.com/fr-fr/azure/virtual-network/virtual-networks-faq","title":"Réseau virtuel Azure : plages privées et réservations de sous-réseaux"},
+"ip-dhcp-diagnostic":{"url":"https://learn.microsoft.com/fr-fr/windows-server/troubleshoot/troubleshoot-dhcp-issue","title":"Diagnostiquer les échanges et les baux DHCP"},
+"ip-commands":{"url":"https://learn.microsoft.com/fr-fr/powershell/module/nettcpip/","title":"Commandes PowerShell du module NetTCPIP"},
 "fsmo":{"url":"https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/understand-fsmo-roles","title":"Comprendre les cinq rôles FSMO dans Windows Server"},
 "fsmo-manage":{"url":"https://learn.microsoft.com/fr-fr/windows-server/identity/ad-ds/manage/manage-fsmo-roles","title":"Transférer les rôles FSMO dans Windows Server"},
 "fsmo-recovery":{"url":"https://learn.microsoft.com/fr-fr/troubleshoot/windows-server/active-directory/fsmo-transfer-seizure-process","title":"Transfert et saisie des rôles FSMO"},

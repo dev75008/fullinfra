@@ -1,0 +1,30 @@
+import { readFile, writeFile } from 'node:fs/promises';
+
+// Texte vectoriel et icônes intégrées : le document reste autonome et net au zoom.
+const escape = value => String(value).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+const parts = [`<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800" font-family="Segoe UI, Arial, sans-serif" role="img" aria-labelledby="title desc"><title id="title">Adressage réseau : IP, masques et sous-réseaux</title><desc id="desc">IPv4, IPv6, CIDR, sous-réseaux, passerelle, DHCP, DNS et diagnostic.</desc><rect width="2400" height="1800" fill="#f4f8fb"/>`];
+function rect(x,y,w,h,fill='#fff',stroke='#cbddeb') { parts.push(`<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="10" fill="${fill}" stroke="${stroke}"/>`); }
+function text(x,y,value,size=25,color='#173654',weight=400) { parts.push(`<text x="${x}" y="${y}" fill="${color}" font-size="${size}" font-weight="${weight}">${escape(value)}</text>`); }
+async function icon(name,x,y,size=58) { const svg=await readFile(new URL(`../public/icons/microsoft/${name}.svg`,import.meta.url)); parts.push(`<image x="${x}" y="${y}" width="${size}" height="${size}" href="data:image/svg+xml;base64,${svg.toString('base64')}"/>`); }
+function row(n,y,h,title,description) { rect(30,y,2340,h); rect(30,y,290,h,'#edf5fb','#edf5fb'); parts.push(`<circle cx="66" cy="${y+42}" r="19" fill="#0067b8"/>`); text(59,y+50,n,24,'#fff',700); title.forEach((line,i)=>text(98,y+48+i*35,line,29,'#173654',700)); description.forEach((line,i)=>text(52,y+h-65+i*30,line,24,'#526b82')); }
+async function card(x,y,w,h,title,name,lines,color='#0067b8') { rect(x,y,w,h,'#f7fafc'); rect(x,y,w,52,color,color); await icon(name,x+13,y+10,32); text(x+58,y+36,title,28,'#fff',650); await icon(name,x+22,y+80,68); lines.forEach((line,i)=>text(x+110,y+99+i*37,line,25)); }
+await icon('vnet',35,25,70); text(125,80,'Adressage réseau',54,'#0b4876',700); text(720,72,'Adresses IP, masques et sous-réseaux',42,'#173654',650); text(720,112,'Comprendre, découper et vérifier son réseau',27,'#526b82');
+row(1,150,180,['Les repères','essentiels'],['Une configuration IP','cohérente par interface']);
+for (const [i,[name,title,desc]] of [['vnet','Adresse IP','Identifier une interface'],['resource-group','Préfixe / masque','Définir la taille du réseau'],['gateway','Passerelle','Joindre les autres réseaux'],['dns','Serveur DNS','Résoudre un nom en adresse']].entries()) { const x=360+i*495; await icon(name,x+165,170,58); text(x+45,265,title,30,'#173654',650); text(x+45,305,desc,24,'#526b82'); }
+row(2,350,310,['IPv4','et CIDR'],['32 bits en IPv4','Préfixe réseau /p']);
+await card(340,370,970,225,'Exemple : 192.168.10.70/26','vnet',['Masque : 255.255.255.192 · 26 bits réseau','Réseau : 192.168.10.64/26 · Bloc de 64 adresses','Hôtes : .65 à .126 · Diffusion : .127']);
+await card(1330,370,1020,225,'Plages IPv4 privées (RFC 1918)','private-endpoint',['10.0.0.0/8','172.16.0.0/12','192.168.0.0/16']);
+text(365,630,'Plus le préfixe est long, plus le bloc est petit.',26,'#0067b8',600); text(1320,630,'Éviter les chevauchements entre sites et cloud.',26,'#0067b8',600);
+row(3,680,260,['Découper','un /24 en /26'],['4 blocs de 64 adresses','62 hôtes par bloc']);
+for(const [i,[start,first,last,broadcast]] of [[0,1,62,63],[64,65,126,127],[128,129,190,191],[192,193,254,255]].entries()){const x=340+i*505;rect(x,700,485,220,'#f7fafc');rect(x,700,485,52,'#0067b8','#0067b8');text(x+18,736,`192.168.10.${start}/26`,28,'#fff',650);text(x+20,798,`Hôtes : .${first} à .${last}`,27);text(x+20,843,`Diffusion : .${broadcast}`,25);text(x+20,886,'Masque : 255.255.255.192',24,'#526b82');}
+row(4,960,260,['Communiquer','sur le réseau'],['Adressage, routage','et résolution de noms']);
+await card(340,980,650,220,'Passerelle et routage','gateway',['Destination locale : accès direct','Destination distante : route','Chemin de retour nécessaire']);
+await card(1010,980,650,220,'DHCP et attribution','vnet',['Bail · Adresse · Masque','Options : passerelle et DNS','DHCPv4 : UDP 67 / 68']);
+await card(1680,980,670,220,'DNS et noms','dns',['Nom → adresse IPv4 / IPv6','Enregistrements A et AAAA','DNS classique : UDP / TCP 53']);
+row(5,1240,290,['Préparer','et vérifier'],['Concevoir le plan','puis tester les chemins']);
+for (const [i,[title,name,lines,color]] of [['IPv6','vnet',['128 bits · Hexadécimal','Ex. 2001:db8:10::20/64','Préfixe /64 courant en LAN','Configuration distincte d’IPv4'],'#0067b8'],['Plan d’adressage','resource-group',['Usage de chaque segment','Préfixe et passerelle','DHCP, réservations, DNS','VLAN et règles de routage'],'#0067b8'],['Capacité et réservations','availability',['Total : 2^(32 − préfixe)','Hôtes classiques : total − 2','Azure IPv4 : total − 5','Cas /31 et /32 particuliers'],'#107c41'],['Diagnostic','monitor',['Adresse et préfixe','Passerelle et table de routes','DNS puis port applicatif','Ne pas conclure sur le ping'],'#0067b8']].entries()) {const x=340+i*505;rect(x,1260,485,250,'#f7fafc');rect(x,1260,485,52,color,color);text(x+15,1295,title,25,'#fff',650);await icon(name,x+18,1350,65);lines.forEach((line,j)=>text(x+102,1354+j*36,line,23));}
+row(6,1550,145,['Parcours','illustratif'],[]);
+['Poste configuré','DNS si nom','Route choisie','Direct / routeur','Service cible','Réponse'].forEach((label,i)=>{const x=345+i*335;parts.push(`<circle cx="${x+20}" cy="1591" r="20" fill="#0067b8"/>`);text(x+13,1599,i+1,24,'#fff',700);text(x+51,1600,label,24,'#173654',600);if(i<5)text(x+295,1640,'→',38,'#0078d4');});
+rect(30,1715,2340,55,'#0b4876','#0b4876');text(52,1751,'IP : pas de port TCP/UDP propre',25,'#fff',600); text(820,1751,'DHCPv4 UDP 67/68 · DNS TCP/UDP 53',25,'#fff',600); text(1700,1751,'Routage ≠ autorisation',25,'#fff',600);
+text(34,1792,'Les exemples de capacité IPv4 classique portent sur /24 à /30, avant les réservations internes. Les contraintes du cloud et d’IPv6 sont distinctes.',22,'#526b82');
+parts.push('</svg>');await writeFile(new URL('../public/adressage-reseau-architecture.svg',import.meta.url),parts.join('\n'));console.log('OK : infographie Adressage réseau, Segoe UI vectoriel.');

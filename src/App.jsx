@@ -8,6 +8,7 @@ import WindowsArchitecture from './WindowsArchitecture';
 import FsmoSection from './FsmoSection';
 import VirtualisationArchitecture from './VirtualisationArchitecture';
 import AzureArchitecture from './AzureArchitecture';
+import NetworkAddressingSection from './NetworkAddressingSection';
 import TechnologyInfographic from './TechnologyInfographic';
 import { ecosystems } from './data/ecosystems';
 import SourceLinks from './SourceLinks';
@@ -55,7 +56,7 @@ function Header() {
     </nav><Link className="header-cta" to="/guides">Tous les guides <ArrowUpRight size={16} aria-hidden="true"/></Link>
   </div></header>;
 }
-function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} FullInfra. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 <span className="status-dot"/></span></div></div></footer>; }
+function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} FullInfra. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 · Réseau <span className="status-dot"/></span></div></div></footer>; }
 function GuideList({ category }) {
   const [searchParams,setSearchParams] = useSearchParams();
   const query = searchParams.get('recherche') || '';
@@ -94,6 +95,7 @@ function Guides() {
   if (slug === 'windows-server') sections.splice(1,0,['windows-fsmo','Rôles FSMO']);
   if (slug === 'virtualisation') sections.unshift(['virtualisation-architecture','Infographie de l’architecture']);
   if (slug === 'azure') sections.unshift(['azure-architecture','Infographie de l’architecture']);
+  if (slug === 'adressage-reseau') sections.splice(0,sections.length,['adressage-architecture','Infographie'],['adressage-details','Explications'],['adressage-exemple','Exemple de sous-réseaux'],['adressage-diagnostic','Diagnostic']);
   return <main className="container listing-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
     <section className={`page-intro ${category?.color || 'green'}`}><span className="icon-box"><TechnologyIcon name={category ? categoryIconKeys[slug] : 'guides'} size={60}/></span><h1>{category?.name || 'Tous les guides'}</h1><p>{category?.description || 'Recherchez un sujet ou choisissez un environnement pour retrouver un guide.'}</p></section>
@@ -101,6 +103,7 @@ function Guides() {
     {slug === 'windows-server' && <><WindowsArchitecture/><FsmoSection/><WindowsInfographic/></>}
     {slug === 'virtualisation' && <VirtualisationArchitecture/>}
     {slug === 'azure' && <AzureArchitecture/>}
+    {slug === 'adressage-reseau' && <NetworkAddressingSection/>}
     {ecosystems[slug] && <TechnologyInfographic key={`map-${slug}`} ecosystem={ecosystems[slug]}/>}
     {slug === 'virtualisation' && <VMwareSection/>}{slug === 'microsoft-365' && <Microsoft365Section/>}
     <GuideList key={`guides-${slug || 'all'}`} category={category}/>

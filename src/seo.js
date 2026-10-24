@@ -7,12 +7,13 @@ export const canonicalPath = pathname => {
   return path === '/' ? '/' : `${path}/`;
 };
 const categoryTitles = {
+  'adressage-reseau':'Adressage IP : IPv4, IPv6, CIDR et sous-réseaux',
   'windows-server':'Windows Server : Active Directory, FSMO et PowerShell',
   virtualisation:'Virtualisation : Hyper-V, VMware et machines virtuelles',
   azure:'Azure : réseau, machines virtuelles et services cloud',
   'microsoft-365':'Microsoft 365 : identités, sécurité et collaboration',
 };
-const images = {'windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png'};
+const images = {'windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png'};
 
 export function getPageMetadata(pathname) {
   const path = pathname.replace(/\/+$/,'') || '/';

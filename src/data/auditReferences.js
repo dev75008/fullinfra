@@ -65,6 +65,8 @@ export const flowReferences = {
 };
 
 export const articleReferences = {
+  'calculer-sous-reseau-ipv4':['ip-subnets','ip-planning'],
+  'comprendre-adresse-ipv6':['ip-v6','ip-commands'],
   'preparer-tenant':['m365-admin','m365-health'],
   'teams-connectivite':['m365-teams','m365-network'],
   'active-directory-fondations':['ad','gpo','replication','fsmo','fsmo-manage','fsmo-recovery'],

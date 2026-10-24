@@ -7,6 +7,9 @@ const server=await createServer({server:{middlewareMode:true,hmr:false,ws:false}
 try {
   const { categoryIconKeys, branchIconKeys, technologyIconKeys }=await server.ssrLoadModule('/src/data/technologyIcons.js');
   const { availableTechnologyIcons }=await server.ssrLoadModule('/src/TechnologyIcon.jsx');
+  const { networkTopics }=await server.ssrLoadModule('/src/data/networkAddressing.js');
+  assert.ok(availableTechnologyIcons.has(categoryIconKeys['adressage-reseau']));
+  for(const topic of networkTopics) assert.ok(availableTechnologyIcons.has(topic.icon),`Missing network icon: ${topic.id}`);
   const { windowsBranches }=await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { ecosystems }=await server.ssrLoadModule('/src/data/ecosystems.js');
   let technologies=0;

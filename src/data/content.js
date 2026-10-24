@@ -1,9 +1,11 @@
 import { articleReferences } from './auditReferences';
+import { networkGuides } from './networkAddressing';
 export const categories = [
   { slug: 'windows-server', name: 'Windows Server', short: 'Windows', icon: 'server', color: 'green', description: 'Identités Active Directory, services réseau, stockage et administration de Windows Server.', topics: ['Active Directory', 'PowerShell', 'Réseau'] },
   { slug: 'virtualisation', name: 'Virtualisation', short: 'Virtualisation', icon: 'layers', color: 'purple', description: 'Hyper-V, VMware vSphere et Azure VMware Solution : hôtes, machines virtuelles, stockage et disponibilité.', topics: ['Hyper-V', 'VMware', 'Stockage'] },
   { slug: 'azure', name: 'Azure', short: 'Azure', icon: 'cloud', color: 'blue', description: 'Calcul, réseau, stockage et gouvernance : comprenez les services Azure et leurs dépendances.', topics: ['Machines virtuelles', 'Réseau cloud', 'Gouvernance'] },
   { slug: 'microsoft-365', name: 'Microsoft 365', short: 'Microsoft 365', icon: 'apps', color: 'blue', description: 'Administrez vos services de collaboration : identités, messagerie, fichiers, appareils et protection des données.', topics: ['Administration', 'Teams', 'Sécurité'] },
+  { slug: 'adressage-reseau', name: 'Adressage réseau', short: 'Réseau', icon: 'network', color: 'blue', description: 'Comprendre IPv4, IPv6, les masques et le CIDR ; calculer les sous-réseaux et préparer un plan d’adressage cohérent.', topics: ['IPv4 et CIDR', 'Sous-réseaux', 'IPv6'] },
 ];
 
 const sampleArticles = [
@@ -51,4 +53,4 @@ const sampleArticles = [
   ] },
 ];
 
-export const articles = sampleArticles.map(article => ({...article, sourceIds:articleReferences[article.slug], minutes:Math.max(1,Math.ceil(article.sections.map(section => section.join(' ')).join(' ').split(/\s+/).length / 200))}));
+export const articles = [...sampleArticles,...networkGuides].map(article => ({...article, sourceIds:articleReferences[article.slug], minutes:Math.max(1,Math.ceil(article.sections.map(section => section.join(' ')).join(' ').split(/\s+/).length / 200))}));
