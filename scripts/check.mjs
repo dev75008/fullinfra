@@ -39,7 +39,7 @@ try {
   const render = path => renderToString(React.createElement(MemoryRouter, { initialEntries: [path] }, React.createElement(App)));
   assert.match(render('/'), /Comprendre/);
   const windowsHtml = render('/windows-server');
-  assert.ok(windowsHtml.includes('id="communication-title"'));
+  assert.ok(!windowsHtml.includes('id="communication-title"'));
   assert.equal(communicationNodes.length, 13); // Douze branches et le centre clients/admins.
   assert.equal(new Set(communicationEdges.map(edge => edge.id)).size, communicationEdges.length);
   const nodeIds = new Set(communicationNodes.map(node => node.id));
@@ -88,7 +88,7 @@ try {
   }
   for (const ecosystem of Object.values(ecosystems)) {
     const html = render(`/${ecosystem.slug}`);
-    assert.equal(html.includes(`id="${ecosystem.slug}-communication-title"`), ecosystem.slug !== 'virtualisation');
+    assert.ok(!html.includes(`id="${ecosystem.slug}-communication-title"`));
     assert.ok(html.includes(`id="${ecosystem.slug}-map"`));
     assert.ok(!html.includes('NaN') && !html.includes('undefined'));
     assert.equal((html.match(/<details /g) || []).length, 13);
