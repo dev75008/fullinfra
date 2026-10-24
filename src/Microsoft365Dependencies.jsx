@@ -2,8 +2,8 @@ import React from 'react';
 import './microsoft365-dependencies.css';
 
 export default function Microsoft365Dependencies() {
-  const image=`${import.meta.env.BASE_URL}microsoft365-architecture.svg?v=lisible-1`;
-  const png=`${import.meta.env.BASE_URL}microsoft365-architecture-hd.png?v=lisible-1`;
+  const image=`${import.meta.env.BASE_URL}microsoft365-architecture.svg?v=icones-2`;
+  const png=`${import.meta.env.BASE_URL}microsoft365-architecture-hd.png?v=icones-2`;
   return <section id="m365-dependencies" className="dependency-infographic supplied-infographic" aria-labelledby="dependencies-title">
     <header><h2 id="dependencies-title">Microsoft 365 : architecture et fonctionnement</h2><p>Identité, collaboration, gestion des appareils, sécurité et données dans le cloud.</p></header>
     <div className="dependency-toolbar">

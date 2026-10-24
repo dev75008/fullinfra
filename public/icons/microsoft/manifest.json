@@ -1,7 +1,11 @@
 {
   "sources": [
     "https://learn.microsoft.com/fr-fr/azure/architecture/icons/",
-    "https://learn.microsoft.com/fr-fr/entra/architecture/architecture-icons"
+    "https://learn.microsoft.com/fr-fr/entra/architecture/architecture-icons",
+    "https://learn.microsoft.com/fr-fr/previous-versions/microsoft-365/solutions/architecture-icons-templates",
+    "https://fluent2.microsoft.design/iconography/",
+    "https://github.com/microsoft/agent-academy/tree/main/docs/public/product-icons",
+    "https://github.com/microsoft/Microsoft-AI-Decision-Framework/tree/main/images/icons"
   ],
   "usage": "Architecture diagrams and educational documentation only. Product names accompany icons. SVG files are unmodified. Microsoft retains its rights.",
   "icons": [
@@ -305,6 +309,202 @@
       "original": "Microsoft Entra architecture icons - Oct 2023/Microsoft Entra color icons SVG/Microsoft Entra ID color icon.svg",
       "pack": "Microsoft Entra architecture icons - Oct 2023",
       "sha256": "efd9f54562bfb78bf3c77aecdd5fc31b61fce8a1cec78c4370b41fc470e54eda"
+    },
+    {
+      "key": "m365-teams",
+      "file": "m365-teams.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/teams_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "6ec0e1afd7359a71915430bab4a49554bcfd1f1b881db5108c807ed08f1a0afb"
+    },
+    {
+      "key": "m365-powerpoint",
+      "file": "m365-powerpoint.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/powerpoint_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "708fa79febaf25786d84a4bd6a39c8a7345e1e927399f88761db11dab5441f84"
+    },
+    {
+      "key": "m365-outlook",
+      "file": "m365-outlook.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/outlook_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "0884e0478f7e073163febe67eaff20be97ae38373b0866c9668f81c2f6bd26c2"
+    },
+    {
+      "key": "m365-word",
+      "file": "m365-word.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/word_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "fef9d7fc114f0c5d55e6d50c6d8d3fc40ed69f1122d9adf1780dfa57ad40af79"
+    },
+    {
+      "key": "m365-onenote",
+      "file": "m365-onenote.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/onenote_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "b2a79855b547ff47cd23640fb8b6cb625713ca0880e74654f018d2b88f96a3ec"
+    },
+    {
+      "key": "m365-onedrive",
+      "file": "m365-onedrive.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/onedrive_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "393fe3509c33de52e4dcfb7aece1a5ea41d8114ac1be0d68b13948cc28962f6a"
+    },
+    {
+      "key": "m365-sharepoint",
+      "file": "m365-sharepoint.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/sharepoint_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "7f260c54c77342eb16ce20ab132729c7e640e7ead6a4bb9e7d1b4a94bd0e8eda"
+    },
+    {
+      "key": "m365-excel",
+      "file": "m365-excel.svg",
+      "original": "https://static2.sharepointonline.com/files/fabric/assets/brand-icons/product/svg/excel_48x1.svg",
+      "pack": "Microsoft Fluent UI product icons",
+      "sha256": "da91a550409ab355e664188a00135bc93603e5a8f53df3eeed8abc2ab3db8d71"
+    },
+    {
+      "key": "m365-copilot",
+      "file": "m365-copilot.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/public/product-icons/microsoft-365-copilot.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "45b1006ebb3cce86a0d9d8053323975081e439ae788573e360abba39eca36efc"
+    },
+    {
+      "key": "m365-microsoft365",
+      "file": "m365-microsoft365.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/agent-academy/main/docs/public/product-icons/microsoft-365.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "7383ee3f4999fe311b1826a9ffae9048cbf3d13015c78900201d2f892862dadc"
+    },
+    {
+      "key": "m365-exchange",
+      "file": "m365-exchange.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/Microsoft-AI-Decision-Framework/main/images/icons/exchange.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "0e6d96c4c946861ac4cdf8a090e976c238877f0d079c9a41591ea43345d9107f"
+    },
+    {
+      "key": "m365-intune",
+      "file": "m365-intune.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/Microsoft-AI-Decision-Framework/main/images/icons/intune.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "77cf5bca800f55dcc805f01eeb96a93e185fb15f821bc87b6f9133fa19803fa4"
+    },
+    {
+      "key": "m365-defender",
+      "file": "m365-defender.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/Microsoft-AI-Decision-Framework/main/images/icons/defender.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "97d644929a43949ec1d00aa4ce0d8782b5bbb9b6deeae984038a7b4ab4be2626"
+    },
+    {
+      "key": "m365-purview",
+      "file": "m365-purview.svg",
+      "original": "https://raw.githubusercontent.com/microsoft/Microsoft-AI-Decision-Framework/main/images/icons/purview.svg",
+      "pack": "Microsoft official GitHub product assets",
+      "sha256": "c940c3bf9d280e2189f97eb570e513b5a2d2083c502732e8a94dd91814b5bc6d"
+    },
+    {
+      "key": "m365-concept-people",
+      "file": "m365-concept-people.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/People Team.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "6deae9f70c6ea80eff4e06db0eac075d4de453013e3d82efadd1cb8692fedc0b"
+    },
+    {
+      "key": "m365-concept-admin",
+      "file": "m365-concept-admin.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Person Settings.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "6d8a413e521916aac43fe58c5be90fbb1a5598301ed5444f73d77da7391564a9"
+    },
+    {
+      "key": "m365-concept-mobile",
+      "file": "m365-concept-mobile.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Phone Tablet.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "45fcd47f8e254e684754090e094a19699d6977075ba04bae05b9cc11916aead7"
+    },
+    {
+      "key": "m365-concept-desktop",
+      "file": "m365-concept-desktop.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Desktop Tower.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "3524087d091f20b5504d1fb6a8f31b682b1201bf9d69824097bece51d9fe4fc6"
+    },
+    {
+      "key": "m365-concept-laptop",
+      "file": "m365-concept-laptop.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Laptop.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "e9351cd1070cf25da266d9d3a1f80bce32095f13840b1e1faf201bc713b09707"
+    },
+    {
+      "key": "m365-concept-web",
+      "file": "m365-concept-web.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Globe.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "1245387d89e7854153efb724f839fa33b201c435f673fb6d31cfcbf2d3b00962"
+    },
+    {
+      "key": "m365-concept-person",
+      "file": "m365-concept-person.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Person.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "097b5b705601978e52267eb76ad9d6a2a0b406ee7177be2874f3dfaa9b7cf6c7"
+    },
+    {
+      "key": "m365-concept-key",
+      "file": "m365-concept-key.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Key.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "2a8d444c0d9947c6539f1478ef320ab1fe35c9868021e05504769775e3bb9959"
+    },
+    {
+      "key": "m365-concept-shield",
+      "file": "m365-concept-shield.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Lock Shield.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "4fda7e806d72cfa8b4b3cd18eed83364ad6dda4fa07f1677d5f29bad7f4e4cea"
+    },
+    {
+      "key": "m365-concept-roles",
+      "file": "m365-concept-roles.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/People Settings.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "a985af7d32dd4ad74c12091d1b3a91fe691fac512661f988b9b36d40db1c7b20"
+    },
+    {
+      "key": "m365-concept-cloud",
+      "file": "m365-concept-cloud.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Cloud.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "634ac6c9a28b2933fbd9ad4c2787c57d8211fb037e29a88b7d5073f6f86e9024"
+    },
+    {
+      "key": "m365-concept-database",
+      "file": "m365-concept-database.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Database.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "9be57c0758d72cdf7df74a3228d6d55b335e819857fbbf9bf620b90dc9eeca2c"
+    },
+    {
+      "key": "m365-concept-protection",
+      "file": "m365-concept-protection.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Document Lock.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "a7039b767b328d76d2c12f5b6012c3ed9eed5e56f2ce2d27d66ac5a04274e160"
+    },
+    {
+      "key": "m365-concept-devices",
+      "file": "m365-concept-devices.svg",
+      "original": "Microsoft Blue/48x48 Grey & Blue Icon/Phone Laptop.svg",
+      "pack": "Microsoft 365 Content Icons 2024",
+      "sha256": "d1e375128db4bf555ac7e942f61b41e06cda233e6d7ee815cc0652e2e86c15af"
     }
   ]
 }
