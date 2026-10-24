@@ -63,10 +63,10 @@ try {
     }
   }
   assert.equal(windowsBranches.length, 12);
-  assert.equal((windowsHtml.match(/<details /g) || []).length, 12);
+  assert.equal((windowsHtml.match(/<details /g) || []).length, 13);
   assert.equal((windowsHtml.match(/<dt>/g) || []).length, 48);
   assert.equal((windowsHtml.match(/class="technology-points"/g) || []).length, 48);
-  assert.equal((windowsHtml.match(/<li>/g) || []).length, 144);
+  assert.equal((windowsHtml.match(/<li>/g) || []).length, 150);
   assert.equal((windowsHtml.match(/class="branch-example"/g) || []).length, 12);
   assert.equal((windowsHtml.match(/class="technology-protocols"/g) || []).length, 48);
   for (const branch of windowsBranches) {
