@@ -191,4 +191,6 @@ Le rendu SVG a été rasterisé et inspecté pour vérifier les étiquettes. Cet
 
 ### Image d’architecture Microsoft 365
 
-L’infographie affichée dans la rubrique Microsoft 365 est désormais l’image fournie par l’utilisateur, conservée sans modification dans `public/microsoft365-architecture.png` (3072 × 2048). Elle s’adapte à la largeur de l’écran et propose une ouverture en grand, un téléchargement et un résumé textuel. Les fiches techniques et la carte des accès réseau restent disponibles plus bas.
+L’infographie de la rubrique Microsoft 365 est recréée dans `public/microsoft365-architecture.svg` (2400 × 1800), avec du texte vectoriel en Segoe UI, des fonds unis et les six rubriques de l’image fournie. Le texte a été retapé et les pictogrammes recomposés pour éviter les lettres déformées du visuel original. Les noms des services dans le SVG renvoient aux sources Microsoft Learn en français déjà référencées dans le projet ; l’icône officielle Entra est intégrée sans modification.
+
+Le site affiche le SVG et propose son ouverture en grand ainsi que les téléchargements SVG et PNG. L’export `public/microsoft365-architecture-hd.png` (4800 × 3600) est rendu à une échelle de 2 avec Chromium et Segoe UI. Après une modification du SVG, renouveler cet export. L’image fournie reste conservée dans `public/microsoft365-architecture.png` comme original, sans être affichée. Le résumé textuel, les fiches techniques et la carte des accès réseau restent disponibles.

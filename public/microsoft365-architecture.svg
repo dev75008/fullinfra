@@ -1,0 +1,314 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800" role="img" aria-labelledby="title description" font-family="Segoe UI, Arial, sans-serif">
+<title id="title">Microsoft 365 : architecture et fonctionnement</title><desc id="description">Infographie en six rubriques : utilisateurs, identité et accès, services Microsoft 365, appareils et sécurité, données cloud et parcours utilisateur. Le texte est vectoriel. Les liens des produits renvoient aux sources Microsoft Learn en français.</desc>
+<rect x="0" y="0" width="2400" height="1800" rx="0" fill="#f5f8fb"/>
+<text x="40" y="70" font-size="58" font-weight="700" fill="#064578" text-anchor="start"><tspan x="40" dy="0">Microsoft 365</tspan></text>
+<text x="595" y="61" font-size="36" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="595" dy="0">Architecture et fonctionnement</tspan></text>
+<text x="598" y="103" font-size="26" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="598" dy="0">Identité, sécurité, gestion des appareils et collaboration</tspan></text>
+<path d="M40 131H2360" fill="none" stroke="#cedbe6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="32" y="156" width="2336" height="174" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="156" width="286" height="174" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="194" r="18" fill="#0067b8"/>
+<text x="68" y="201" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">1</tspan></text>
+<text x="98" y="202" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Utilisateurs</tspan></text>
+<text x="56" y="265" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Accès aux services</tspan><tspan x="56" dy="30">depuis vos appareils</tspan></text>
+<g transform="translate(478 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="19" cy="13" r="7"/><path d="M4 43v-7c0-13 29-13 29 0v7ZM34 7c9 0 9 14 0 14M40 43v-8c0-6-2-9-7-10"/>
+</g>
+<text x="502" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="502" dy="0">Collaborateurs</tspan></text>
+<text x="502" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="502" dy="0">Employés</tspan></text>
+<g transform="translate(806 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="24" cy="13" r="8"/><path d="M8 44v-7c0-15 32-15 32 0v7Z"/>
+</g>
+<text x="830" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="830" dy="0">Administrateurs IT</tspan></text>
+<text x="830" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="830" dy="0">DSI / IT</tspan></text>
+<g transform="translate(1134 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="12" y="3" width="24" height="42" rx="4"/><path d="M20 8h8M23 39h2"/>
+</g>
+<text x="1158" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1158" dy="0">Mobiles</tspan></text>
+<text x="1158" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1158" dy="0">iOS / Android</tspan></text>
+<g transform="translate(1462 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="7" y="7" width="34" height="26" rx="2"/><path d="M2 39h44l-4 5H6Z"/>
+</g>
+<text x="1486" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1486" dy="0">PC Windows</tspan></text>
+<text x="1486" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1486" dy="0">Applications et web</tspan></text>
+<g transform="translate(1790 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="7" y="7" width="34" height="26" rx="2"/><path d="M2 39h44l-4 5H6Z"/>
+</g>
+<text x="1814" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1814" dy="0">Mac</tspan></text>
+<text x="1814" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1814" dy="0">Applications et web</tspan></text>
+<g transform="translate(2118 176) scale(1)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="24" cy="24" r="20"/><ellipse cx="24" cy="24" rx="9" ry="20"/><path d="M4 24h40M8 12h32M8 36h32"/>
+</g>
+<text x="2142" y="257" font-size="26" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="2142" dy="0">Accès web</tspan></text>
+<text x="2142" y="293" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="2142" dy="0">Navigateur</tspan></text>
+<rect x="32" y="350" width="2336" height="290" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="350" width="286" height="290" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="388" r="18" fill="#0067b8"/>
+<text x="68" y="395" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">2</tspan></text>
+<text x="98" y="396" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Identité</tspan><tspan x="98" dy="37">et accès</tspan></text>
+<text x="56" y="575" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Qui peut accéder</tspan><tspan x="56" dy="30">à quoi ?</tspan></text>
+<rect x="338" y="368" width="2010" height="66" rx="8" fill="#0067b8"/>
+<image x="359" y="375" width="50" height="50" href="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0idXVpZC1mOGQ0ZDM5Mi03YzEyLTRiZDktYmFmZi02NmZiZjc4MTRiOTEiIGRhdGEtbmFtZT0iTGF5ZXIgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCI+CiAgPHBhdGggZD0ibTMuODAyLDE0LjAzMmMuMzg4LjI0MiwxLjAzMy41MTEsMS43MTUuNTExLjYyMSwwLDEuMTk4LS4xOCwxLjY3Ni0uNDg3LDAsMCwuMDAxLDAsLjAwMi0uMDAxbDEuODA1LTEuMTI4djQuMDczYy0uMjg2LDAtLjU3NC0uMDc4LS44MjQtLjIzNGwtNC4zNzQtMi43MzRaIiBmaWxsPSIjMjI1MDg2Ii8+CiAgPHBhdGggZD0ibTcuODUzLDEuNTA3TC4zNTMsOS45NjdjLS41NzkuNjU0LS40MjgsMS42NDIuMzIzLDIuMTExLDAsMCwyLjc3NiwxLjczNSwzLjEyNiwxLjk1NC4zODguMjQyLDEuMDMzLjUxMSwxLjcxNS41MTEuNjIxLDAsMS4xOTgtLjE4LDEuNjc2LS40ODcsMCwwLC4wMDEsMCwuMDAyLS4wMDFsMS44MDUtMS4xMjgtNC4zNjQtMi43MjgsNC4zNjUtNC45MjRWMXMwLDAsMCwwYy0uNDI0LDAtLjg0Ny4xNjktMS4xNDcuNTA3WiIgZmlsbD0iIzZkZiIvPgogIDxwb2x5Z29uIHBvaW50cz0iNC42MzYgMTAuMTk5IDQuNjg4IDEwLjIzMSA5IDEyLjkyNyA5LjAwMSAxMi45MjcgOS4wMDEgMTIuOTI3IDkuMDAxIDUuMjc2IDkgNS4yNzUgNC42MzYgMTAuMTk5IiBmaWxsPSIjY2JmOGZmIi8+CiAgPHBhdGggZD0ibTE3LjMyNCwxMi4wNzhjLjc1MS0uNDY5LjkwMi0xLjQ1Ny4zMjMtMi4xMTFsLTQuOTIxLTUuNTUxYy0uMzk3LS4xODUtLjg0Mi0uMjkxLTEuMzEzLS4yOTEtLjkyNSwwLTEuNzUyLjM5OS0yLjMwMiwxLjAyNmwtLjEwOS4xMjNoMHM0LjM2NCw0LjkyNCw0LjM2NCw0LjkyNGgwczAsMCwwLDBsLTQuMzY1LDIuNzI4djQuMDczYy4yODcsMCwuNTczLS4wNzguODIzLS4yMzRsNy41LTQuNjg4WiIgZmlsbD0iIzA3NDc5MyIvPgogIDxwYXRoIGQ9Im05LjAwMSwxdjQuMjc1cy4xMDktLjEyMy4xMDktLjEyM2MuNTUtLjYyNywxLjM3Ny0xLjAyNiwyLjMwMi0xLjAyNi40NzIsMCwuOTE2LjEwNywxLjMxMy4yOTFsLTIuNTc5LTIuOTA5Yy0uMjk5LS4zMzgtLjcyMy0uNTA3LTEuMTQ2LS41MDdaIiBmaWxsPSIjMDI5NGU0Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxMy4zNjUgMTAuMTk5IDEzLjM2NSAxMC4xOTkgMTMuMzY1IDEwLjE5OSA5LjAwMSA1LjI3NiA5LjAwMSAxMi45MjYgMTMuMzY1IDEwLjE5OSIgZmlsbD0iIzk2YmNjMiIvPgo8L3N2Zz4="/>
+<a href="https://learn.microsoft.com/fr-fr/microsoft-365/admin/admin-overview/admin-center-overview?view=o365-worldwide" target="_blank" rel="noopener noreferrer">
+<text x="427" y="412" font-size="33" font-weight="700" fill="#fff" text-anchor="start"><tspan x="427" dy="0">Microsoft Entra ID</tspan></text>
+</a>
+<text x="968" y="410" font-size="25" font-weight="400" fill="#fff" text-anchor="start"><tspan x="968" dy="0">Gestion des identités et des accès</tspan></text>
+<rect x="338" y="448" width="369" height="173" rx="12" fill="#f3f8fc" stroke="#cedbe6" stroke-width="1.5"/>
+<g transform="translate(354 465) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="24" cy="13" r="8"/><path d="M8 44v-7c0-15 32-15 32 0v7Z"/>
+</g>
+<text x="408" y="487" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="408" dy="0">Authentification</tspan><tspan x="408" dy="34">unique (SSO)</tspan></text>
+<text x="356" y="574" font-size="23" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="356" dy="0">Une connexion pour</tspan><tspan x="356" dy="31">les services intégrés</tspan></text>
+<rect x="721" y="448" width="369" height="173" rx="12" fill="#f3f8fc" stroke="#cedbe6" stroke-width="1.5"/>
+<g transform="translate(737 465) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="9" y="21" width="30" height="23" rx="3"/><path d="M15 21V12a9 9 0 0 1 18 0v9M24 30v6"/>
+</g>
+<text x="791" y="487" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="791" dy="0">MFA</tspan></text>
+<text x="739" y="574" font-size="23" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="739" dy="0">Authentification</tspan><tspan x="739" dy="31">multifacteur</tspan></text>
+<rect x="1104" y="448" width="369" height="173" rx="12" fill="#f3f8fc" stroke="#cedbe6" stroke-width="1.5"/>
+<g transform="translate(1120 465) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 3 42 10v14c0 10-9 18-18 22C15 42 6 34 6 24V10Z"/><path d="m15 24 6 6 13-14"/>
+</g>
+<text x="1174" y="487" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1174" dy="0">Accès conditionnel</tspan></text>
+<text x="1122" y="574" font-size="23" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="1122" dy="0">Décision selon l’identité,</tspan><tspan x="1122" dy="31">l’appareil et le risque</tspan></text>
+<rect x="1487" y="448" width="369" height="173" rx="12" fill="#f3f8fc" stroke="#cedbe6" stroke-width="1.5"/>
+<g transform="translate(1503 465) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<circle cx="19" cy="13" r="7"/><path d="M4 43v-7c0-13 29-13 29 0v7ZM34 7c9 0 9 14 0 14M40 43v-8c0-6-2-9-7-10"/>
+</g>
+<text x="1557" y="487" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1557" dy="0">Gestion des rôles</tspan></text>
+<text x="1505" y="574" font-size="23" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="1505" dy="0">Utilisateurs, groupes</tspan><tspan x="1505" dy="31">et droits d’administration</tspan></text>
+<rect x="1870" y="448" width="478" height="173" rx="12" fill="#edf4fa" stroke="#cedbe6" stroke-width="1.5"/>
+<text x="1890" y="479" font-size="25" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="1890" dy="0">Rôles principaux</tspan></text>
+<text x="1890" y="518" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1890" dy="0">Administrateur général · Sécurité</tspan><tspan x="1890" dy="36">Exchange · Teams</tspan><tspan x="1890" dy="36">Intune · SharePoint</tspan></text>
+<rect x="32" y="660" width="2336" height="280" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="660" width="286" height="280" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="698" r="18" fill="#0067b8"/>
+<text x="68" y="705" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">3</tspan></text>
+<text x="98" y="706" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Services</tspan><tspan x="98" dy="37">Microsoft 365</tspan></text>
+<text x="56" y="875" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Travailler, collaborer</tspan><tspan x="56" dy="30">et communiquer</tspan></text>
+<text x="348" y="702" font-size="30" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="348" dy="0">Applications et services</tspan></text>
+<text x="2336" y="702" font-size="24" font-weight="400" fill="#40556b" text-anchor="end"><tspan x="2336" dy="0">Communication · Productivité · Collaboration</tspan></text>
+<rect x="419" y="736" width="64" height="64" rx="10" fill="#0067b8"/>
+<text x="451" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="451" dy="0">O</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/exchange/exchange-online" target="_blank" rel="noopener noreferrer">
+<text x="451" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="451" dy="0">Outlook</tspan></text>
+</a>
+<text x="451" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="451" dy="0">Messagerie</tspan><tspan x="451" dy="31">Exchange Online</tspan></text>
+<path d="M561 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="641" y="736" width="64" height="64" rx="10" fill="#5256a8"/>
+<text x="673" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="673" dy="0">T</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/microsoftteams/office-365-set-up" target="_blank" rel="noopener noreferrer">
+<text x="673" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="673" dy="0">Teams</tspan></text>
+</a>
+<text x="673" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="673" dy="0">Conversations</tspan><tspan x="673" dy="31">et réunions</tspan></text>
+<path d="M783 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="863" y="736" width="64" height="64" rx="10" fill="#087f7d"/>
+<text x="895" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="895" dy="0">S</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/sharepoint/introduction" target="_blank" rel="noopener noreferrer">
+<text x="895" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="895" dy="0">SharePoint</tspan></text>
+</a>
+<text x="895" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="895" dy="0">Sites et</tspan><tspan x="895" dy="31">documents</tspan></text>
+<path d="M1005 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1085" y="736" width="64" height="64" rx="10" fill="#0078d4"/>
+<g transform="translate(1096 747) scale(0.875)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 39h26c13 0 12-21-1-21C33 1 10 6 10 22-2 24 0 39 12 39Z"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/sharepoint/introduction" target="_blank" rel="noopener noreferrer">
+<text x="1117" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1117" dy="0">OneDrive</tspan></text>
+</a>
+<text x="1117" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1117" dy="0">Fichiers et</tspan><tspan x="1117" dy="31">synchronisation</tspan></text>
+<path d="M1227 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1307" y="736" width="64" height="64" rx="10" fill="#185abd"/>
+<text x="1339" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="1339" dy="0">W</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/microsoft-365-apps/deploy/about-microsoft-365-apps" target="_blank" rel="noopener noreferrer">
+<text x="1339" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1339" dy="0">Word</tspan></text>
+</a>
+<text x="1339" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1339" dy="0">Traitement</tspan><tspan x="1339" dy="31">de texte</tspan></text>
+<path d="M1449 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1529" y="736" width="64" height="64" rx="10" fill="#107c41"/>
+<text x="1561" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="1561" dy="0">X</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/microsoft-365-apps/deploy/about-microsoft-365-apps" target="_blank" rel="noopener noreferrer">
+<text x="1561" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1561" dy="0">Excel</tspan></text>
+</a>
+<text x="1561" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1561" dy="0">Feuilles</tspan><tspan x="1561" dy="31">de calcul</tspan></text>
+<path d="M1671 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1751" y="736" width="64" height="64" rx="10" fill="#b73c1b"/>
+<text x="1783" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="1783" dy="0">P</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/microsoft-365-apps/deploy/about-microsoft-365-apps" target="_blank" rel="noopener noreferrer">
+<text x="1783" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1783" dy="0">PowerPoint</tspan></text>
+</a>
+<text x="1783" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1783" dy="0">Présentations</tspan></text>
+<path d="M1893 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1973" y="736" width="64" height="64" rx="10" fill="#8037a5"/>
+<text x="2005" y="781" font-size="42" font-weight="600" fill="#fff" text-anchor="middle"><tspan x="2005" dy="0">N</tspan></text>
+<a href="https://learn.microsoft.com/fr-fr/microsoft-365-apps/deploy/about-microsoft-365-apps" target="_blank" rel="noopener noreferrer">
+<text x="2005" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="2005" dy="0">OneNote</tspan></text>
+</a>
+<text x="2005" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="2005" dy="0">Prise</tspan><tspan x="2005" dy="31">de notes</tspan></text>
+<path d="M2115 738v169" fill="none" stroke="#cedbe6" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2195" y="736" width="64" height="64" rx="10" fill="#6545a2"/>
+<g transform="translate(2206 747) scale(0.875)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="m24 3 6 15 15 6-15 6-6 15-6-15-15-6 15-6Z"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/copilot/microsoft-365/microsoft-365-copilot-architecture" target="_blank" rel="noopener noreferrer">
+<text x="2227" y="841" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="2227" dy="0">Copilot</tspan></text>
+</a>
+<text x="2227" y="877" font-size="23" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="2227" dy="0">Assistant IA</tspan><tspan x="2227" dy="31">Microsoft 365</tspan></text>
+<rect x="32" y="960" width="2336" height="314" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="960" width="286" height="314" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="998" r="18" fill="#0067b8"/>
+<text x="68" y="1005" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">4</tspan></text>
+<text x="98" y="1006" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Appareils</tspan><tspan x="98" dy="37">et sécurité</tspan></text>
+<text x="56" y="1209" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Gestion des appareils</tspan><tspan x="56" dy="30">et protection</tspan></text>
+<rect x="338" y="978" width="992" height="278" rx="12" fill="#f1f8f3" stroke="#b5d6c1" stroke-width="1.5"/>
+<rect x="1348" y="978" width="1000" height="278" rx="12" fill="#fff5f4" stroke="#e5c0bd" stroke-width="1.5"/>
+<rect x="338" y="978" width="992" height="65" rx="8" fill="#107c41"/>
+<g transform="translate(359 990) scale(0.875)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="7" y="7" width="34" height="26" rx="2"/><path d="M2 39h44l-4 5H6Z"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/intune/intune-service/fundamentals/what-is-intune" target="_blank" rel="noopener noreferrer">
+<text x="421" y="1023" font-size="33" font-weight="700" fill="#fff" text-anchor="start"><tspan x="421" dy="0">Microsoft Intune</tspan></text>
+</a>
+<rect x="1348" y="978" width="1000" height="65" rx="8" fill="#b3262b"/>
+<g transform="translate(1370 990) scale(0.875)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 3 42 10v14c0 10-9 18-18 22C15 42 6 34 6 24V10Z"/><path d="m15 24 6 6 13-14"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/defender-xdr/microsoft-365-defender" target="_blank" rel="noopener noreferrer">
+<text x="1432" y="1023" font-size="33" font-weight="700" fill="#fff" text-anchor="start"><tspan x="1432" dy="0">Microsoft Defender</tspan></text>
+</a>
+<text x="360" y="1080" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="360" dy="0">Gestion des appareils et des applications</tspan></text>
+<text x="1370" y="1080" font-size="25" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1370" dy="0">Protection contre les menaces</tspan></text>
+<circle cx="369" cy="1118" r="10" fill="#107c41"/>
+<path d="M364 1118l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="389" y="1126" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="389" dy="0">Gestion des appareils (MDM)</tspan></text>
+<circle cx="369" cy="1160" r="10" fill="#107c41"/>
+<path d="M364 1160l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="389" y="1168" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="389" dy="0">Protection des applications (MAM)</tspan></text>
+<circle cx="369" cy="1202" r="10" fill="#107c41"/>
+<path d="M364 1202l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="389" y="1210" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="389" dy="0">Configuration et déploiement</tspan></text>
+<circle cx="849" cy="1118" r="10" fill="#107c41"/>
+<path d="M844 1118l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="869" y="1126" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="869" dy="0">Windows, macOS, iOS, Android</tspan></text>
+<circle cx="849" cy="1160" r="10" fill="#107c41"/>
+<path d="M844 1160l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="869" y="1168" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="869" dy="0">Conformité et stratégies de sécurité</tspan></text>
+<circle cx="849" cy="1202" r="10" fill="#107c41"/>
+<path d="M844 1202l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="869" y="1210" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="869" dy="0">Actions à distance</tspan></text>
+<circle cx="1379" cy="1118" r="10" fill="#b3262b"/>
+<path d="M1374 1118l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1399" y="1126" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1399" dy="0">Appareils et identités</tspan></text>
+<circle cx="1379" cy="1160" r="10" fill="#b3262b"/>
+<path d="M1374 1160l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1399" y="1168" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1399" dy="0">E-mails et applications</tspan></text>
+<circle cx="1379" cy="1202" r="10" fill="#b3262b"/>
+<path d="M1374 1202l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1399" y="1210" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1399" dy="0">Détection des menaces</tspan></text>
+<circle cx="1859" cy="1118" r="10" fill="#b3262b"/>
+<path d="M1854 1118l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1879" y="1126" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1879" dy="0">Corrélation des alertes avec XDR</tspan></text>
+<circle cx="1859" cy="1160" r="10" fill="#b3262b"/>
+<path d="M1854 1160l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1879" y="1168" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1879" dy="0">Investigation des incidents</tspan></text>
+<circle cx="1859" cy="1202" r="10" fill="#b3262b"/>
+<path d="M1854 1202l4 4 7-8" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1879" y="1210" font-size="23" font-weight="400" fill="#132e4c" text-anchor="start"><tspan x="1879" dy="0">Réponse aux attaques</tspan></text>
+<rect x="32" y="1294" width="2336" height="218" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="1294" width="286" height="218" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="1332" r="18" fill="#0067b8"/>
+<text x="68" y="1339" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">5</tspan></text>
+<text x="98" y="1340" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Données</tspan><tspan x="98" dy="37">dans le cloud</tspan></text>
+<text x="56" y="1447" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Où sont stockées</tspan><tspan x="56" dy="30">les données ?</tspan></text>
+<rect x="338" y="1312" width="2010" height="52" rx="8" fill="#064578"/>
+<g transform="translate(360 1321) scale(0.7291666666666666)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 39h26c13 0 12-21-1-21C33 1 10 6 10 22-2 24 0 39 12 39Z"/>
+</g>
+<text x="413" y="1349" font-size="29" font-weight="700" fill="#fff" text-anchor="start"><tspan x="413" dy="0">Cloud Microsoft</tspan></text>
+<text x="2325" y="1348" font-size="23" font-weight="400" fill="#fff" text-anchor="end"><tspan x="2325" dy="0">Stockage et protection des données</tspan></text>
+<g transform="translate(484 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="3" y="8" width="42" height="32" rx="3"/><path d="m4 10 20 17 20-17"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/exchange/exchange-online" target="_blank" rel="noopener noreferrer">
+<text x="503" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="503" dy="0">Exchange Online</tspan></text>
+</a>
+<text x="503" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="503" dy="0">E-mails et calendriers</tspan></text>
+<g transform="translate(817 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M3 11h17l5 6h20v25H3Z"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/sharepoint/introduction" target="_blank" rel="noopener noreferrer">
+<text x="836" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="836" dy="0">SharePoint Online</tspan></text>
+</a>
+<text x="836" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="836" dy="0">Sites et documents</tspan></text>
+<g transform="translate(1150 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M12 39h26c13 0 12-21-1-21C33 1 10 6 10 22-2 24 0 39 12 39Z"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/sharepoint/introduction" target="_blank" rel="noopener noreferrer">
+<text x="1169" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1169" dy="0">OneDrive</tspan></text>
+</a>
+<text x="1169" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1169" dy="0">Fichiers de travail</tspan></text>
+<g transform="translate(1483 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<ellipse cx="24" cy="10" rx="18" ry="7"/><path d="M6 10v28c0 9 36 9 36 0V10M6 24c0 9 36 9 36 0"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/purview/purview" target="_blank" rel="noopener noreferrer">
+<text x="1502" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1502" dy="0">Rétention</tspan></text>
+</a>
+<text x="1502" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1502" dy="0">Cycle de vie des données</tspan></text>
+<g transform="translate(1816 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<rect x="9" y="21" width="30" height="23" rx="3"/><path d="M15 21V12a9 9 0 0 1 18 0v9M24 30v6"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/purview/purview" target="_blank" rel="noopener noreferrer">
+<text x="1835" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="1835" dy="0">Protection</tspan></text>
+</a>
+<text x="1835" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="1835" dy="0">Données sensibles</tspan></text>
+<g transform="translate(2149 1383) scale(0.7916666666666666)" fill="none" stroke="#0067b8" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 3 42 10v14c0 10-9 18-18 22C15 42 6 34 6 24V10Z"/><path d="m15 24 6 6 13-14"/>
+</g>
+<a href="https://learn.microsoft.com/fr-fr/purview/purview" target="_blank" rel="noopener noreferrer">
+<text x="2168" y="1451" font-size="25" font-weight="600" fill="#132e4c" text-anchor="middle"><tspan x="2168" dy="0">Conformité</tspan></text>
+</a>
+<text x="2168" y="1486" font-size="22" font-weight="400" fill="#40556b" text-anchor="middle"><tspan x="2168" dy="0">Microsoft Purview</tspan></text>
+<rect x="32" y="1532" width="2336" height="148" rx="12" fill="#ffffff" stroke="#cedbe6" stroke-width="1.5"/>
+<rect x="32" y="1532" width="286" height="148" rx="12" fill="#edf4fa"/>
+<circle cx="68" cy="1570" r="18" fill="#0067b8"/>
+<text x="68" y="1577" font-size="22" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="68" dy="0">6</tspan></text>
+<text x="98" y="1578" font-size="27" font-weight="700" fill="#132e4c" text-anchor="start"><tspan x="98" dy="0">Parcours</tspan><tspan x="98" dy="37">utilisateur</tspan></text>
+<text x="56" y="1654" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="56" dy="0">Exemple de parcours</tspan></text>
+<circle cx="367" cy="1573" r="19" fill="#0067b8"/>
+<text x="367" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="367" dy="0">1</tspan></text>
+<text x="396" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="396" dy="0">Connexion</tspan></text>
+<text x="350" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="350" dy="0">Compte utilisateur</tspan></text>
+<path d="M642 1605h23m-8-7 8 7-8 7" fill="none" stroke="#0067b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="701" cy="1573" r="19" fill="#0067b8"/>
+<text x="701" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="701" dy="0">2</tspan></text>
+<text x="730" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="730" dy="0">Vérification MFA</tspan></text>
+<text x="684" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="684" dy="0">Selon les stratégies</tspan></text>
+<path d="M976 1605h23m-8-7 8 7-8 7" fill="none" stroke="#0067b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1035" cy="1573" r="19" fill="#0067b8"/>
+<text x="1035" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="1035" dy="0">3</tspan></text>
+<text x="1064" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1064" dy="0">État de l’appareil</tspan></text>
+<text x="1018" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="1018" dy="0">Signaux de conformité</tspan></text>
+<path d="M1310 1605h23m-8-7 8 7-8 7" fill="none" stroke="#0067b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1369" cy="1573" r="19" fill="#0067b8"/>
+<text x="1369" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="1369" dy="0">4</tspan></text>
+<text x="1398" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1398" dy="0">Décision d’accès</tspan></text>
+<text x="1352" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="1352" dy="0">Contexte et risque</tspan></text>
+<path d="M1644 1605h23m-8-7 8 7-8 7" fill="none" stroke="#0067b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1703" cy="1573" r="19" fill="#0067b8"/>
+<text x="1703" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="1703" dy="0">5</tspan></text>
+<text x="1732" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="1732" dy="0">Microsoft 365</tspan></text>
+<text x="1686" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="1686" dy="0">Services autorisés</tspan></text>
+<path d="M1978 1605h23m-8-7 8 7-8 7" fill="none" stroke="#0067b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="2037" cy="1573" r="19" fill="#0067b8"/>
+<text x="2037" y="1581" font-size="23" font-weight="700" fill="#fff" text-anchor="middle"><tspan x="2037" dy="0">6</tspan></text>
+<text x="2066" y="1582" font-size="24" font-weight="600" fill="#132e4c" text-anchor="start"><tspan x="2066" dy="0">Données cloud</tspan></text>
+<text x="2020" y="1626" font-size="22" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="2020" dy="0">Accès aux contenus</tspan></text>
+<rect x="32" y="1700" width="2336" height="68" rx="10" fill="#064578"/>
+<g transform="translate(52 1713) scale(0.8333333333333334)" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+<path d="M24 3 42 10v14c0 10-9 18-18 22C15 42 6 34 6 24V10Z"/><path d="m15 24 6 6 13-14"/>
+</g>
+<text x="113" y="1745" font-size="30" font-weight="700" fill="#fff" text-anchor="start"><tspan x="113" dy="0">Architecture Zero Trust</tspan></text>
+<text x="708" y="1743" font-size="27" font-weight="600" fill="#fff" text-anchor="start"><tspan x="708" dy="0">Identité + Appareil + Risque + Données</tspan></text>
+<text x="2339" y="1742" font-size="22" font-weight="400" fill="#fff" text-anchor="end"><tspan x="2339" dy="0">Fonctions selon les licences et les stratégies.</tspan></text>
+<text x="40" y="1791" font-size="20" font-weight="400" fill="#40556b" text-anchor="start"><tspan x="40" dy="0">Sources : Microsoft Learn (français). Dans le SVG, les noms des services sont des liens vers leur documentation.</tspan></text>
+</svg>
