@@ -31,6 +31,7 @@ try {
     assert.equal(document.querySelectorAll('.windows-map').length,1);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
     assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be absent in every category');
+    assert.equal(document.querySelector('.m365-architecture-image').parentElement.tagName,'FIGURE','Infographics must not be links');
     for (const link of document.querySelectorAll('.section-navigation a')) {
       assert.ok(document.getElementById(link.hash.slice(1)),`Unresolved section navigation: ${link.hash}`);
     }
@@ -92,6 +93,7 @@ try {
   assert.ok(document.querySelector('.dependency-infographic'));
   const architectureImage=document.querySelector('.m365-architecture-image');
   assert.ok(architectureImage);
+  assert.equal(architectureImage.parentElement.tagName,'FIGURE','Microsoft 365 infographic must not be a link');
   assert.equal(document.querySelector('.dependency-toolbar'),null,'Infographic action buttons must be removed');
   assert.ok(document.querySelector('.infographic-transcript'));
   await click(document.querySelector('.m365-network-map>summary'));
