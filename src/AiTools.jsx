@@ -28,7 +28,7 @@ export default function AiTools() {
   }
   function logout() {generation.current++;setBusy(false);setError('');closeSession();}
   const search=normalize(query);
-  const visible=groups.filter(group=>domain==='all'||group.id===domain).map(group=>({...group,skills:group.skills.filter(skill=>normalize(`${skill.name} ${skill.summary} ${skill.usage} ${group.name}`).includes(search))})).filter(group=>group.skills.length);
+  const visible=groups.filter(group=>domain==='all'||group.id===domain).map(group=>({...group,skills:group.skills.filter(skill=>normalize(`${skill.id} ${skill.name} ${skill.summary} ${skill.usage} ${group.name}`).includes(search))})).filter(group=>group.skills.length);
   const count=visible.reduce((total,group)=>total+group.skills.length,0),total=groups.reduce((sum,group)=>sum+group.skills.length,0);
   return <main className="container listing-page ai-tools-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">Outils IA</span></nav>

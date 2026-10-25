@@ -1,6 +1,6 @@
 # Outils IA sur GitHub Pages
 
-La rubrique `/outils-ia/` fonctionne sans serveur. Elle contient 52 fiches réparties dans sept domaines, dont Ponytail, REA, Graphify et API Anything. Chaque fiche présente sa fonction, les usages, un exemple et les prérequis. Le site décrit ces skills ; il ne les exécute pas.
+La rubrique `/outils-ia/` fonctionne sans serveur. Elle contient 83 fiches réparties dans huit domaines, dont Ponytail, REA, Graphify et API Anything. Chaque fiche présente sa fonction, les usages, un exemple et les prérequis. Le site décrit ces skills ; il ne les exécute pas.
 
 ## Protection du catalogue
 
@@ -24,7 +24,7 @@ Modifier la source privée puis exécuter :
 npm run password:ai
 ```
 
-La commande demande le mot de passe en saisie masquée, vérifie les 52 fiches, chiffre le catalogue puis le déchiffre pour contrôler le résultat. Aucun mot de passe n’est sauvegardé. Un autre fichier source peut être indiqué :
+La commande demande le mot de passe en saisie masquée, vérifie les 83 fiches, chiffre le catalogue puis le déchiffre pour contrôler le résultat. Aucun mot de passe n’est sauvegardé. Un autre fichier source peut être indiqué :
 
 ```powershell
 npm run password:ai -- C:/chemin/prive/ai-skills.mjs
@@ -49,3 +49,9 @@ Les tests contrôlent le chiffrement et déchiffrement réels avec un mot de pas
 ## Migration
 
 L’ancien mécanisme Node/Argon2id et son fichier `.env.ai-tools.local` ne participent plus au site publié. Ils sont conservés localement pour permettre un retour, sans publication de leurs fichiers ni réutilisation du hachage dans le navigateur. L’ancien audit concernait ce mécanisme serveur ; il ne certifie pas la présente version statique. Le retrait de la rubrique Adressage réseau s’applique au menu, à l’accueil, aux guides et au sitemap ; ses anciennes URL retournent la page 404.
+
+## Ajouts du 26 octobre 2026
+
+Le catalogue comprend les 31 nouvelles entrées décrites dans [RAPPORT-INSTALLATION.md](RAPPORT-INSTALLATION.md) : 26 skills natifs et cinq adaptateurs de références. Les 52 fiches précédentes sont conservées. Le domaine « Animation, interactions et effets visuels » regroupe 21 fiches spécialisées ; les autres ajouts complètent le design, le développement et les sites et documents.
+
+Les fiches distinguent les outils installés dans l’agent des composants qui devront être intégrés dans un projet. OpenDesign fournit ici des guides locaux, pas son application ou son serveur MCP. Scroll World ne dispose pas d’autorisation de dépense. React Bits et Canvas UI conservent leurs restrictions de licence. Lire une fiche du site n’active ni le skill ni ses services.

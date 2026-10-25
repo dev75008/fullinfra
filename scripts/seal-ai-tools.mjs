@@ -2,6 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { sealCatalog, openCatalog } from '../src/ai-vault.mjs';
 import { pathToFileURL } from 'node:url';
 import { resolve } from 'node:path';
+import { testGroups } from './fixtures/ai-catalog.mjs';
 
 let password='';
 if(process.stdin.isTTY) {
@@ -17,6 +18,8 @@ const source=resolve(process.argv[2] || 'server/ai-skills.mjs');
 const {skillGroups}=await import(pathToFileURL(source).href);
 const encrypted=await sealCatalog(skillGroups,password);
 const verified=await openCatalog(encrypted,password);password='';
-if(verified.flatMap(g=>g.skills).length!==52)throw new Error('52 fiches attendues.');
+const actualIds=verified.flatMap(g=>g.skills.map(s=>s.id)).sort();
+const expectedIds=testGroups.flatMap(g=>g.skills.map(s=>s.id)).sort();
+if(JSON.stringify(actualIds)!==JSON.stringify(expectedIds)||verified.length!==testGroups.length)throw new Error('Catalogue incomplet ou domaines inattendus.');
 await writeFile(new URL('../public/ai-catalog.enc.json',import.meta.url),JSON.stringify(encrypted)+'\n');
-console.log('Catalogue chiffré et vérifié : 52 fiches. Aucun mot de passe enregistré.');
+console.log(`Catalogue chiffré et vérifié : ${actualIds.length} fiches, ${verified.length} domaines. Aucun mot de passe enregistré.`);

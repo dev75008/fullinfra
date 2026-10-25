@@ -78,3 +78,10 @@ Mise à jour du 25 octobre 2026. La rubrique **Outils IA** contient désormais 5
 Chaque fiche propose une explication, les situations d’utilisation, un exemple et les prérequis. Graphify figure dans « Développement et qualité du code » ; API Anything dans « Recherche et documentation ». Les filtres et la recherche utilisent les mêmes données que les autres fiches.
 
 Le catalogue décrit les outils de l’agent : consulter une fiche ne lance pas le skill depuis le navigateur. Le catalogue est désormais chiffré pour une publication sur GitHub Pages et déchiffré dans le navigateur. Le mot de passe et la source éditoriale ne sont pas publiés. Les limites de cette protection statique sont documentées dans [Outils IA](OUTILS-IA.md).
+
+
+## Catalogue IA : extension du 26 octobre 2026
+
+Les 31 nouvelles entrées sont intégrées au catalogue chiffré : 83 fiches dans huit domaines. Chaque fiche conserve la présentation commune avec fonction, usage, exemple et prérequis. Les descriptions précisent les limites des adaptateurs de références, des services payants et des dépendances projet. Le rapport d’installation est disponible dans [RAPPORT-INSTALLATION.md](RAPPORT-INSTALLATION.md).
+
+Les tests DOM couvrent la recherche et l’ouverture des fiches des principaux nouveaux packs, ainsi que les filtres après l’ajout du domaine Animation. Aucun changement de charte ni de mise en page n’est inclus dans cette extension éditoriale.
