@@ -204,10 +204,10 @@ try {
   assert.equal(document.querySelector('.ai-workspace'),null);assert.equal(document.querySelector('#ai-password').value,'');
   await submitPassword(testPassword);
   assert.equal(document.querySelectorAll('.ai-domain-navigation button').length,9);
-  assert.equal(document.querySelectorAll('.ai-skill').length,83);
+  assert.equal(document.querySelectorAll('.ai-skill').length,88);
   assert.equal(document.querySelectorAll('.ai-skill-group').length,8);
   assert.equal(document.querySelector('#ai-password'),null);
-  assert.match(document.querySelector('.ai-result-count').textContent,/83 skills/);
+  assert.match(document.querySelector('.ai-result-count').textContent,/88 skills/);
   for(const skill of document.querySelectorAll('.ai-skill'))assert.equal(skill.querySelectorAll('dd').length,3);
   await click(document.querySelector('.ai-domain-navigation button:nth-child(5)'));
   assert.equal(document.querySelectorAll('.ai-skill').length,3);
@@ -215,7 +215,7 @@ try {
   assert.match(document.querySelector('.ai-skill-list').textContent,/api-anything/);
   await click(document.querySelector('.ai-domain-navigation button'));
   const search=document.querySelector('#ai-search');
-  for(const name of ['graphify','api-anything','impeccable','hallmark','open-design','google-design-md','react-bits','canvas-ui','scroll-world','gsap-react','write-swift']) {
+  for(const name of ['graphify','api-anything','impeccable','hallmark','open-design','google-design-md','react-bits','canvas-ui','scroll-world','gsap-react','write-swift','mimic','reagent','llm4decompile','llm-decompiler','ai-code-decompile']) {
     await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,name);search.dispatchEvent(new window.Event('input',{bubbles:true}));});
     assert.equal(document.querySelectorAll('.ai-skill').length,1);
     assert.equal(document.querySelector('.ai-skill-overview strong').textContent,testGroups.flatMap(group=>group.skills).find(skill=>skill.id===name).name);
@@ -229,7 +229,7 @@ try {
   assert.match(detail.querySelector('dl').textContent,/approbation explicite/);
   await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'aucun-skill-xyz');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
   assert.equal(document.querySelectorAll('.ai-skill').length,0);assert.ok(document.querySelector('.ai-empty'));
-  await click(document.querySelector('.ai-empty button'));assert.equal(document.querySelectorAll('.ai-skill').length,83);
+  await click(document.querySelector('.ai-empty button'));assert.equal(document.querySelectorAll('.ai-skill').length,88);
   await click(document.querySelector('.ai-tools-heading button'));
   assert.equal(document.querySelector('.ai-workspace'),null);assert.ok(document.querySelector('#ai-password'));
   // Missing ciphertext fails closed even on a static host.
@@ -239,7 +239,7 @@ try {
   assert.match(document.querySelector('[role="alert"]').textContent,/catalogue chiffré est indisponible/);
   assert.ok(document.querySelector('#ai-password'));
   globalThis.fetch=originalFetch;
-  console.log('OK outils IA : 83 fiches, recherche, domaines, détails, déchiffrement, verrouillage et refus si le fichier est absent.');
+  console.log('OK outils IA : 88 fiches, recherche, domaines, détails, déchiffrement, verrouillage et refus si le fichier est absent.');
   await act(async () => {root.render(React.createElement(MemoryRouter,{key:'wrong-category',initialEntries:['/inconnu/azure-premiere-vm']},React.createElement(App)));});
   assert.ok(document.querySelector('.not-found'));
   assert.match(document.title,/Page introuvable/,'A known slug under the wrong category must keep its 404 title');

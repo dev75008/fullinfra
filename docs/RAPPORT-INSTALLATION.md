@@ -43,3 +43,22 @@ Les données éditoriales restent locales dans le fichier exclu de Git `server/a
 - Animation et interactions : Animate, Animate Expo, Animation Performance, Animation Vocabulary, Apple Design, Ask Sonner, Find Animation Opportunities, Improve Animations, Mobile Native, Review Animations, React Bits, Canvas UI, Scroll World et les huit guides GSAP.
 - Développement : Write Swift.
 - Sites et documents : OpenDesign.
+
+
+## Ajout des outils de reconstruction de code
+
+Le catalogue passe de 83 à **88 fiches**, toujours dans huit domaines. La fiche Mimic complète le design ; les quatre outils de décompilation rejoignent le développement. Chaque fiche expose fonction, usage, exemple et état réel de disponibilité.
+
+| Entrée | Source retenue | État local |
+| --- | --- | --- |
+| Mimic | https://github.com/sumanrox/mimic | Skill natif installé, adapté aux règles navigateur de l’hôte. Aucun contrôle visuel réalisé. |
+| ReAgent | https://github.com/Dryxio/reagent | Paquets 0.4.0 et bridge Ghidra 0.2.0 installés depuis les sources épinglées ; adaptateur documentaire validé. Projet d’analyse et fournisseur non configurés ; fonctionnement complet non testé. |
+| LLM4Decompile | https://github.com/albertan017/LLM4Decompile | Sources et adaptateur documentaire uniquement. Modèles et environnement Linux/CUDA non installés ; aucune inférence. |
+| LLM_Decompiler | https://github.com/Lami99/LLM_Decompiler | Correspondance retenue pour un nom ambigu. Sources et adaptateur documentaire uniquement ; dépendances historiques et shell Unix non validés. |
+| AI Code Decompile | https://github.com/zhongguagua/ai-code-decompile | Sources du frontend et adaptateur documentaire uniquement. Backend distant non fourni ; aucun code envoyé à JSUnpack. |
+
+Mimic et LLM_Decompiler ont été identifiés à partir de leurs fonctions et de leurs noms ; les autres projets homonymes ne sont pas inclus. Les fichiers ORIGIN.json locaux conservent les révisions des sources.
+
+La vérification automatique a bloqué une commande groupée d’intégration et de test sans motif détaillé. L’intégration a été limitée à la documentation et aux déclarations de skills ; aucun test d’exécution de cible ou d’analyse IA n’a été effectué. Ne pas interpréter « paquet installé » ou « sources téléchargées » comme une décompilation complète validée.
+
+LLM4Decompile distingue la licence du code de celle de ses checkpoints. Aucune licence explicite n’a été trouvée dans les deux derniers dépôts ; leur code n’est pas republié sur FullInfra. Le site ne publie que ses propres descriptions dans le catalogue chiffré. Les outils nécessitant un fournisseur ou une API distante ne sont pas activés par la consultation des fiches.

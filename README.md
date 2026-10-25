@@ -206,6 +206,6 @@ Le site affiche le SVG et propose son ouverture en grand ainsi que les télécha
 
 ### Outils IA : version GitHub Pages
 
-La rubrique contient 83 fiches, dont Graphify et API Anything. Elle utilise un catalogue chiffré AES-256-GCM déverrouillé dans le navigateur ; aucun serveur Node ni mot de passe dans le frontend. Voir [la configuration, la mise à jour et les limites de sécurité](docs/OUTILS-IA.md). La source éditoriale reste privée et exclue de Git. `npm run password:ai` régénère le fichier chiffré en demandant le mot de passe en saisie masquée.
+La rubrique contient 88 fiches, dont Graphify et API Anything. Elle utilise un catalogue chiffré AES-256-GCM déverrouillé dans le navigateur ; aucun serveur Node ni mot de passe dans le frontend. Voir [la configuration, la mise à jour et les limites de sécurité](docs/OUTILS-IA.md). La source éditoriale reste privée et exclue de Git. `npm run password:ai` régénère le fichier chiffré en demandant le mot de passe en saisie masquée.
 
 La rubrique Adressage réseau est retirée de la navigation et des pages publiées.
