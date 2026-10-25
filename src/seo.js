@@ -21,9 +21,9 @@ export function getPageMetadata(pathname) {
   const article = articles.find(a => path === `/${a.category}/${a.slug}`);
   const category = categories.find(c => path === `/${c.slug}` || c.slug === article?.category);
   const known = contentPaths.includes(path);
-  const headline = article?.title || (category ? categoryTitles[category.slug] || category.name : path === '/guides' ? 'Tous les guides infrastructure informatique' : path === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable');
+  const headline = path === '/outils-ia' ? 'Outils IA — espace protégé' : article?.title || (category ? categoryTitles[category.slug] || category.name : path === '/guides' ? 'Tous les guides infrastructure informatique' : path === '/' ? 'Comprendre votre infrastructure' : 'Page introuvable');
   const title = `${headline} — FullInfra`;
-  const description = article?.excerpt || category?.description || (path === '/guides' ? 'Retrouvez les guides FullInfra : Windows Server, virtualisation, Azure, Microsoft 365, adressage réseau et DevOps, avec leurs sources officielles.' : 'Guides et infographies pour comprendre Windows Server, la virtualisation, Azure, Microsoft 365, l’adressage IP et DevOps.');
+  const description = path === '/outils-ia' ? 'Catalogue protégé des skills IA : fonctions, usages, exemples et prérequis.' : article?.excerpt || category?.description || (path === '/guides' ? 'Retrouvez les guides FullInfra : Windows Server, virtualisation, Azure, Microsoft 365 et DevOps, avec leurs sources officielles.' : 'Guides et infographies pour comprendre Windows Server, la virtualisation, Azure, Microsoft 365 et DevOps.');
   const canonical = `${siteUrl}${canonicalPath(path)}`;
   const image = `${siteUrl}/${images[category?.slug] || images['windows-server']}`;
   const organization = {'@type':'Organization',name:'FullInfra',url:siteUrl};

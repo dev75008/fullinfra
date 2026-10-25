@@ -65,3 +65,16 @@ Ces points sont des recommandations : cette demande de revue n’a pas déclench
 Les tests de sources vérifient la traçabilité locale ; ils ne constituent pas une nouvelle vérification factuelle de chaque affirmation sur le Web. Vite émet deux avertissements concernant les directives `use client` de React Router, sans empêcher la compilation.
 
 Le serveur local répond HTTP 200 sur http://127.0.0.1:5173/. L’outil de navigateur ne fournit aucune application ni aucun navigateur accessible. Aucune capture ni mesure visuelle aux largeurs 390, 768 et 1440 px n’a donc été réalisée. Le contraste calculé dans un navigateur, les débordements réels et la lisibilité des cartes sur téléphone restent à vérifier. Aucun score visuel n’est attribué.
+
+## Catalogue IA : nouveaux skills
+
+Mise à jour du 25 octobre 2026. La rubrique **Outils IA** contient désormais 52 fiches dans sept domaines. Les 50 fiches déjà présentes, dont Ponytail et REA, sont conservées.
+
+| Skill ajouté | Fonction | Usage automatique | Limites |
+| --- | --- | --- | --- |
+| Graphify | Construit un graphe local des symboles et dépendances pour guider la navigation dans le code. | Recherche sur plusieurs fichiers, architecture et analyse des effets d’un changement. | Extraction structurelle locale sans modèle ; vérifier les sources et actualiser le graphe. Sortie du helper limitée à 4 096 octets UTF-8. Économies non mesurées. |
+| API Anything | Apprend les requêtes d’un site et les réutilise comme opérations API avec des réponses structurées. | Création ou appel d’opérations et extractions répétées sans API ou connecteur adapté. | Chromium nécessaire pour certains apprentissages. Comptes et import de cookies soumis à autorisation ; écritures MCP désactivées par défaut. |
+
+Chaque fiche propose une explication, les situations d’utilisation, un exemple et les prérequis. Graphify figure dans « Développement et qualité du code » ; API Anything dans « Recherche et documentation ». Les filtres et la recherche utilisent les mêmes données que les autres fiches.
+
+Le catalogue décrit les outils de l’agent : consulter une fiche ne lance pas le skill depuis le navigateur. Le catalogue est désormais chiffré pour une publication sur GitHub Pages et déchiffré dans le navigateur. Le mot de passe et la source éditoriale ne sont pas publiés. Les limites de cette protection statique sont documentées dans [Outils IA](OUTILS-IA.md).

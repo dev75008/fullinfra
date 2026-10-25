@@ -2,6 +2,10 @@
 
 Site publié : **https://fullinfra.duckdns.org/**
 
+## Outils IA protégés
+
+La rubrique `/outils-ia/` fonctionne sur GitHub Pages avec un catalogue chiffré, déverrouillé dans le navigateur. Voir le [mode d’emploi et les limites de sécurité](docs/OUTILS-IA.md). Pour l’aperçu local : `npm start` puis ouvrir l’adresse affichée par Vite.
+
 ## Publication GitHub Pages
 
 Le workflow `.github/workflows/pages.yml` teste, compile et publie le site après chaque push sur `main`. La compilation utilise `VITE_BASE_PATH=/` et génère une page HTML complète par rubrique et par article. Les URL publiques canoniques se terminent par `/` et sont servies directement par GitHub Pages ; les anciennes URL sans `/` restent utilisables. Les URL inconnues affichent une vraie page 404, sans redirection vers l’accueil.
@@ -198,3 +202,10 @@ Le rendu SVG a été rasterisé et inspecté pour vérifier les étiquettes. Cet
 L’infographie de la rubrique Microsoft 365 est recréée dans `public/microsoft365-architecture.svg` (2400 × 1800), avec du texte vectoriel en Segoe UI, des fonds unis et les six rubriques de l’image fournie. Le texte a été retapé pour éviter les lettres déformées du visuel original. Les icônes officielles des produits Microsoft 365, Exchange, Entra ID, Intune, Defender et Purview, ainsi que les illustrations des personnes, appareils, accès et données, sont intégrées sans modification. Les sources et empreintes des fichiers figurent dans `public/icons/microsoft/manifest.json`. Le SVG embarque les icônes : aucun téléchargement externe n’est nécessaire pour l’afficher. Les noms des services renvoient aux sources Microsoft Learn en français déjà référencées dans le projet.
 
 Le site affiche le SVG et propose son ouverture en grand ainsi que les téléchargements SVG et PNG. L’export `public/microsoft365-architecture-hd.png` (4800 × 3600) est rendu à une échelle de 2 avec Chromium et Segoe UI. Après une modification du SVG, renouveler cet export. L’image fournie reste conservée dans `public/microsoft365-architecture.png` comme original, sans être affichée. Le résumé textuel, les fiches techniques et la carte des accès réseau restent disponibles.
+
+
+### Outils IA : version GitHub Pages
+
+La rubrique contient 52 fiches, dont Graphify et API Anything. Elle utilise un catalogue chiffré AES-256-GCM déverrouillé dans le navigateur ; aucun serveur Node ni mot de passe dans le frontend. Voir [la configuration, la mise à jour et les limites de sécurité](docs/OUTILS-IA.md). La source éditoriale reste privée et exclue de Git. `npm run password:ai` régénère le fichier chiffré en demandant le mot de passe en saisie masquée.
+
+La rubrique Adressage réseau est retirée de la navigation et des pages publiées.

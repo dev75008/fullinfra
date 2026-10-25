@@ -5,3 +5,9 @@ dist/
 .env.*
 !.env.example
 .taste-skill/
+graphify-out/
+
+# Private editorial source and legacy local server; never publish plaintext catalogue.
+server/
+scripts/set-ai-password.mjs
+scripts/pentest-local.mjs

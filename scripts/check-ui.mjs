@@ -15,6 +15,7 @@ const server = await createServer({server:{middlewareMode:true,hmr:false,ws:fals
 const root = createRoot(document.getElementById('root'));
 const errors = [];
 const originalError = console.error;
+const originalFetch = globalThis.fetch;
 console.error = (...args) => {errors.push(args.map(String).join(' ')); originalError(...args);};
 const click = async element => {
   assert.ok(element, 'Expected clickable element');
@@ -60,7 +61,7 @@ try {
   }
   await click(document.querySelector('.header-cta'));
   assert.match(document.title,/Tous les guides/,'Catalogue title must describe the page');
-  assert.equal(document.querySelectorAll('.article-card').length,13);
+  assert.equal(document.querySelectorAll('.article-card').length,11);
   await click(document.querySelectorAll('.filter-tabs button')[1]);
   assert.equal(document.querySelectorAll('.article-card').length,2);
   const input=document.querySelector('.search-box input');
@@ -70,7 +71,7 @@ try {
   });
   assert.equal(document.querySelectorAll('.article-card').length,0,'Search must filter displayed content');
   await click(document.querySelector('.empty-state button'));
-  assert.equal(document.querySelectorAll('.article-card').length,13,'Reset must clear search and category');
+  assert.equal(document.querySelectorAll('.article-card').length,11,'Reset must clear search and category');
   await click(document.querySelector('.article-card'));
   assert.ok(document.querySelector('.prose'));
   assert.ok(!document.title.includes('introuvable'));
@@ -162,22 +163,13 @@ try {
   await searchFor('guide-inexistant-xyz');
   await click(document.querySelector('.empty-state button'));
   assert.equal(document.querySelector('#guide-search').value,'');
-  assert.equal(document.querySelectorAll('.article-card').length,13);
+  assert.equal(document.querySelectorAll('.article-card').length,11);
   await click(document.querySelector('.site-header nav a[href="/windows-server"]'));
   assert.equal(document.querySelectorAll('.filter-tabs button').length,3,'Category filters should only list topics with articles');
   console.log('OK UX : menu courant, Échap, focus, libellés, filtres annoncés, recherche sans accents et liens de section.');
-  await click(document.querySelector('.site-header nav a[href="/adressage-reseau"]'));
-  assert.match(document.title,/Adressage IP/);
-  assert.equal(document.querySelectorAll('.addressing-topic-grid article').length,12);
-  assert.equal(document.querySelectorAll('.article-card').length,2);
-  assert.equal(document.querySelector('.m365-architecture-image').parentElement.tagName,'FIGURE');
-  for (const type of ['click','dblclick']) assert.equal(document.querySelector('.m365-architecture-image').dispatchEvent(new MouseEvent(type,{bubbles:true,cancelable:true})),false);
-  assert.equal(document.querySelectorAll('#adressage-exemple table')[0].querySelectorAll('tbody tr').length,4);
-  for (const link of document.querySelectorAll('.section-navigation a')) assert.ok(document.getElementById(link.hash.slice(1)));
-  await click(document.querySelector('.article-card'));
-  assert.match(document.querySelector('h1').textContent,/IPv4/);
-  assert.ok(document.querySelector('.prose a[href*="tcpip-addressing-and-subnetting"]'));
-  console.log('OK réseau : 12 thèmes, 4 sous-réseaux /26, image non cliquable, navigation et guides.');
+  assert.equal(document.querySelector('a[href="/adressage-reseau"]'),null);
+  assert.ok(document.querySelector('.site-header nav a[href="/outils-ia"]'));
+  assert.ok(document.querySelector('footer a[href="/outils-ia"]'));
   await click(document.querySelector('.site-header nav a[href="/devops"]'));
   assert.match(document.title,/DevOps/);
   assert.equal(document.querySelectorAll('.devops-details article').length,12);
@@ -192,6 +184,62 @@ try {
   assert.match(document.querySelector('h1').textContent,/CI\/CD/);
   assert.ok(document.querySelector('.prose a[href*="what-is-continuous-integration"]'));
   console.log('OK DevOps : 12 domaines, pipeline de 8 étapes, 3 guides, infographie non cliquable et navigation.');
+  const {testGroups}=await import('./fixtures/ai-catalog.mjs');
+  const {sealCatalog}=await import('../src/ai-vault.mjs');
+  const testPassword=crypto.randomUUID(),testEnvelope=await sealCatalog(testGroups,testPassword);
+  globalThis.fetch=async path=>{assert.ok(path.endsWith('ai-catalog.enc.json'));return {ok:true,json:async()=>testEnvelope};};
+  const submitPassword=async value=>{
+    await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(document.querySelector('#ai-password'),value);document.querySelector('#ai-password').dispatchEvent(new window.Event('input',{bubbles:true}));});
+    await act(async()=>document.querySelector('.ai-login').dispatchEvent(new window.Event('submit',{bubbles:true,cancelable:true})));
+    for(let i=0;i<400&&document.querySelector('.ai-login button')?.disabled;i++)await act(async()=>new Promise(resolve=>setTimeout(resolve,25)));
+    assert.ok(document.querySelector('.ai-workspace')||!document.querySelector('.ai-login button')?.disabled,'Decryption completed');
+  };
+  await click(document.querySelector('.site-header nav a[href="/outils-ia"]'));
+  assert.match(document.title,/Outils IA/);
+  assert.equal(document.querySelector('.ai-workspace'),null);
+  assert.equal(document.querySelector('#ai-password').type,'password');
+  assert.equal(document.querySelector('#ai-password').autocomplete,'current-password');
+  await submitPassword('incorrect');
+  assert.match(document.querySelector('[role="alert"]').textContent,/Mot de passe incorrect/);
+  assert.equal(document.querySelector('.ai-workspace'),null);assert.equal(document.querySelector('#ai-password').value,'');
+  await submitPassword(testPassword);
+  assert.equal(document.querySelectorAll('.ai-domain-navigation button').length,8);
+  assert.equal(document.querySelectorAll('.ai-skill').length,52);
+  assert.equal(document.querySelectorAll('.ai-skill-group').length,7);
+  assert.equal(document.querySelector('#ai-password'),null);
+  assert.match(document.querySelector('.ai-result-count').textContent,/52 skills/);
+  for(const skill of document.querySelectorAll('.ai-skill'))assert.equal(skill.querySelectorAll('dd').length,3);
+  await click(document.querySelector('.ai-domain-navigation button:nth-child(4)'));
+  assert.equal(document.querySelectorAll('.ai-skill').length,3);
+  assert.match(document.querySelector('.ai-skill-list').textContent,/agent-reach/);
+  assert.match(document.querySelector('.ai-skill-list').textContent,/api-anything/);
+  await click(document.querySelector('.ai-domain-navigation button'));
+  const search=document.querySelector('#ai-search');
+  for(const name of ['graphify','api-anything']) {
+    await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,name);search.dispatchEvent(new window.Event('input',{bubbles:true}));});
+    assert.equal(document.querySelectorAll('.ai-skill').length,1);
+    assert.match(document.querySelector('.ai-skill').textContent,new RegExp(name));
+    await click(document.querySelector('.ai-skill summary'));
+    assert.equal(document.querySelector('.ai-skill').open,true);
+  }
+  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'caveman-optimize');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
+  assert.equal(document.querySelectorAll('.ai-skill').length,1);
+  const detail=document.querySelector('.ai-skill');
+  await click(detail.querySelector('summary'));assert.equal(detail.open,true);
+  assert.match(detail.querySelector('dl').textContent,/approbation explicite/);
+  await act(async()=>{Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype,'value').set.call(search,'aucun-skill-xyz');search.dispatchEvent(new window.Event('input',{bubbles:true}));});
+  assert.equal(document.querySelectorAll('.ai-skill').length,0);assert.ok(document.querySelector('.ai-empty'));
+  await click(document.querySelector('.ai-empty button'));assert.equal(document.querySelectorAll('.ai-skill').length,52);
+  await click(document.querySelector('.ai-tools-heading button'));
+  assert.equal(document.querySelector('.ai-workspace'),null);assert.ok(document.querySelector('#ai-password'));
+  // Missing ciphertext fails closed even on a static host.
+  globalThis.fetch=async()=>({ok:false,status:404});
+  await submitPassword(testPassword);
+  assert.equal(document.querySelector('.ai-workspace'),null);
+  assert.match(document.querySelector('[role="alert"]').textContent,/catalogue chiffré est indisponible/);
+  assert.ok(document.querySelector('#ai-password'));
+  globalThis.fetch=originalFetch;
+  console.log('OK outils IA : 52 fiches, recherche, domaines, détails, déchiffrement, verrouillage et refus si le fichier est absent.');
   await act(async () => {root.render(React.createElement(MemoryRouter,{key:'wrong-category',initialEntries:['/inconnu/azure-premiere-vm']},React.createElement(App)));});
   assert.ok(document.querySelector('.not-found'));
   assert.match(document.title,/Page introuvable/,'A known slug under the wrong category must keep its 404 title');
@@ -201,6 +249,7 @@ try {
   await act(async () => root.unmount());
   await server.close();
   console.error=originalError;
+  globalThis.fetch=originalFetch;
   dom.window.close();
 }
 

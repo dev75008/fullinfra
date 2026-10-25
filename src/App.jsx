@@ -8,12 +8,12 @@ import WindowsArchitecture from './WindowsArchitecture';
 import FsmoSection from './FsmoSection';
 import VirtualisationArchitecture from './VirtualisationArchitecture';
 import AzureArchitecture from './AzureArchitecture';
-import NetworkAddressingSection from './NetworkAddressingSection';
 import DevopsSection from './DevopsSection';
 import TechnologyInfographic from './TechnologyInfographic';
 import { ecosystems } from './data/ecosystems';
 import SourceLinks from './SourceLinks';
 import Home from './Home';
+import AiTools from './AiTools';
 import TechnologyIcon from './TechnologyIcon';
 import VMwareSection from './VMwareSection';
 import Microsoft365Section from './Microsoft365Section';
@@ -53,11 +53,12 @@ function Header() {
     <Logo/><button ref={toggleRef} className="menu-toggle" onClick={() => setOpen(!open)} aria-expanded={open} aria-controls="main-nav" aria-label={open ? 'Fermer le menu' : 'Ouvrir le menu'}>{open ? <X aria-hidden="true"/> : <Menu aria-hidden="true"/>}</button>
     <nav id="main-nav" className={open ? 'open' : ''} aria-label="Navigation principale" onClick={event => { if (event.target.closest('a')) setOpen(false); }}>
       <NavLink to="/" end>Accueil</NavLink>{categories.map(category => <NavLink key={category.slug} to={`/${category.slug}`}>{category.name}</NavLink>)}
+      <NavLink to="/outils-ia">Outils IA</NavLink>
       <NavLink className="mobile-guides-link" to="/guides">Tous les guides</NavLink>
     </nav><Link className="header-cta" to="/guides">Tous les guides <ArrowUpRight size={16} aria-hidden="true"/></Link>
   </div></header>;
 }
-function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}</div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} FullInfra. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 · Réseau · DevOps <span className="status-dot"/></span></div></div></footer>; }
+function Footer() { return <footer><div className="container"><div className="footer-main"><div><Logo/><p>Guides pour administrer vos systèmes et services cloud.</p></div><div className="footer-links"><Link to="/guides">Tous les guides</Link><Link to="/">Accueil</Link>{categories.map(c => <Link key={c.slug} to={`/${c.slug}`}>{c.name}</Link>)}<Link to="/outils-ia">Outils IA</Link></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} FullInfra. Construit pour apprendre.</span><span>Windows · Virtualisation · Azure · Microsoft 365 · DevOps · Outils IA <span className="status-dot"/></span></div></div></footer>; }
 function GuideList({ category }) {
   const [searchParams,setSearchParams] = useSearchParams();
   const query = searchParams.get('recherche') || '';
@@ -96,7 +97,6 @@ function Guides() {
   if (slug === 'windows-server') sections.splice(1,0,['windows-fsmo','Rôles FSMO']);
   if (slug === 'virtualisation') sections.unshift(['virtualisation-architecture','Infographie de l’architecture']);
   if (slug === 'azure') sections.unshift(['azure-architecture','Infographie de l’architecture']);
-  if (slug === 'adressage-reseau') sections.splice(0,sections.length,['adressage-architecture','Infographie'],['adressage-details','Explications'],['adressage-exemple','Exemple de sous-réseaux'],['adressage-diagnostic','Diagnostic']);
   if (slug === 'devops') sections.splice(0,sections.length,['devops-architecture','Infographie'],['devops-details','Domaines DevOps'],['devops-pipeline','Exemple de pipeline'],['devops-pratique','Mise en pratique']);
   return <main className="container listing-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
@@ -105,7 +105,6 @@ function Guides() {
     {slug === 'windows-server' && <><WindowsArchitecture/><FsmoSection/><WindowsInfographic/></>}
     {slug === 'virtualisation' && <VirtualisationArchitecture/>}
     {slug === 'azure' && <AzureArchitecture/>}
-    {slug === 'adressage-reseau' && <NetworkAddressingSection/>}
     {slug === 'devops' && <DevopsSection/>}
     {ecosystems[slug] && <TechnologyInfographic key={`map-${slug}`} ecosystem={ecosystems[slug]}/>}
     {slug === 'virtualisation' && <VMwareSection/>}{slug === 'microsoft-365' && <Microsoft365Section/>}
@@ -114,4 +113,4 @@ function Guides() {
 }
 function Article() { const { category: slug, article: articleSlug } = useParams(); const article = articles.find(a => a.slug === articleSlug && a.category === slug); if (!article) return <NotFound/>; const category = categories.find(c => c.slug === slug); return <main className="container article-page"><div className="breadcrumb"><Link to="/">Accueil</Link><ChevronRight size={14}/><Link to={`/${slug}`}>{category.name}</Link><ChevronRight size={14}/><span>Le guide</span></div><div className={`article-title ${category.color}`}><span className="pill">{category.name} / {article.level}</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="reading-meta"><Clock3 size={15}/> {article.minutes} min de lecture <span>·</span> {new Date(article.date + 'T12:00:00').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}</div></div><div className="article-layout"><aside className="article-aside"><h2>Dans ce guide</h2>{article.sections.map(([title], i) => <a key={title} href={`#etape-${i}`}><span>0{i+1}</span>{title}</a>)}</aside><article className="prose"><div className="note"><BookOpen size={20}/><p>Les fonctionnalités et paramètres dépendent de votre environnement. Consultez les références du guide et testez vos changements avant le déploiement.</p></div>{article.sections.map(([title, text], i) => <section id={`etape-${i}`} key={title}><h2>{title}</h2><p>{text}</p></section>)}<SourceLinks ids={article.sourceIds}/><Link className="button secondary" to={`/${slug}`}>Tous les guides {category.name} <ArrowRight size={17}/></Link></article></div><section className="related"><h2>Explorez aussi</h2><div className="article-grid">{articles.filter(a => a.category === slug && a.slug !== article.slug).map(a => <ArticleCard article={a} key={a.slug}/>)}</div></section></main>; }
 function NotFound() { return <main className="container empty-state not-found"><div className="eyebrow">ERREUR 404</div><h1>Page introuvable.</h1><p>Le lien est incorrect ou la page a été déplacée. Retrouvez les rubriques depuis l’accueil.</p><Link className="button primary" to="/">Retour à l’accueil <ArrowRight size={18}/></Link></main>; }
-export default function App() { return <><RouteEffects/><a href="#content" className="skip-link">Aller au contenu</a><Header/><div id="content" tabIndex={-1}><Routes><Route path="/" element={<main><Home/></main>}/><Route path="/guides" element={<Guides/>}/><Route path="/:category" element={<Guides/>}/><Route path="/:category/:article" element={<Article/>}/><Route path="*" element={<NotFound/>}/></Routes></div><Footer/></>; }
+export default function App() { return <><RouteEffects/><a href="#content" className="skip-link">Aller au contenu</a><Header/><div id="content" tabIndex={-1}><Routes><Route path="/" element={<main><Home/></main>}/><Route path="/guides" element={<Guides/>}/><Route path="/outils-ia" element={<AiTools/>}/><Route path="/:category" element={<Guides/>}/><Route path="/:category/:article" element={<Article/>}/><Route path="*" element={<NotFound/>}/></Routes></div><Footer/></>; }

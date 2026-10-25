@@ -17,14 +17,14 @@ export default function Home() {
       <div className="container">
         
         <h1>Comprendre votre infrastructure.</h1>
-        <p className="support-hero-description">Des réponses claires sur Windows Server, la virtualisation,<br className="desktop-break"/> Azure, Microsoft 365, l’adressage réseau et DevOps.</p>
+        <p className="support-hero-description">Des réponses claires sur Windows Server, la virtualisation,<br className="desktop-break"/> Azure, Microsoft 365 et DevOps.</p>
         <label className="home-search-label" htmlFor="home-guide-search">Quel sujet souhaitez-vous explorer ?</label>
         <form className="home-search" onSubmit={search} role="search" aria-label="Rechercher dans les guides">
           <Search size={23} aria-hidden="true"/>
           <input id="home-guide-search" type="search" value={query} onChange={event => setQuery(event.target.value)} placeholder="Active Directory, VMware, Teams…"/>
           <button type="submit" aria-label="Lancer la recherche"><ArrowRight size={23}/></button>
         </form>
-        <div className="hero-suggestions"><span>Pour commencer :</span><Link to="/windows-server">Windows Server</Link><Link to="/virtualisation">Virtualisation</Link><Link to="/azure">Azure</Link><Link to="/microsoft-365">Microsoft 365</Link><Link to="/adressage-reseau">Adressage réseau</Link><Link to="/devops">DevOps</Link></div>
+        <div className="hero-suggestions"><span>Pour commencer :</span><Link to="/windows-server">Windows Server</Link><Link to="/virtualisation">Virtualisation</Link><Link to="/azure">Azure</Link><Link to="/microsoft-365">Microsoft 365</Link><Link to="/devops">DevOps</Link><Link to="/outils-ia">Outils IA</Link></div>
       </div>
     </section>
 

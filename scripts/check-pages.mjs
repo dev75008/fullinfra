@@ -11,7 +11,8 @@ for (const [,asset] of index.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)) {
 }
 const sitemap=new JSDOM(await readFile(new URL('sitemap.xml',dist),'utf8'),{contentType:'text/xml'});
 const urls=[...sitemap.window.document.querySelectorAll('loc')].map(node=>node.textContent);
-assert.equal(urls.length,21);
+assert.equal(urls.length,18);
+assert.ok(urls.every(url=>!url.includes('/adressage-reseau')));
 assert.equal(new Set(urls).size,urls.length);
 const titles=new Set(),descriptions=new Set();
 for(const url of urls) {
@@ -35,7 +36,7 @@ for(const url of urls) {
   assert.ok(schema['@graph'].some(item=>item.url===url));
   for(const link of d.querySelectorAll('a[href^="/"]')) {
     const target=new URL(link.getAttribute('href'),'https://fullinfra.duckdns.org');
-    assert.ok(urls.includes(`https://fullinfra.duckdns.org${target.pathname.replace(/\/+$/,'')}/`),`Unknown page link: ${target}`);
+    assert.ok(target.pathname.replace(/\/+$/,'')==='/outils-ia' || urls.includes(`https://fullinfra.duckdns.org${target.pathname.replace(/\/+$/,'')}/`),`Unknown page link: ${target}`);
   }
   dom.window.close();
 }
@@ -53,7 +54,7 @@ missing.window.close();
 // Execute the production bundle against the actual generated HTML, including hydration.
 const asset=index.match(/src="([^"]+\.js)"/)[1];
 const code=await readFile(new URL(asset.slice(base.length),dist),'utf8');
-for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/microsoft-365/','/adressage-reseau/','/devops/','/devops/comprendre-pipeline-ci-cd/','/adressage-reseau/calculer-sous-reseau-ipv4/','/windows-server/active-directory-fondations/','/guides/?recherche=Hyper-V','/missing-page/']) {
+for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/microsoft-365/','/outils-ia/','/devops/','/devops/comprendre-pipeline-ci-cd/','/windows-server/active-directory-fondations/','/guides/?recherche=Hyper-V','/missing-page/']) {
   const pathname=route.split('?')[0];
   const html=pathname==='/missing-page/' ? fallback : await readFile(new URL(`${pathname.slice(1)}index.html`,dist),'utf8');
   const errors=[];

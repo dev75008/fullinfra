@@ -134,6 +134,10 @@ try {
     }
     console.log(`OK : ${ecosystem.title}, 12 branches, 48 technologies, ${ecosystem.edges.length} relations et 4 scénarios.`);
   }
+  assert.ok(!categories.some(category=>category.slug==='adressage-reseau'));
+  assert.ok(!articles.some(article=>article.category==='adressage-reseau'));
+  assert.ok(render('/adressage-reseau').includes('Page introuvable'));
+  assert.ok(render('/').includes('href="/outils-ia"'));
   assert.equal((render('/guides').match(/class="article-card /g) || []).length, articles.length);
   for (const category of categories) {
     const html = render(`/${category.slug}`);
@@ -145,7 +149,7 @@ try {
     assert.ok(html.includes(article.title));
     assert.ok(html.includes('id="etape-0"'));
   }
-  for (const path of ['/','/guides',...categories.map(item => `/${item.slug}`),...articles.map(item => `/${item.category}/${item.slug}`)]) {
+  for (const path of ['/','/guides','/outils-ia',...categories.map(item => `/${item.slug}`),...articles.map(item => `/${item.category}/${item.slug}`)]) {
     const html=render(path);
     assert.equal((html.match(/<h1[ >]/g) || []).length,1,`One page title expected on ${path}`);
     assert.equal((html.match(/<main[ >]/g) || []).length,1,`One main landmark expected on ${path}`);

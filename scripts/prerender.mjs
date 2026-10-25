@@ -25,6 +25,8 @@ try {
     dom.window.close();
   }
   for(const path of contentPaths) await page(path,resolve('dist',path.slice(1),'index.html'));
+  // Public locked shell only; catalogue remains encrypted until browser-side unlocking.
+  await page('/outils-ia',resolve('dist/outils-ia/index.html'));
   // Unknown URLs stay actual 404 responses with useful content; no redirect to the home page.
   await page('/404',resolve('dist/404.html'));
   const xml=value=>value.replaceAll('&','&amp;').replaceAll('<','&lt;');
