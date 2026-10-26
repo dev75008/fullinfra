@@ -13,6 +13,9 @@ try {
   const { devopsTopics }=await server.ssrLoadModule('/src/data/devops.js');
   assert.ok(availableTechnologyIcons.has(categoryIconKeys.devops));
   for(const topic of devopsTopics) assert.ok(availableTechnologyIcons.has(topic.icon),`Missing DevOps icon: ${topic.id}`);
+  const { classicCycle, classicPillars, classicTools }=await server.ssrLoadModule('/src/data/devopsClassic.js');
+  assert.ok(availableTechnologyIcons.has(categoryIconKeys['devops-classique']));
+  for(const item of [...classicCycle,...classicPillars,...classicTools]) assert.ok(availableTechnologyIcons.has(item.icon));
   const { windowsBranches }=await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { ecosystems }=await server.ssrLoadModule('/src/data/ecosystems.js');
   let technologies=0;

@@ -1,5 +1,5 @@
 // Une correspondance explicite évite d’attribuer un logo cloud à un service Windows local.
-export const categoryIconKeys = {'windows-server':'windows-server',virtualisation:'hyperv',azure:'azure','microsoft-365':'apps-local','adressage-reseau':'network',devops:'replication'};
+export const categoryIconKeys = {'windows-server':'windows-server',virtualisation:'hyperv',azure:'azure','microsoft-365':'apps-local','adressage-reseau':'network',devops:'replication','devops-classique':'code'};
 
 export const branchIconKeys = {
   'windows-server': {'active-directory':'directory',reseau:'network',stockage:'files-local',securite:'shield',virtualisation:'hyperv',web:'web',maintenance:'maintenance',disponibilite:'cluster',powershell:'powershell',rds:'desktop',hybride:'hybrid',monitoring:'activity'},

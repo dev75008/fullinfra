@@ -1,0 +1,7 @@
+.devops-classic{--classic-surface:#f2f7fc;--classic-border:#d5dfe8;--classic-ink:#16466a}
+.classic-infographic{margin:28px 0}.classic-infographic img{display:block;width:100%;height:auto;cursor:default}.classic-infographic figcaption{font-size:14px;color:var(--muted);line-height:1.7;margin-top:12px}
+.classic-cycle-details{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 28px}.classic-cycle-details li{display:flex;gap:14px;min-width:0}.classic-cycle-details h3{font-size:20px;margin:0}.classic-cycle-details p{margin:6px 0 0}.classic-cycle-details .technology-icon{margin-top:3px}
+.devops-classic .addressing-topic-grid article>p{color:var(--muted);line-height:1.85}.classic-context{padding:18px 22px;background:var(--classic-surface);border-left:3px solid var(--accent);line-height:1.8}.classic-example-steps{padding-left:26px}.classic-example-steps li{padding-left:10px;margin:20px 0}.classic-example-steps h3{font-size:21px;margin:0}.devops-classic .addressing-worked>ul{padding-left:22px;line-height:1.85;color:var(--muted)}.devops-classic .addressing-worked>ul li{margin-block:12px}
+@media(max-width:760px){.classic-cycle-details{grid-template-columns:1fr}.classic-infographic{margin-inline:-8px}}
+/* The extra category fits beside the existing brand without squeezing link labels. */
+@media(min-width:1251px){.site-header nav{gap:14px}.site-header .header-cta{display:none}.header-inner{gap:20px}}

@@ -61,7 +61,7 @@ try {
   }
   await click(document.querySelector('.header-cta'));
   assert.match(document.title,/Tous les guides/,'Catalogue title must describe the page');
-  assert.equal(document.querySelectorAll('.article-card').length,11);
+  assert.equal(document.querySelectorAll('.article-card').length,13);
   await click(document.querySelectorAll('.filter-tabs button')[1]);
   assert.equal(document.querySelectorAll('.article-card').length,2);
   const input=document.querySelector('.search-box input');
@@ -71,7 +71,7 @@ try {
   });
   assert.equal(document.querySelectorAll('.article-card').length,0,'Search must filter displayed content');
   await click(document.querySelector('.empty-state button'));
-  assert.equal(document.querySelectorAll('.article-card').length,11,'Reset must clear search and category');
+  assert.equal(document.querySelectorAll('.article-card').length,13,'Reset must clear search and category');
   await click(document.querySelector('.article-card'));
   assert.ok(document.querySelector('.prose'));
   assert.ok(!document.title.includes('introuvable'));
@@ -163,7 +163,7 @@ try {
   await searchFor('guide-inexistant-xyz');
   await click(document.querySelector('.empty-state button'));
   assert.equal(document.querySelector('#guide-search').value,'');
-  assert.equal(document.querySelectorAll('.article-card').length,11);
+  assert.equal(document.querySelectorAll('.article-card').length,13);
   await click(document.querySelector('.site-header nav a[href="/windows-server"]'));
   assert.equal(document.querySelectorAll('.filter-tabs button').length,3,'Category filters should only list topics with articles');
   console.log('OK UX : menu courant, Échap, focus, libellés, filtres annoncés, recherche sans accents et liens de section.');
@@ -184,6 +184,25 @@ try {
   assert.match(document.querySelector('h1').textContent,/CI\/CD/);
   assert.ok(document.querySelector('.prose a[href*="what-is-continuous-integration"]'));
   console.log('OK DevOps : 12 domaines, pipeline de 8 étapes, 3 guides, infographie non cliquable et navigation.');
+  await click(document.querySelector('.site-header nav a[href="/devops-classique"]'));
+  assert.match(document.title,/DevOps classique/);
+  assert.equal(document.querySelectorAll('#classique-piliers article').length,5);
+  assert.equal(document.querySelectorAll('#classique-outils article').length,8);
+  assert.equal(document.querySelectorAll('.classic-cycle-details > li').length,8);
+  assert.equal(document.querySelectorAll('.classic-example-steps > li').length,6);
+  assert.equal(document.querySelectorAll('#classique-metiers tbody tr').length,5);
+  assert.equal(document.querySelectorAll('.article-card').length,2);
+  const classicImage=document.querySelector('.classic-infographic img');
+  assert.equal(classicImage.closest('a,button,[role="button"]'),null);
+  assert.equal(classicImage.getAttribute('tabindex'),null);
+  assert.ok(!document.querySelector('.devops-classic a[href*="azure"]'));
+  for(const link of document.querySelectorAll('.section-navigation a')) assert.ok(document.getElementById(link.hash.slice(1)));
+  for(const link of document.querySelectorAll('.devops-classic .learn-source-links a')) assert.ok(link.href.startsWith('https://'));
+  await click(document.querySelector('.article-card'));
+  assert.ok(document.querySelector('.prose a[href*="docs.gitlab.com"]'));
+  assert.equal(document.querySelector('link[rel="canonical"]').href,'https://fullinfra.duckdns.org/devops-classique/pipeline-independant-du-cloud/');
+  console.log('OK DevOps classique : cinq piliers, huit outils, cycle, cas pratique, métiers, image sans lien et guides sourcés.');
+
   const {testGroups}=await import('./fixtures/ai-catalog.mjs');
   const {sealCatalog}=await import('../src/ai-vault.mjs');
   const testPassword=crypto.randomUUID(),testEnvelope=await sealCatalog(testGroups,testPassword);

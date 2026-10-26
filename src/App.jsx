@@ -9,6 +9,7 @@ import FsmoSection from './FsmoSection';
 import VirtualisationArchitecture from './VirtualisationArchitecture';
 import AzureArchitecture from './AzureArchitecture';
 import DevopsSection from './DevopsSection';
+import DevopsClassicSection from './DevopsClassicSection';
 import TechnologyInfographic from './TechnologyInfographic';
 import { ecosystems } from './data/ecosystems';
 import SourceLinks from './SourceLinks';
@@ -98,6 +99,7 @@ function Guides() {
   if (slug === 'virtualisation') sections.unshift(['virtualisation-architecture','Infographie de l’architecture']);
   if (slug === 'azure') sections.unshift(['azure-architecture','Infographie de l’architecture']);
   if (slug === 'devops') sections.splice(0,sections.length,['devops-architecture','Infographie'],['devops-details','Domaines DevOps'],['devops-pipeline','Exemple de pipeline'],['devops-pratique','Mise en pratique']);
+  if (slug === 'devops-classique') sections.splice(0,sections.length,['classique-cycle','Cycle DevOps'],['classique-piliers','Cinq piliers'],['classique-outils','Outils'],['classique-exemple','Cas pratique'],['classique-metiers','Métiers'],['classique-flux','Accès et dépendances']);
   return <main className="container listing-page">
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
     <section className={`page-intro ${category?.color || 'green'}`}><span className="icon-box"><TechnologyIcon name={category ? categoryIconKeys[slug] : 'guides'} size={60}/></span><h1>{category?.name || 'Tous les guides'}</h1><p>{category?.description || 'Recherchez un sujet ou choisissez un environnement pour retrouver un guide.'}</p></section>
@@ -106,6 +108,7 @@ function Guides() {
     {slug === 'virtualisation' && <VirtualisationArchitecture/>}
     {slug === 'azure' && <AzureArchitecture/>}
     {slug === 'devops' && <DevopsSection/>}
+    {slug === 'devops-classique' && <DevopsClassicSection/>}
     {ecosystems[slug] && <TechnologyInfographic key={`map-${slug}`} ecosystem={ecosystems[slug]}/>}
     {slug === 'virtualisation' && <VMwareSection/>}{slug === 'microsoft-365' && <Microsoft365Section/>}
     <GuideList key={`guides-${slug || 'all'}`} category={category}/>

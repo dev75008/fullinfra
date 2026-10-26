@@ -1,11 +1,13 @@
 import { articleReferences } from './auditReferences';
 import { devopsGuides } from './devops';
+import { classicGuides } from './devopsClassic';
 export const categories = [
   { slug: 'windows-server', name: 'Windows Server', short: 'Windows', icon: 'server', color: 'green', description: 'Identités Active Directory, services réseau, stockage et administration de Windows Server.', topics: ['Active Directory', 'PowerShell', 'Réseau'] },
   { slug: 'virtualisation', name: 'Virtualisation', short: 'Virtualisation', icon: 'layers', color: 'purple', description: 'Hyper-V, VMware vSphere et Azure VMware Solution : hôtes, machines virtuelles, stockage et disponibilité.', topics: ['Hyper-V', 'VMware', 'Stockage'] },
   { slug: 'azure', name: 'Azure', short: 'Azure', icon: 'cloud', color: 'blue', description: 'Calcul, réseau, stockage et gouvernance : comprenez les services Azure et leurs dépendances.', topics: ['Machines virtuelles', 'Réseau cloud', 'Gouvernance'] },
   { slug: 'microsoft-365', name: 'Microsoft 365', short: 'Microsoft 365', icon: 'apps', color: 'blue', description: 'Administrez vos services de collaboration : identités, messagerie, fichiers, appareils et protection des données.', topics: ['Administration', 'Teams', 'Sécurité'] },
   { slug: 'devops', name: 'DevOps', short: 'DevOps', icon: 'terminal', color: 'blue', description: 'Git, CI/CD, tests, conteneurs, Kubernetes, infrastructure comme code, sécurité et observabilité : comprendre le chemin du code à la production.', topics: ['CI/CD', 'Infrastructure comme code', 'Conteneurs'] },
+  { slug: 'devops-classique', name: 'DevOps classique', short: 'DevOps classique', icon: 'terminal', color: 'blue', description: 'Les pratiques DevOps indépendantes du cloud : collaboration, Git, CI/CD, Docker, Kubernetes, Terraform, Ansible et supervision sur Windows et Linux.', topics: ['CI/CD', 'Infrastructure comme code', 'Supervision'] },
 ];
 
 const sampleArticles = [
@@ -53,4 +55,4 @@ const sampleArticles = [
   ] },
 ];
 
-export const articles = [...sampleArticles,...devopsGuides].map(article => ({...article, sourceIds:articleReferences[article.slug], minutes:Math.max(1,Math.ceil(article.sections.map(section => section.join(' ')).join(' ').split(/\s+/).length / 200))}));
+export const articles = [...sampleArticles,...devopsGuides,...classicGuides].map(article => ({...article, sourceIds:article.sourceIds || articleReferences[article.slug], minutes:Math.max(1,Math.ceil(article.sections.map(section => section.join(' ')).join(' ').split(/\s+/).length / 200))}));

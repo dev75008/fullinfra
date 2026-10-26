@@ -1,0 +1,119 @@
+{
+  "checkedAt": "2026-10-26T10:40:43.298Z",
+  "sources": [
+    {
+      "id": "classic-github",
+      "url": "https://docs.github.com/fr/actions/get-started/understand-github-actions",
+      "finalUrl": "https://docs.github.com/fr/actions/get-started/understand-github-actions",
+      "title": "GitHub Actions : workflows et runners",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "ca903ec99b5bf9e489e18db20279e977369b07d07d57a07fca336a0512665f62"
+    },
+    {
+      "id": "classic-gitlab",
+      "url": "https://docs.gitlab.com/ci/",
+      "finalUrl": "https://docs.gitlab.com/ci/",
+      "title": "GitLab : principes de CI/CD",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "9e59aaf170948f76398932cc0dd09354f4fa10336fd55dbbead6f8da044a0297"
+    },
+    {
+      "id": "classic-jenkins",
+      "url": "https://www.jenkins.io/doc/book/pipeline/",
+      "finalUrl": "https://www.jenkins.io/doc/book/pipeline/",
+      "title": "Jenkins : Pipeline as Code",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "ca8246229a82c819f7bd4cb548eee150506e6575a778935a0ee33896bf2f72a6"
+    },
+    {
+      "id": "classic-docker",
+      "url": "https://docs.docker.com/get-started/docker-overview/",
+      "finalUrl": "https://docs.docker.com/get-started/docker-overview/",
+      "title": "Docker : images, conteneurs et registres",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "0c528ff508854368b4b9288139d4ded34f80d37d01f55d306f4846c235061de1"
+    },
+    {
+      "id": "classic-kubernetes",
+      "url": "https://kubernetes.io/fr/docs/concepts/overview/",
+      "finalUrl": "https://kubernetes.io/fr/docs/concepts/overview/",
+      "title": "Kubernetes : rôle de l’orchestrateur",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "aa5a191f0c6f6efb30bd6bd0ad23bb2c7d95861a0c860807325c97a840c6c31e"
+    },
+    {
+      "id": "classic-terraform",
+      "url": "https://developer.hashicorp.com/terraform/intro",
+      "finalUrl": "https://developer.hashicorp.com/terraform/intro",
+      "title": "Terraform : infrastructure comme code",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "9df3418bb562b9908ae96fdb3f7aa02d9cb215285badc636158c41bafa276646"
+    },
+    {
+      "id": "classic-state",
+      "url": "https://developer.hashicorp.com/terraform/language/manage-sensitive-data",
+      "finalUrl": "https://developer.hashicorp.com/terraform/language/manage-sensitive-data",
+      "title": "Terraform : données sensibles et état",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "de1d35e93ef9e7f3b25a5e2070aaae12b5153eeeb8a3a3975291a74eca2e9d5a"
+    },
+    {
+      "id": "classic-ansible",
+      "url": "https://docs.ansible.com/projects/ansible/latest/getting_started/index.html",
+      "title": "Ansible : inventaire, nœud de contrôle et machines gérées",
+      "ok": true,
+      "method": "web.run official documentation reader; evidence contains three documents",
+      "sha256": "f7f233a2fd0d32996a31b312330c6837db31e68b9572adf3b3c69524f84df3c7"
+    },
+    {
+      "id": "classic-windows",
+      "url": "https://docs.ansible.com/projects/ansible/latest/os_guide/intro_windows.html",
+      "title": "Ansible : administrer des hôtes Windows",
+      "ok": true,
+      "method": "web.run official documentation reader; evidence contains three documents",
+      "sha256": "f7f233a2fd0d32996a31b312330c6837db31e68b9572adf3b3c69524f84df3c7"
+    },
+    {
+      "id": "classic-winrm",
+      "url": "https://docs.ansible.com/projects/ansible/latest/os_guide/windows_winrm.html",
+      "title": "Ansible : connexions WinRM",
+      "ok": true,
+      "method": "web.run official documentation reader; evidence contains three documents",
+      "sha256": "f7f233a2fd0d32996a31b312330c6837db31e68b9572adf3b3c69524f84df3c7"
+    },
+    {
+      "id": "classic-prometheus",
+      "url": "https://prometheus.io/docs/introduction/overview/",
+      "finalUrl": "https://prometheus.io/docs/introduction/overview/",
+      "title": "Prometheus : collecte de métriques et alertes",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "5b139e1811d428e69378c26f6db8a86ade27aff964d0baaf5ed436b9a3931e6b"
+    },
+    {
+      "id": "classic-grafana",
+      "url": "https://grafana.com/docs/grafana/latest/introduction/",
+      "finalUrl": "https://grafana.com/docs/grafana/latest/introduction/",
+      "title": "Grafana : exploration et visualisation des données",
+      "ok": true,
+      "status": 200,
+      "method": "direct official HTTPS retrieval",
+      "sha256": "2f65210d1785525b628eeb981a155f8b86241ed461a1f99818e2531d96f9fa0c"
+    }
+  ]
+}

@@ -10,6 +10,8 @@ try {
   const { learnSources } = await server.ssrLoadModule('/src/data/learnSources.js');
   const { broadcomSources, vmwareFlows } = await server.ssrLoadModule('/src/data/broadcomSources.js');
   const sources = {...learnSources,...broadcomSources};
+  const { devopsClassicSources, classicPillars, classicTools } = await server.ssrLoadModule('/src/data/devopsClassic.js');
+  Object.assign(sources,devopsClassicSources);
   const { microsoft365Sources } = await server.ssrLoadModule('/src/data/microsoft365Sources.js');
   const { microsoft365Topics, microsoft365Flows } = await server.ssrLoadModule('/src/data/microsoft365.js');
   const { microsoft365CommunicationMap } = await server.ssrLoadModule('/src/data/microsoft365Communications.js');
@@ -32,6 +34,8 @@ try {
   evidence.sources.push(...broadcomEvidence.sources);
   const microsoft365Evidence=JSON.parse(await readFile(new URL('../docs/microsoft365-sources-audit.json',import.meta.url),'utf8'));
   evidence.sources.push(...microsoft365Evidence.sources);
+  const classicEvidence=JSON.parse(await readFile(new URL('../docs/devops-classic-sources-audit.json',import.meta.url),'utf8'));
+  evidence.sources.push(...classicEvidence.sources);
   const evidenceById=Object.fromEntries(evidence.sources.map(source => [source.id,source]));
   let technologyCount=0, flowCount=0;
   const usedIds=new Set();
@@ -41,7 +45,8 @@ try {
       const source=sources[id];
       assert.ok(source,`Unknown source ${id}: ${label}`);
       const url=new URL(source.url);
-      if (broadcomSources[id]) assert.ok(['www.broadcom.com','knowledge.broadcom.com'].includes(url.hostname));
+      if (devopsClassicSources[id]) assert.ok(['docs.github.com','docs.gitlab.com','www.jenkins.io','docs.docker.com','kubernetes.io','developer.hashicorp.com','docs.ansible.com','prometheus.io','grafana.com'].includes(url.hostname));
+      else if (broadcomSources[id]) assert.ok(['www.broadcom.com','knowledge.broadcom.com'].includes(url.hostname));
       else { assert.equal(url.hostname,'learn.microsoft.com'); assert.ok(url.pathname.startsWith('/fr-fr/')); }
       assert.ok(evidenceById[id]?.ok,`Source retrieval failed: ${id}`);
       assert.equal(source.url,evidenceById[id].url);
@@ -57,6 +62,7 @@ try {
     for (const edge of edges) { verify(edge.sourceIds,edge.id);flowCount++; }
   }
   for (const article of articles) verify(article.sourceIds,article.title);
+  for (const item of [...classicPillars,...classicTools]) verify(item.sourceIds,item.title || item.name);
   assert.equal(networkTopics.length,12);
   assert.equal(new Set(networkTopics.map(topic=>topic.id)).size,12);
   for (const topic of networkTopics) verify(topic.sourceIds,topic.title);
@@ -98,17 +104,18 @@ try {
   assert.ok(vmwareFlows.some(row => row[1] === 'vCenter Server' && row[3] === 'TCP 902'));
   assert.ok(vmwareFlows.some(row => row[2] === 'vCenter Server' && row[3] === 'UDP 902'));
   const collectedUrls=new Set(evidence.sources.filter(source => source.ok).map(source => source.url));
-  for (const path of ['/','/guides','/windows-server','/virtualisation','/azure','/microsoft-365','/adressage-reseau','/devops',...articles.map(article => `/${article.category}/${article.slug}`)]) {
+  for (const path of ['/','/guides','/windows-server','/virtualisation','/azure','/microsoft-365','/adressage-reseau','/devops','/devops-classique',...articles.map(article => `/${article.category}/${article.slug}`)]) {
     const html=renderToString(React.createElement(MemoryRouter,{initialEntries:[path]},React.createElement(App)));
     for (const [,value] of html.matchAll(/href="(https?:[^\"]+)"/g)) {
       const href=value.replaceAll('&amp;','&');
       const host=new URL(href).hostname;
-      assert.ok(host === 'learn.microsoft.com' || (path.startsWith('/virtualisation') && ['www.broadcom.com','knowledge.broadcom.com'].includes(host)),`External technical source on ${path}`);
+      const isClassicSource=Object.values(devopsClassicSources).some(source=>source.url===href);
+      assert.ok(host === 'learn.microsoft.com' || (path.startsWith('/virtualisation') && ['www.broadcom.com','knowledge.broadcom.com'].includes(host)) || ((path.startsWith('/devops-classique') || path==='/' || path==='/guides') && isClassicSource),`External technical source on ${path}`);
       assert.ok(collectedUrls.has(href),`Displayed reference was not retrieved: ${href}`);
     }
   }
   assert.equal(technologyCount,144);
   assert.equal(flowCount,84);
-  assert.equal(articles.length,11);
+  assert.equal(articles.length,13);
   console.log(`OK sources : ${technologyCount} technologies, ${flowCount} relations, ${articles.length} articles ; ${usedIds.size} références traçables ; 12 thèmes réseau, sous-réseaux et CIDR vérifiés ; Microsoft 365 et VMware validés.`);
 } finally { await server.close(); }

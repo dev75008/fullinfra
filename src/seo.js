@@ -9,12 +9,13 @@ export const canonicalPath = pathname => {
 const categoryTitles = {
   'adressage-reseau':'Adressage IP : IPv4, IPv6, CIDR et sous-réseaux',
   devops:'DevOps : Git, CI/CD, conteneurs, Kubernetes et IaC',
+  'devops-classique':'DevOps classique : CI/CD, Docker, Terraform et Ansible',
   'windows-server':'Windows Server : Active Directory, FSMO et PowerShell',
   virtualisation:'Virtualisation : Hyper-V, VMware et machines virtuelles',
   azure:'Azure : réseau, machines virtuelles et services cloud',
   'microsoft-365':'Microsoft 365 : identités, sécurité et collaboration',
 };
-const images = {'windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};
+const images = {'devops-classique':'devops-classique-architecture.svg','windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};
 
 export function getPageMetadata(pathname) {
   const path = pathname.replace(/\/+$/,'') || '/';
