@@ -1,1 +1,190 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="900" viewBox="0 0 1440 900" role="img" aria-labelledby="title desc"><title id="title">DevOps classique : un cycle continu</title><desc id="desc">Planifier, coder, construire, tester, livrer, déployer, exploiter, observer et recommencer. Cinq piliers : CI/CD, infrastructure comme code, conteneurisation, monitoring et collaboration.</desc><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#0067b8"/></marker></defs><rect width="1440" height="900" fill="#f2f7fc"/><g font-family="Segoe UI,Arial,sans-serif" fill="#203748"><text x="64" y="86" font-size="48" font-weight="600">DevOps classique</text><text x="64" y="134" font-size="25" fill="#526676">Du besoin à la production, puis du terrain au prochain changement</text><g transform="translate(64 206)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">1</text><text x="24" y="91" font-size="29" font-weight="600">Planifier</text><text x="24" y="123" font-size="17" fill="#526676">Besoins et responsabilités</text></g><g transform="translate(398 206)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">2</text><text x="24" y="91" font-size="29" font-weight="600">Coder</text><text x="24" y="123" font-size="17" fill="#526676">Git et revue de code</text></g><g transform="translate(732 206)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">3</text><text x="24" y="91" font-size="29" font-weight="600">Construire</text><text x="24" y="123" font-size="17" fill="#526676">Paquet ou image versionnée</text></g><g transform="translate(1066 206)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">4</text><text x="24" y="91" font-size="29" font-weight="600">Tester</text><text x="24" y="123" font-size="17" fill="#526676">Tests et contrôles bloquants</text></g><g transform="translate(64 410)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">5</text><text x="24" y="91" font-size="29" font-weight="600">Livrer</text><text x="24" y="123" font-size="17" fill="#526676">Artefact prêt à promouvoir</text></g><g transform="translate(398 410)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">6</text><text x="24" y="91" font-size="29" font-weight="600">Déployer</text><text x="24" y="123" font-size="17" fill="#526676">Préproduction puis production</text></g><g transform="translate(732 410)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">7</text><text x="24" y="91" font-size="29" font-weight="600">Exploiter</text><text x="24" y="123" font-size="17" fill="#526676">Service, données et capacité</text></g><g transform="translate(1066 410)"><rect width="310" height="150" rx="8" fill="white" stroke="#bad2e4"/><path d="M0 8Q0 0 8 0H302Q310 0 310 8V13H0Z" fill="#0067b8"/><text x="24" y="53" font-size="19" fill="#0067b8">8</text><text x="24" y="91" font-size="29" font-weight="600">Observer</text><text x="24" y="123" font-size="17" fill="#526676">Métriques, journaux et incidents</text></g><g fill="none" stroke="#0067b8" stroke-width="3" marker-end="url(#arrow)"><path d="M378 281h12"/><path d="M712 281h12"/><path d="M1046 281h12"/><path d="M378 485h12"/><path d="M712 485h12"/><path d="M1046 485h12"/><path d="M1355 356v30H219v18"/><path d="M1355 562v58H42V177H219v20"/></g><text x="450" y="613" font-size="23" fill="#0067b8">Retour d’expérience : observer pour améliorer</text><text x="64" y="679" font-size="27" font-weight="600">Les cinq piliers soutiennent l’ensemble du cycle</text><g transform="translate(64 710)"><rect width="243" height="112" rx="6" fill="white" stroke="#bad2e4"/><text x="18" y="38" font-size="19" font-weight="600">CI/CD</text><text x="18" y="75" font-size="16" fill="#526676">Tester et livrer</text></g><g transform="translate(331 710)"><rect width="243" height="112" rx="6" fill="white" stroke="#bad2e4"/><text x="18" y="38" font-size="19" font-weight="600">Infrastructure as Code</text><text x="18" y="75" font-size="16" fill="#526676">Décrire et configurer</text></g><g transform="translate(598 710)"><rect width="243" height="112" rx="6" fill="white" stroke="#bad2e4"/><text x="18" y="38" font-size="19" font-weight="600">Conteneurisation</text><text x="18" y="75" font-size="16" fill="#526676">Construire et exécuter</text></g><g transform="translate(865 710)"><rect width="243" height="112" rx="6" fill="white" stroke="#bad2e4"/><text x="18" y="38" font-size="19" font-weight="600">Monitoring</text><text x="18" y="75" font-size="16" fill="#526676">Observer et réagir</text></g><g transform="translate(1132 710)"><rect width="243" height="112" rx="6" fill="white" stroke="#bad2e4"/><text x="18" y="38" font-size="19" font-weight="600">Collaboration</text><text x="18" y="75" font-size="16" fill="#526676">Partager et améliorer</text></g><text x="64" y="864" font-size="18" fill="#526676">GitHub / GitLab · Jenkins · Docker · Kubernetes · Terraform · Ansible · Prometheus · Grafana</text><text x="1258" y="864" font-size="18" fill="#0067b8">fullinfra.</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="1800" viewBox="0 0 2400 1800" font-family="Segoe UI, Arial, sans-serif" role="img" aria-labelledby="title desc"><title id="title">DevOps classique : architecture et fonctionnement</title><desc id="desc">Git, CI/CD, tests, artefacts, conteneurs, Kubernetes, IaC, sécurité et observabilité.</desc><rect width="2400" height="1800" fill="#f4f8fb"/>
+<g transform="translate(35 25)"><svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></g>
+<text x="125" y="80" fill="#0b4876" font-size="61" font-weight="700">DevOps classique</text>
+<text x="760" y="72" fill="#173654" font-size="42" font-weight="650">Du code à la production</text>
+<text x="760" y="112" fill="#526b82" font-size="27" font-weight="400">Git, CI/CD et automatisation, sans dépendance au cloud</text>
+<rect x="30" y="150" width="2340" height="180" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="150" width="290" height="180" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="192" r="19" fill="#0067b8"/>
+<text x="59" y="200" fill="#fff" font-size="24" font-weight="700">1</text>
+<text x="98" y="198" fill="#173654" font-size="29" font-weight="700">Collaborer</text>
+<text x="98" y="233" fill="#173654" font-size="29" font-weight="700">et planifier</text>
+<text x="52" y="265" fill="#526b82" font-size="24" font-weight="400">Besoins et priorités</text>
+<text x="52" y="295" fill="#526b82" font-size="24" font-weight="400">Responsabilités définies</text>
+<g transform="translate(525 170)"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-users"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg></g>
+<text x="405" y="265" fill="#173654" font-size="30" font-weight="650">Équipe produit</text>
+<text x="405" y="305" fill="#526b82" font-size="24" font-weight="400">Besoins et priorités</text>
+<g transform="translate(1020 170)"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code-xml"><path d="m18 16 4-4-4-4"></path><path d="m6 8-4 4 4 4"></path><path d="m14.5 4-5 16"></path></svg></g>
+<text x="900" y="265" fill="#173654" font-size="30" font-weight="650">Développement</text>
+<text x="900" y="305" fill="#526b82" font-size="24" font-weight="400">Code, revue et qualité</text>
+<g transform="translate(1515 170)"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg></g>
+<text x="1395" y="265" fill="#173654" font-size="30" font-weight="650">Exploitation</text>
+<text x="1395" y="305" fill="#526b82" font-size="24" font-weight="400">Fiabilité et incidents</text>
+<g transform="translate(2010 170)"><svg xmlns="http://www.w3.org/2000/svg" width="58" height="58" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></g>
+<text x="1890" y="265" fill="#173654" font-size="30" font-weight="650">Sécurité</text>
+<text x="1890" y="305" fill="#526b82" font-size="24" font-weight="400">Risques et contrôles</text>
+<rect x="30" y="350" width="2340" height="310" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="350" width="290" height="310" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="392" r="19" fill="#0067b8"/>
+<text x="59" y="400" fill="#fff" font-size="24" font-weight="700">2</text>
+<text x="98" y="398" fill="#173654" font-size="29" font-weight="700">Versionner</text>
+<text x="98" y="433" fill="#173654" font-size="29" font-weight="700">et intégrer</text>
+<text x="52" y="595" fill="#526b82" font-size="24" font-weight="400">Chaque changement</text>
+<text x="52" y="625" fill="#526b82" font-size="24" font-weight="400">reste traçable</text>
+<rect x="340" y="370" width="970" height="225" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="340" y="370" width="970" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(353 380)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></g>
+<text x="398" y="406" fill="#fff" font-size="28" font-weight="650">GitHub / GitLab et revue de code</text>
+<g transform="translate(362 450)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-git-branch"><line x1="6" x2="6" y1="3" y2="15"></line><circle cx="18" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 9a9 9 0 0 1-9 9"></path></svg></g>
+<text x="450" y="469" fill="#173654" font-size="25" font-weight="400">Commits · Branches · Pull requests</text>
+<text x="450" y="506" fill="#173654" font-size="25" font-weight="400">Revue et politiques de la branche principale</text>
+<text x="450" y="543" fill="#173654" font-size="25" font-weight="400">Historique du code et de la configuration</text>
+<rect x="1330" y="370" width="1020" height="225" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1330" y="370" width="1020" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(1343 380)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></g>
+<text x="1388" y="406" fill="#fff" font-size="28" font-weight="650">Intégration continue (CI)</text>
+<g transform="translate(1352 450)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-workflow"><rect width="8" height="8" x="3" y="3" rx="2"></rect><path d="M7 11v4a2 2 0 0 0 2 2h4"></path><rect width="8" height="8" x="13" y="13" rx="2"></rect></svg></g>
+<text x="1440" y="469" fill="#173654" font-size="25" font-weight="400">GitHub Actions · GitLab CI/CD · Jenkins</text>
+<text x="1440" y="506" fill="#173654" font-size="25" font-weight="400">Construction · Tests · Analyses requis</text>
+<text x="1440" y="543" fill="#173654" font-size="25" font-weight="400">Résultats associés au commit</text>
+<text x="365" y="630" fill="#0067b8" font-size="26" font-weight="600">Le dépôt déclenche les contrôles configurés.</text>
+<text x="1320" y="630" fill="#0067b8" font-size="26" font-weight="600">Un contrôle obligatoire en échec bloque la suite.</text>
+<rect x="30" y="680" width="2340" height="260" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="680" width="290" height="260" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="722" r="19" fill="#0067b8"/>
+<text x="59" y="730" fill="#fff" font-size="24" font-weight="700">3</text>
+<text x="98" y="728" fill="#173654" font-size="29" font-weight="700">Valider</text>
+<text x="98" y="763" fill="#173654" font-size="29" font-weight="700">et livrer</text>
+<text x="52" y="875" fill="#526b82" font-size="24" font-weight="400">Promouvoir une version</text>
+<text x="52" y="905" fill="#526b82" font-size="24" font-weight="400">identifiée et contrôlée</text>
+<rect x="340" y="700" width="650" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="340" y="700" width="650" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(353 710)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></g>
+<text x="398" y="736" fill="#fff" font-size="28" font-weight="650">Tests et qualité</text>
+<g transform="translate(362 780)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clipboard-check"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"></rect><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="m9 14 2 2 4-4"></path></svg></g>
+<text x="450" y="799" fill="#173654" font-size="25" font-weight="400">Tests unitaires et intégration</text>
+<text x="450" y="836" fill="#173654" font-size="25" font-weight="400">Parcours de bout en bout</text>
+<text x="450" y="873" fill="#173654" font-size="25" font-weight="400">Analyses et critères de validation</text>
+<rect x="1010" y="700" width="650" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1010" y="700" width="650" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(1023 710)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg></g>
+<text x="1068" y="736" fill="#fff" font-size="28" font-weight="650">Artefacts et registres</text>
+<g transform="translate(1032 780)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-package"><path d="M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z"></path><path d="M12 22V12"></path><path d="m3.3 7 7.703 4.734a2 2 0 0 0 1.994 0L20.7 7"></path><path d="m7.5 4.27 9 5.15"></path></svg></g>
+<text x="1120" y="799" fill="#173654" font-size="25" font-weight="400">Paquets · Archives · Images</text>
+<text x="1120" y="836" fill="#173654" font-size="25" font-weight="400">Version et commit identifiables</text>
+<text x="1120" y="873" fill="#173654" font-size="25" font-weight="400">Même artefact entre les étapes</text>
+<rect x="1680" y="700" width="670" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1680" y="700" width="670" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(1693 710)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></g>
+<text x="1738" y="736" fill="#fff" font-size="28" font-weight="650">Livraison et déploiement</text>
+<g transform="translate(1702 780)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rocket"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"></path><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"></path><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"></path><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"></path></svg></g>
+<text x="1790" y="799" fill="#173654" font-size="25" font-weight="400">Test → Préproduction → Production</text>
+<text x="1790" y="836" fill="#173654" font-size="25" font-weight="400">Approbations selon la politique</text>
+<text x="1790" y="873" fill="#173654" font-size="25" font-weight="400">Contrôle après mise en service</text>
+<rect x="30" y="960" width="2340" height="260" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="960" width="290" height="260" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="1002" r="19" fill="#0067b8"/>
+<text x="59" y="1010" fill="#fff" font-size="24" font-weight="700">4</text>
+<text x="98" y="1008" fill="#173654" font-size="29" font-weight="700">Exécuter</text>
+<text x="98" y="1043" fill="#173654" font-size="29" font-weight="700">et provisionner</text>
+<text x="52" y="1155" fill="#526b82" font-size="24" font-weight="400">Cycles de l’application</text>
+<text x="52" y="1185" fill="#526b82" font-size="24" font-weight="400">et de l’infrastructure</text>
+<rect x="340" y="980" width="650" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="340" y="980" width="650" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(353 990)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path><path d="M12 8 7.26 5.15"></path><path d="m12 8 4.74-2.85"></path><path d="M12 13.5V8"></path></svg></g>
+<text x="398" y="1016" fill="#fff" font-size="28" font-weight="650">Docker : images et conteneurs</text>
+<g transform="translate(362 1060)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-boxes"><path d="M2.97 12.92A2 2 0 0 0 2 14.63v3.24a2 2 0 0 0 .97 1.71l3 1.8a2 2 0 0 0 2.06 0L12 19v-5.5l-5-3-4.03 2.42Z"></path><path d="m7 16.5-4.74-2.85"></path><path d="m7 16.5 5-3"></path><path d="M7 16.5v5.17"></path><path d="M12 13.5V19l3.97 2.38a2 2 0 0 0 2.06 0l3-1.8a2 2 0 0 0 .97-1.71v-3.24a2 2 0 0 0-.97-1.71L17 10.5l-5 3Z"></path><path d="m17 16.5-5-3"></path><path d="m17 16.5 4.74-2.85"></path><path d="M17 16.5v5.17"></path><path d="M7.97 4.42A2 2 0 0 0 7 6.13v4.37l5 3 5-3V6.13a2 2 0 0 0-.97-1.71l-3-1.8a2 2 0 0 0-2.06 0l-3 1.8Z"></path><path d="M12 8 7.26 5.15"></path><path d="m12 8 4.74-2.85"></path><path d="M12 13.5V8"></path></svg></g>
+<text x="450" y="1079" fill="#173654" font-size="25" font-weight="400">Image : contenu à exécuter</text>
+<text x="450" y="1116" fill="#173654" font-size="25" font-weight="400">Conteneur : instance exécutée</text>
+<text x="450" y="1153" fill="#173654" font-size="25" font-weight="400">Données et secrets séparés</text>
+<rect x="1010" y="980" width="650" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1010" y="980" width="650" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(1023 990)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></g>
+<text x="1068" y="1016" fill="#fff" font-size="28" font-weight="650">Kubernetes</text>
+<g transform="translate(1032 1060)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-network"><rect x="16" y="16" width="6" height="6" rx="1"></rect><rect x="2" y="16" width="6" height="6" rx="1"></rect><rect x="9" y="2" width="6" height="6" rx="1"></rect><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"></path><path d="M12 12V8"></path></svg></g>
+<text x="1120" y="1079" fill="#173654" font-size="25" font-weight="400">Pods · Deployments · Services</text>
+<text x="1120" y="1116" fill="#173654" font-size="25" font-weight="400">État déclaré et réplicas</text>
+<text x="1120" y="1153" fill="#173654" font-size="25" font-weight="400">Optionnel selon les besoins</text>
+<rect x="1680" y="980" width="670" height="220" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1680" y="980" width="670" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<g transform="translate(1693 990)"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></g>
+<text x="1738" y="1016" fill="#fff" font-size="28" font-weight="650">Infrastructure comme code</text>
+<g transform="translate(1702 1060)"><svg xmlns="http://www.w3.org/2000/svg" width="68" height="68" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"></path><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"></path><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"></path></svg></g>
+<text x="1790" y="1079" fill="#173654" font-size="25" font-weight="400">Terraform : provisionner les ressources</text>
+<text x="1790" y="1116" fill="#173654" font-size="25" font-weight="400">Ansible : configurer les systèmes</text>
+<text x="1790" y="1153" fill="#173654" font-size="25" font-weight="400">Plateforme compatible · État protégé</text>
+<rect x="30" y="1240" width="2340" height="290" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="1240" width="290" height="290" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="1282" r="19" fill="#0067b8"/>
+<text x="59" y="1290" fill="#fff" font-size="24" font-weight="700">5</text>
+<text x="98" y="1288" fill="#173654" font-size="29" font-weight="700">Protéger</text>
+<text x="98" y="1323" fill="#173654" font-size="29" font-weight="700">et exploiter</text>
+<text x="52" y="1465" fill="#526b82" font-size="24" font-weight="400">Observer les résultats</text>
+<text x="52" y="1495" fill="#526b82" font-size="24" font-weight="400">et réviser les pratiques</text>
+<rect x="340" y="1260" width="485" height="250" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="340" y="1260" width="485" height="52" rx="10" fill="#b3262b" stroke="#b3262b"/>
+<text x="355" y="1295" fill="#fff" font-size="25" font-weight="650">Identités et secrets</text>
+<g transform="translate(358 1350)"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-lock-keyhole"><circle cx="12" cy="16" r="1"></circle><rect x="3" y="10" width="18" height="12" rx="2"></rect><path d="M7 10V7a5 5 0 0 1 10 0v3"></path></svg></g>
+<text x="442" y="1354" fill="#173654" font-size="23" font-weight="400">Coffre de secrets</text>
+<text x="442" y="1390" fill="#173654" font-size="23" font-weight="400">Accès limités par rôle</text>
+<text x="442" y="1426" fill="#173654" font-size="23" font-weight="400">Séparation des environnements</text>
+<text x="442" y="1462" fill="#173654" font-size="23" font-weight="400">Rotation et audit</text>
+<rect x="845" y="1260" width="485" height="250" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="845" y="1260" width="485" height="52" rx="10" fill="#b3262b" stroke="#b3262b"/>
+<text x="860" y="1295" fill="#fff" font-size="25" font-weight="650">DevSecOps</text>
+<g transform="translate(863 1350)"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-check"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg></g>
+<text x="947" y="1354" fill="#173654" font-size="23" font-weight="400">Code et dépendances</text>
+<text x="947" y="1390" fill="#173654" font-size="23" font-weight="400">Images et chaîne de livraison</text>
+<text x="947" y="1426" fill="#173654" font-size="23" font-weight="400">Protection des agents</text>
+<text x="947" y="1462" fill="#173654" font-size="23" font-weight="400">Traçabilité des validations</text>
+<rect x="1350" y="1260" width="485" height="250" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1350" y="1260" width="485" height="52" rx="10" fill="#0067b8" stroke="#0067b8"/>
+<text x="1365" y="1295" fill="#fff" font-size="25" font-weight="650">Observabilité</text>
+<g transform="translate(1368 1350)"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-activity"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"></path></svg></g>
+<text x="1452" y="1354" fill="#173654" font-size="23" font-weight="400">Prometheus : métriques et alertes</text>
+<text x="1452" y="1390" fill="#173654" font-size="23" font-weight="400">Grafana : tableaux de bord</text>
+<text x="1452" y="1426" fill="#173654" font-size="23" font-weight="400">Journaux collectés séparément</text>
+<text x="1452" y="1462" fill="#173654" font-size="23" font-weight="400">Réaction aux incidents</text>
+<rect x="1855" y="1260" width="485" height="250" rx="10" fill="#f7fafc" stroke="#cbddeb"/>
+<rect x="1855" y="1260" width="485" height="52" rx="10" fill="#107c41" stroke="#107c41"/>
+<text x="1870" y="1295" fill="#fff" font-size="25" font-weight="650">Amélioration continue</text>
+<g transform="translate(1873 1350)"><svg xmlns="http://www.w3.org/2000/svg" width="65" height="65" viewBox="0 0 24 24" fill="none" stroke="#0067b8" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg></g>
+<text x="1957" y="1354" fill="#173654" font-size="23" font-weight="400">Retours de production</text>
+<text x="1957" y="1390" fill="#173654" font-size="23" font-weight="400">Nouvelles tâches du backlog</text>
+<text x="1957" y="1426" fill="#173654" font-size="23" font-weight="400">Tests et procédures enrichis</text>
+<text x="1957" y="1462" fill="#173654" font-size="23" font-weight="400">Fiabilité et qualité suivies</text>
+<rect x="30" y="1550" width="2340" height="145" rx="10" fill="#fff" stroke="#cbddeb"/>
+<rect x="30" y="1550" width="290" height="145" rx="10" fill="#edf5fb" stroke="#edf5fb"/>
+<circle cx="66" cy="1592" r="19" fill="#0067b8"/>
+<text x="59" y="1600" fill="#fff" font-size="24" font-weight="700">6</text>
+<text x="98" y="1598" fill="#173654" font-size="29" font-weight="700">Boucle</text>
+<text x="98" y="1633" fill="#173654" font-size="29" font-weight="700">de livraison</text>
+<circle cx="365" cy="1591" r="20" fill="#0067b8"/>
+<text x="358" y="1599" fill="#fff" font-size="24" font-weight="700">1</text>
+<text x="396" y="1600" fill="#173654" font-size="24" font-weight="600">Besoin</text>
+<text x="640" y="1640" fill="#0078d4" font-size="38" font-weight="400">→</text>
+<circle cx="700" cy="1591" r="20" fill="#0067b8"/>
+<text x="693" y="1599" fill="#fff" font-size="24" font-weight="700">2</text>
+<text x="731" y="1600" fill="#173654" font-size="24" font-weight="600">Code et revue</text>
+<text x="975" y="1640" fill="#0078d4" font-size="38" font-weight="400">→</text>
+<circle cx="1035" cy="1591" r="20" fill="#0067b8"/>
+<text x="1028" y="1599" fill="#fff" font-size="24" font-weight="700">3</text>
+<text x="1066" y="1600" fill="#173654" font-size="24" font-weight="600">CI et tests</text>
+<text x="1310" y="1640" fill="#0078d4" font-size="38" font-weight="400">→</text>
+<circle cx="1370" cy="1591" r="20" fill="#0067b8"/>
+<text x="1363" y="1599" fill="#fff" font-size="24" font-weight="700">4</text>
+<text x="1401" y="1600" fill="#173654" font-size="24" font-weight="600">Artefact validé</text>
+<text x="1645" y="1640" fill="#0078d4" font-size="38" font-weight="400">→</text>
+<circle cx="1705" cy="1591" r="20" fill="#0067b8"/>
+<text x="1698" y="1599" fill="#fff" font-size="24" font-weight="700">5</text>
+<text x="1736" y="1600" fill="#173654" font-size="24" font-weight="600">Déploiement</text>
+<text x="1980" y="1640" fill="#0078d4" font-size="38" font-weight="400">→</text>
+<circle cx="2040" cy="1591" r="20" fill="#0067b8"/>
+<text x="2033" y="1599" fill="#fff" font-size="24" font-weight="700">6</text>
+<text x="2071" y="1600" fill="#173654" font-size="24" font-weight="600">Retour terrain</text>
+<rect x="30" y="1715" width="2340" height="55" rx="10" fill="#0b4876" stroke="#0b4876"/>
+<text x="52" y="1751" fill="#fff" font-size="25" font-weight="600">CI/CD · IaC · Conteneurisation</text>
+<text x="920" y="1751" fill="#fff" font-size="25" font-weight="600">Monitoring · Collaboration</text>
+<text x="1680" y="1751" fill="#fff" font-size="25" font-weight="600">Les cinq piliers du DevOps</text>
+<text x="34" y="1792" fill="#526b82" font-size="22" font-weight="400">Kubernetes est optionnel. Les gains dépendent des tests et de l’automatisation. Pictogrammes fonctionnels ; aucun logo éditeur.</text>
+</svg>

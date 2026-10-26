@@ -193,6 +193,8 @@ try {
   assert.equal(document.querySelectorAll('#classique-metiers tbody tr').length,5);
   assert.equal(document.querySelectorAll('.article-card').length,2);
   const classicImage=document.querySelector('.classic-infographic img');
+  assert.equal(classicImage.getAttribute('width'),'2400');
+  assert.equal(classicImage.getAttribute('height'),'1800');
   assert.equal(classicImage.closest('a,button,[role="button"]'),null);
   assert.equal(classicImage.getAttribute('tabindex'),null);
   assert.ok(!document.querySelector('.devops-classic a[href*="azure"]'));

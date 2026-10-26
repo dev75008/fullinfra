@@ -15,7 +15,7 @@ const categoryTitles = {
   azure:'Azure : réseau, machines virtuelles et services cloud',
   'microsoft-365':'Microsoft 365 : identités, sécurité et collaboration',
 };
-const images = {'devops-classique':'devops-classique-architecture.svg','windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};
+const images = {'devops-classique':'devops-classique-architecture-hd.png','windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};
 
 export function getPageMetadata(pathname) {
   const path = pathname.replace(/\/+$/,'') || '/';
