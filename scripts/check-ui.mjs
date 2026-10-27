@@ -61,7 +61,8 @@ try {
   }
   await click(document.querySelector('.header-cta'));
   assert.match(document.title,/Tous les guides/,'Catalogue title must describe the page');
-  assert.equal(document.querySelectorAll('.article-card').length,13);
+  assert.equal(document.querySelectorAll('.article-card').length,14);
+  assert.ok(document.querySelector('a[href="/azure/microsoft-foundry-agents-ia"]'),'Le guide Foundry doit être accessible dans le catalogue');
   await click(document.querySelectorAll('.filter-tabs button')[1]);
   assert.equal(document.querySelectorAll('.article-card').length,2);
   const input=document.querySelector('.search-box input');
@@ -71,7 +72,7 @@ try {
   });
   assert.equal(document.querySelectorAll('.article-card').length,0,'Search must filter displayed content');
   await click(document.querySelector('.empty-state button'));
-  assert.equal(document.querySelectorAll('.article-card').length,13,'Reset must clear search and category');
+  assert.equal(document.querySelectorAll('.article-card').length,14,'Reset must clear search and category');
   await click(document.querySelector('.article-card'));
   assert.ok(document.querySelector('.prose'));
   assert.ok(!document.title.includes('introuvable'));
@@ -95,8 +96,8 @@ try {
     await click(document.querySelector(`.site-header nav a[href="/${slug}"]`));
     assert.equal(document.querySelectorAll('.communication-map').length,0);
     assert.equal(document.querySelectorAll('.map-branch').length,12);
-    assert.equal(document.querySelectorAll('.article-card').length,2);
-    assert.equal(document.querySelectorAll('.technology-heading > [data-icon]').length,48);
+    assert.equal(document.querySelectorAll('.article-card').length,slug === 'azure' ? 3 : 2);
+    assert.equal(document.querySelectorAll('.technology-heading > [data-icon]').length,slug === 'azure' ? 50 : 48);
     const ids=[...document.querySelectorAll('[id]')].map(element => element.id);
     assert.equal(new Set(ids).size,ids.length,'DOM IDs must stay unique after navigation');
   }
@@ -163,7 +164,11 @@ try {
   await searchFor('guide-inexistant-xyz');
   await click(document.querySelector('.empty-state button'));
   assert.equal(document.querySelector('#guide-search').value,'');
-  assert.equal(document.querySelectorAll('.article-card').length,13);
+  assert.equal(document.querySelectorAll('.article-card').length,14);
+  await searchFor('Foundry');
+  assert.equal(document.querySelectorAll('.article-card').length,1,'Foundry doit être trouvable par la recherche du catalogue');
+  await click(document.querySelector('.article-card'));
+  assert.match(document.querySelector('.prose').textContent,/Foundry Agent Service/);
   await click(document.querySelector('.site-header nav a[href="/windows-server"]'));
   assert.equal(document.querySelectorAll('.filter-tabs button').length,3,'Category filters should only list topics with articles');
   console.log('OK UX : menu courant, Échap, focus, libellés, filtres annoncés, recherche sans accents et liens de section.');

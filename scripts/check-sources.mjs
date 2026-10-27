@@ -114,8 +114,8 @@ try {
       assert.ok(collectedUrls.has(href),`Displayed reference was not retrieved: ${href}`);
     }
   }
-  assert.equal(technologyCount,144);
-  assert.equal(flowCount,84);
-  assert.equal(articles.length,13);
+  assert.equal(technologyCount,146);
+  assert.equal(flowCount,87);
+  assert.equal(articles.length,14);
   console.log(`OK sources : ${technologyCount} technologies, ${flowCount} relations, ${articles.length} articles ; ${usedIds.size} références traçables ; 12 thèmes réseau, sous-réseaux et CIDR vérifiés ; Microsoft 365 et VMware validés.`);
 } finally { await server.close(); }

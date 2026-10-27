@@ -34,7 +34,7 @@ export default function TechnologyInfographic({ ecosystem = windowsEcosystem }) 
         <div>
           
           <h2 id={titleId}>Les technologies par domaine</h2>
-          <p>12 domaines, 48 technologies : rôle, fonctionnement et points clés, avec un cas concret par branche.</p>
+          <p>{windowsBranches.length} domaines, {windowsBranches.reduce((count, branch) => count + branch.details.length, 0)} technologies : rôle, fonctionnement et points clés, avec un cas concret par branche.</p>
         </div>
         <button className="button secondary" onClick={toggleAll}>{expanded ? 'Réduire les détails' : 'Déployer les détails'}<ChevronDown size={16} aria-hidden="true"/></button>
       </div>

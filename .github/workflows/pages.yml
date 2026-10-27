@@ -35,6 +35,7 @@ jobs:
       - run: npm run check:icons
       - run: node scripts/generate-m365-infographic.mjs --check
       - run: node scripts/generate-devops-classic.mjs --check
+      - run: node scripts/generate-azure-architecture.mjs --check
       - run: npm run build
       - run: npm run check:ai
       - run: node scripts/check-pages.mjs

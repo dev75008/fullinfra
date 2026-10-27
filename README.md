@@ -2,6 +2,8 @@
 
 Site publié : **https://fullinfra.duckdns.org/**
 
+La rubrique Azure comprend Microsoft Foundry : modèles, agents, outils MCP, recherche documentaire RAG, accès et observabilité. Le guide `/azure/microsoft-foundry-agents-ia/` complète les fiches Foundry et Azure AI Search. Le schéma Azure et son image HD incluent une ligne dédiée ; `node scripts/generate-azure-architecture.mjs --check` vérifie que le SVG correspond à son générateur.
+
 ## Outils IA protégés
 
 La rubrique `/outils-ia/` fonctionne sur GitHub Pages avec un catalogue chiffré, déverrouillé dans le navigateur. Voir le [mode d’emploi et les limites de sécurité](docs/OUTILS-IA.md). Pour l’aperçu local : `npm start` puis ouvrir l’adresse affichée par Vite.
@@ -50,7 +52,7 @@ npm run preview
 
 `npm run check:ui` teste les interactions React dans un DOM isolé. `npm run check:sources` vérifie la traçabilité des références Microsoft Learn. Le [rapport d’audit](docs/AUDIT.md) détaille les corrections et les limites des vérifications.
 
-`npm run check:icons` contrôle les associations des 144 technologies et 36 branches ainsi que l’intégrité des SVG Microsoft.
+`npm run check:icons` contrôle les associations des 146 technologies et 36 branches ainsi que l’intégrité des SVG Microsoft.
 
 Le build de production se trouve dans `dist/`. Sur un hébergement statique, configurer la réécriture des routes inconnues vers `index.html` pour permettre le rechargement direct des pages React Router.
 

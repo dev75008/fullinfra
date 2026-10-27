@@ -11,7 +11,8 @@ for (const [,asset] of index.matchAll(/(?:src|href)="([^"]+\.(?:js|css))"/g)) {
 }
 const sitemap=new JSDOM(await readFile(new URL('sitemap.xml',dist),'utf8'),{contentType:'text/xml'});
 const urls=[...sitemap.window.document.querySelectorAll('loc')].map(node=>node.textContent);
-assert.equal(urls.length,21);
+assert.equal(urls.length,22);
+assert.ok(urls.includes('https://fullinfra.duckdns.org/azure/microsoft-foundry-agents-ia/'));
 assert.ok(urls.includes('https://fullinfra.duckdns.org/devops-classique/'));
 assert.ok(urls.every(url=>!url.includes('/adressage-reseau')));
 assert.equal(new Set(urls).size,urls.length);

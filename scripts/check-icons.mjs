@@ -39,6 +39,6 @@ try {
     assert.equal(createHash('sha256').update(bytes).digest('hex'),icon.sha256,`Modified official SVG: ${icon.file}`);
     assert.ok(bytes.toString('utf8').includes('<svg'));
   }
-  assert.equal(technologies,144);
-  console.log(`OK icônes : 144 technologies, 36 branches et ${manifest.icons.length} fichiers Microsoft officiels intacts.`);
+  assert.equal(technologies,146);
+  console.log(`OK icônes : 146 technologies, 36 branches et ${manifest.icons.length} fichiers Microsoft officiels intacts.`);
 } finally {await server.close();}

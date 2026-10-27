@@ -34,8 +34,8 @@ export const technologyReferences = {
     calcul: [['vm','vm-states'],['disks'],['bastion','bastion-ports'],['vmss']],
     'stockage-cloud': [['blob'],['files','files-network'],['storage-sas','storage-auth'],['blob-version']],
     'securite-cloud': [['nsg'],['az-firewall'],['keyvault','keyvault-network'],['defender-cloud']],
-    'applications-cloud': [['appservice'],['functions'],['appgateway','frontdoor'],['loadbalancer']],
-    'donnees-cloud': [['sql','sql-network'],['postgres','postgres-tls'],['sql-private'],['pooling']],
+    'applications-cloud': [['appservice'],['functions'],['appgateway','frontdoor'],['loadbalancer'],['foundry','foundry-agents','foundry-observability','foundry-network']],
+    'donnees-cloud': [['sql','sql-network'],['postgres','postgres-tls'],['sql-private'],['pooling'],['ai-search']],
     'disponibilite-cloud': [['zones'],['storage-redundancy'],['asr','asr-network'],['asr','failover-plans']],
     'automatisation-cloud': [['arm'],['bicep'],['terraform'],['arm','ps']],
     'sauvegarde-cloud': [['backup','backup-vm'],['backup'],['backup'],['backup-restore']],
@@ -57,6 +57,7 @@ export const flowReferences = {
     witness:['quorum'],backup:['hv-backup'],repository:['hv-backup'],replica:['hv-replica-config'],script:['ps'],api:['avs-run'],metrics:['perf','monitor'],logs:['wef'],'guest-metrics':['ama-network'],'cloud-api':['arc-network'],'network-path':['hv-network'],
   },
   azure: {
+    'foundry-call':['foundry','foundry-agents'],'foundry-search':['ai-search'],'foundry-traces':['foundry-observability'],
     login:['auth'],deploy:['arm'],'vm-create':['vm-create'],'network-create':['vnet'],rbac:['rbac'],policy:['policy'],dns:['private-dns','az-dns'],'web-front':['appgateway'],
     'web-backend':['appgateway'],'app-login':['auth','managed-identity'],secret:['keyvault-network'],sql:['sql-network','sql-private'],blob:['blob'],files:['files-network'],
     'bastion-entry':['bastion-ports'],'private-path':['private-endpoint','sql-private'],nsg:['nsg'],zones:['zones'],delivery:['loadbalancer','appgateway'],protect:['backup-vm'],
@@ -65,6 +66,7 @@ export const flowReferences = {
 };
 
 export const articleReferences = {
+  'microsoft-foundry-agents-ia':['foundry','foundry-agents','foundry-setup','foundry-network','foundry-observability','ai-search'],
   'comprendre-pipeline-ci-cd':['devops-ci','devops-cd','devops-agents','devops-monitor'],
   'infrastructure-comme-code':['devops-iac','devops-security'],
   'conteneurs-et-kubernetes':['devops-containers','devops-kubernetes','devops-security'],

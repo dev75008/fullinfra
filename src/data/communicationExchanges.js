@@ -21,6 +21,16 @@ export const communicationExchanges = {
     ],
   },
   azure: {
+    'foundry-call': [
+      ['Application cliente','Microsoft Entra ID','HTTPS TCP 443 ; acquisition d’un jeton destiné à la ressource'],
+      ['Application authentifiée','Endpoint du projet ou déploiement Foundry','HTTPS TCP 443 ; rôle et quota requis'],
+    ],
+    'foundry-search': [
+      ['Application ou outil de l’agent','Azure AI Search','HTTPS TCP 443 ; recherche sur le contenu autorisé'],
+    ],
+    'foundry-traces': [
+      ['Application instrumentée ou service Foundry','Collecte de télémétrie Application Insights','HTTPS TCP 443 selon intégration ; filtrer les données sensibles'],
+    ],
     'bastion-entry': [
       ['Navigateur du client','Azure Bastion','HTTPS TCP 443 dans le scénario portail'],
       ['Azure Bastion','VM cible','RDP TCP 3389 ou SSH TCP 22 par défaut'],

@@ -1,6 +1,12 @@
 // Références Microsoft Learn récupérées via le lecteur Jina de la procédure Agent Reach.
 // Traçabilité des captures : docs/learn-sources-audit.json.
 export const learnSources = {
+"foundry":{"url": "https://learn.microsoft.com/fr-fr/azure/foundry/what-is-foundry", "title": "Qu’est-ce que Microsoft Foundry ?"},
+"foundry-agents":{"url": "https://learn.microsoft.com/fr-fr/azure/foundry/agents/overview", "title": "Agents de Microsoft Foundry"},
+"foundry-setup":{"url": "https://learn.microsoft.com/fr-fr/azure/foundry/agents/environment-setup", "title": "Configurer un environnement Foundry"},
+"foundry-network":{"url": "https://learn.microsoft.com/fr-fr/azure/foundry/agents/how-to/virtual-networks", "title": "Configurer le réseau privé pour Foundry Agent Service"},
+"foundry-observability":{"url": "https://learn.microsoft.com/fr-fr/azure/foundry/concepts/observability", "title": "Observabilité dans Microsoft Foundry"},
+"ai-search":{"url": "https://learn.microsoft.com/fr-fr/azure/search/search-what-is-azure-search", "title": "Présentation d’Azure AI Search"},
 "devops-iac":{"url":"https://learn.microsoft.com/fr-fr/devops/deliver/what-is-infrastructure-as-code","title":"Qu’est-ce que l’infrastructure en tant que code (IaC) ? - Azure DevOps"},
 "devops-cd":{"url":"https://learn.microsoft.com/fr-fr/devops/deliver/what-is-continuous-delivery","title":"Qu’est-ce que la livraison continue ? - Azure DevOps"},
 "devops-artifacts":{"url":"https://learn.microsoft.com/fr-fr/azure/devops/artifacts/overview?view=azure-devops","title":"Qu’est-ce qu’Azure Artifacts ? - Azure Artifacts"},

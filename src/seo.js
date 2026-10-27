@@ -12,7 +12,7 @@ const categoryTitles = {
   'devops-classique':'DevOps classique : CI/CD, Docker, Terraform et Ansible',
   'windows-server':'Windows Server : Active Directory, FSMO et PowerShell',
   virtualisation:'Virtualisation : Hyper-V, VMware et machines virtuelles',
-  azure:'Azure : réseau, machines virtuelles et services cloud',
+  azure:'Azure : infrastructure, Microsoft Foundry et agents IA',
   'microsoft-365':'Microsoft 365 : identités, sécurité et collaboration',
 };
 const images = {'devops-classique':'devops-classique-architecture-hd.png','windows-server':'windows-server-architecture-hd.png',virtualisation:'virtualisation-architecture-hd.png',azure:'azure-architecture-hd.png','microsoft-365':'microsoft365-architecture-hd.png','adressage-reseau':'adressage-reseau-architecture-hd.png',devops:'devops-architecture-hd.png'};

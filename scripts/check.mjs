@@ -92,20 +92,21 @@ try {
     assert.ok(html.includes(`id="${ecosystem.slug}-map"`));
     assert.ok(!html.includes('NaN') && !html.includes('undefined'));
     assert.equal((html.match(/<details /g) || []).length, 13);
-    assert.equal((html.match(/<dt>/g) || []).length, 48);
-    assert.equal((html.match(/<li>/g) || []).length, 150);
-    assert.equal((html.match(/class="technology-protocols"/g) || []).length, 48);
+    const expectedTechnologies = ecosystem.slug === 'azure' ? 50 : 48;
+    assert.equal((html.match(/<dt>/g) || []).length, expectedTechnologies);
+    assert.equal((html.match(/<li>/g) || []).length, ecosystem.slug === 'azure' ? 157 : 150);
+    assert.equal((html.match(/class="technology-protocols"/g) || []).length, expectedTechnologies);
     assert.equal((html.match(/class="branch-example"/g) || []).length, 12);
     assert.equal(ecosystem.nodes.length, 13);
     assert.equal(ecosystem.branches.length, 12);
-    assert.equal(ecosystem.scenarios.length, 5);
+    assert.equal(ecosystem.scenarios.length, ecosystem.slug === 'azure' ? 6 : 5);
     const ids = new Set(ecosystem.nodes.map(node => node.id));
     assert.equal(ids.size, 13);
     assert.equal(new Set(ecosystem.edges.map(edge => edge.id)).size, ecosystem.edges.length);
     for (const branch of ecosystem.branches) {
       assert.ok(html.includes(`id="${ecosystem.slug}-branche-${branch.id}"`));
       assert.ok(branch.example && branch.summary);
-      assert.equal(branch.details.length, 4);
+      assert.equal(branch.details.length, ecosystem.slug === 'azure' && ['applications-cloud','donnees-cloud'].includes(branch.id) ? 5 : 4);
       const focused = selectEcosystemEdges(ecosystem, 'all', branch.id);
       assert.ok(focused.length > 0);
       assert.ok(focused.every(edge => edge.from === branch.id || edge.to === branch.id));
@@ -132,7 +133,7 @@ try {
         assert.deepEqual(selectEcosystemEdges(ecosystem, scenario.id, node.id).map(edge => edge.id), selectEcosystemEdges(ecosystem, scenario.id).filter(edge => edge.from === node.id || edge.to === node.id).map(edge => edge.id));
       }
     }
-    console.log(`OK : ${ecosystem.title}, 12 branches, 48 technologies, ${ecosystem.edges.length} relations et 4 scénarios.`);
+    console.log(`OK : ${ecosystem.title}, 12 branches, ${expectedTechnologies} technologies, ${ecosystem.edges.length} relations et ${ecosystem.scenarios.length - 1} scénarios.`);
   }
   assert.ok(!categories.some(category=>category.slug==='adressage-reseau'));
   assert.ok(!articles.some(article=>article.category==='adressage-reseau'));

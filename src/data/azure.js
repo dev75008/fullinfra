@@ -114,7 +114,7 @@ const branches = [
       'Responsabilité : une recommandation ou une alerte nécessite une analyse et une action adaptée.',
     ],api),
   ]),
-  b('applications-cloud','Web & applications','web','App Service · Functions · Livraison','Publier des applications et choisir leur point d’entrée.', 'Un navigateur contacte Application Gateway en HTTPS ; la passerelle relaie la requête vers une application autorisée.',[
+  b('applications-cloud','Applications & IA','web','App Service · Functions · Foundry','Héberger des applications et construire des agents IA avec les services adaptés.', 'Une application appelle un agent Microsoft Foundry ; son identité et ses outils déterminent les données accessibles.',[
     t('Azure App Service','Plateforme d’hébergement web gérant une partie de l’infrastructure.',[
       'Déploiement : le code ou l’image est publié sur un environnement compatible.',
       'Configuration : paramètres, identité et secrets doivent être gérés séparément du code.',
@@ -135,8 +135,13 @@ const branches = [
       'Sonde : elle vérifie un état choisi pour déterminer les cibles utilisables.',
       'Distinction : le service ne route pas les URL et n’assure pas à lui seul une terminaison TLS.',
     ],[['TCP / UDP','Ports configurés par règle','Le port des sondes est aussi à définir selon le service.']]),
+    t('Microsoft Foundry','Plateforme Azure pour développer, déployer et gérer des applications et agents IA.',[
+      'Projet : il réunit les modèles déployés, agents et outils avec des accès définis par Microsoft Entra ID et RBAC.',
+      'Agent : le service managé associe un modèle, des instructions et des outils, dont des serveurs MCP autorisés.',
+      'Exploitation : évaluer la qualité, tracer les appels et suivre les coûts ; vérifier les régions et fonctionnalités en préversion.',
+    ],[['API de modèles et d’agents','HTTPS TCP 443','Endpoint du déploiement ou du projet ; identité, rôles et quotas restent nécessaires.'],['Outils et données','Selon le service cible','Les accès réseau et permissions des outils sont distincts de ceux du modèle ; le réseau privé dépend de la configuration.']]),
   ]),
-  b('donnees-cloud','Bases de données','storage','Azure SQL · PostgreSQL · Connexions','Accéder aux données en tenant compte du réseau et des identités.', 'Une application autorisée ouvre une connexion chiffrée à Azure SQL via le chemin réseau prévu.',[
+  b('donnees-cloud','Données & recherche','storage','SQL · PostgreSQL · Azure AI Search','Accéder aux données et rechercher du contenu avec les droits nécessaires.', 'Une application interroge Azure SQL ; un agent peut retrouver des extraits documentaires avec Azure AI Search.',[
     t('Azure SQL Database','Base relationnelle gérée dont les modalités de connexion sont configurables.',[
       'Service : l’application utilise le nom du serveur logique et une base accessible.',
       'Connexion : le mode Proxy ou Redirect change le chemin et les ports après le premier contact.',
@@ -157,6 +162,11 @@ const branches = [
       'Limites : la taille du pool doit correspondre à la charge et aux capacités de la base.',
       'Résilience : temporisation et tentatives doivent éviter les doublons d’opérations non idempotentes.',
     ],[['Transport du pilote','Selon moteur de base','Le pool est un mécanisme client sans port supplémentaire.']]),
+    t('Azure AI Search','Service de recherche qui peut fournir du contexte documentaire aux applications et agents Foundry.',[
+      'Recherche : des requêtes textuelles, vectorielles ou hybrides retrouvent du contenu pertinent dans les sources préparées.',
+      'RAG : les extraits récupérés complètent la demande au modèle ; cette récupération ne réentraîne pas le modèle.',
+      'Accès : l’indexation, les autorisations et la fraîcheur des données restent à configurer selon le scénario retenu.',
+    ],[['API de recherche et d’indexation','HTTPS TCP 443','Endpoint Azure AI Search autorisé ; les accès aux sources de données possèdent leurs propres exigences.']]),
   ]),
   b('disponibilite-cloud','Disponibilité & reprise','availability','Zones · Répartition · PRA','Prévoir les domaines de panne et les dépendances.', 'Une application possède plusieurs instances réparties sur des zones compatibles et un plan distinct de reprise régionale.',[
     t('Zones de disponibilité','Domaines d’infrastructure séparés dans les régions et services compatibles.',[
@@ -299,11 +309,14 @@ const edges = [
   f('costs','gouvernance-cloud','calcul','Encadrer le dimensionnement','Lien logique · budget et choix de capacité','Le suivi financier aide à décider ; un budget ne désalloue pas automatiquement les VM.','logical'),
   f('storage-rbac','identites','stockage-cloud','Autoriser l’accès aux données','Lien logique · rôle de données / jeton','Les permissions sont évaluées sur les requêtes de stockage ; l’attribution du rôle n’est pas un transfert de fichiers.','logical'),
   f('vault-identity','identites','securite-cloud','Autoriser les lectures de secrets','Lien logique · identité et permissions Key Vault','Un jeton valide doit être associé aux permissions nécessaires pour les objets ; il ne suffit pas de connaître l’URL du coffre.','logical'),
+  f('foundry-call','clients','applications-cloud','Appeler un agent Foundry','HTTPS · TCP 443','Une application authentifiée utilise l’endpoint du projet ou du déploiement Foundry ; le modèle, les rôles et les quotas doivent être configurés.'),
+  f('foundry-search','applications-cloud','donnees-cloud','Retrouver le contexte documentaire','API Azure AI Search · HTTPS TCP 443','L’application ou l’outil de l’agent interroge une recherche autorisée ; les résultats alimentent le contexte RAG, sans donner accès à toutes les données.'),
+  f('foundry-traces','applications-cloud','supervision-cloud','Observer les appels IA','Télémétrie · HTTPS TCP 443 selon intégration','Les traces et évaluations Foundry peuvent être corrélées avec Application Insights ; protéger les entrées et sorties sensibles collectées.'),
 ];
 
 export const azureEcosystem = createEcosystem({
   slug:'azure',title:'Azure',icon:'cloud',accent:'#0078d4',hubTitle:['Microsoft','Azure'],clientLabel:'Utilisateurs · Applications',
-  intro:'Du jeton d’identité aux données : explorez les échanges entre les services de votre environnement Azure.',
+  intro:'Du jeton d’identité aux applications et agents IA Microsoft Foundry : explorez les échanges entre les services Azure.',
   overview:'Douze domaines Azure : distinguez les flux de données, les appels de gestion et les dépendances logiques.',
   ringLabel:'IDENTITÉ · RÉSEAU · DONNÉES · GOUVERNANCE',subtitle:'LE SOCLE DE VOTRE ENVIRONNEMENT CLOUD',
   note:'Les capacités et chemins réseau dépendent des régions, des offres, des plans et des paramètres des ressources.',branches,edges,
@@ -313,6 +326,7 @@ export const azureEcosystem = createEcosystem({
     {id:'deployment',label:'Déployer une VM',description:'Accès au plan de gestion puis création des ressources autorisées.',edges:['login','deploy','vm-create','network-create','rbac','policy','nsg'],steps:[['login','Authentifier l’opérateur ou la chaîne de déploiement.'],['deploy','Envoyer la demande au plan de gestion ARM.'],['policy','Évaluer les règles applicables au déploiement.'],['network-create','Définir les ressources réseau nécessaires.'],['vm-create','Créer les ressources de calcul compatibles.']]},
     {id:'private',label:'Accès privé',description:'Exemples d’administration et d’accès aux données sur des chemins contrôlés.',independent:true,edges:['dns','bastion-entry','files','private-path','sql','nsg'],steps:[['dns','Vérifier que les noms résolvent vers le chemin voulu.'],['bastion-entry','Administrer la VM via Bastion si ce service est choisi.'],['files','Monter un partage compatible depuis une VM autorisée.'],['private-path','Prévoir les endpoints privés compatibles pour les données.']]},
     {id:'operations',label:'Exploitation & reprise',description:'Protection, collecte et disponibilité sont des fonctions complémentaires.',independent:true,edges:['zones','delivery','protect','backup-transfer','recovery','vm-metrics','app-traces','alert','costs'],steps:[['zones','Distribuer les instances selon les domaines de panne.'],['protect','Affecter une politique de protection adaptée.'],['backup-transfer','Conserver les données avec le mécanisme prévu.'],['vm-metrics','Envoyer les mesures des machines.'],['app-traces','Corréler les traces avec l’état des ressources.'],['alert','Déclencher une action seulement si elle est configurée.']]},
+    {id:'foundry',label:'Agent IA & Foundry',description:'Exemple de recherche documentaire : identité, appel Foundry, contexte RAG et télémétrie. Les permissions des outils restent distinctes.',edges:['app-login','foundry-call','foundry-search','foundry-traces'],steps:[['app-login','Obtenir un jeton pour la ressource et attribuer les rôles nécessaires.'],['foundry-call','Appeler le modèle ou l’agent configuré dans le projet Foundry.'],['foundry-search','Récupérer seulement les extraits documentaires autorisés.'],['foundry-traces','Mesurer qualité, latence et appels d’outils sans exposer de données sensibles.']]},
   ],
-  sources:referenceTuples(['nsg','bastion-ports','files-network','sql-network','keyvault-network','ama-network','appgateway']),
+  sources:referenceTuples(['nsg','bastion-ports','files-network','sql-network','keyvault-network','ama-network','appgateway','foundry','foundry-agents','foundry-network','ai-search']),
 });
