@@ -2,6 +2,7 @@ import React from 'react';
 import { classicCycle, classicPillars, classicTools, classicExample, classicResponsibilities } from './data/devopsClassic';
 import TechnologyIcon from './TechnologyIcon';
 import SourceLinks from './SourceLinks';
+import './microsoft365-dependencies.css';
 import './network-addressing.css';
 import './devops.css';
 import './devops-classic.css';
@@ -12,6 +13,14 @@ export default function DevopsClassicSection() {
       <h2 id="classique-cycle-title">Comment fonctionne le DevOps ?</h2>
       <p>DevOps rapproche le développement logiciel et l’exploitation informatique, avec la qualité et la sécurité. L’objectif est de rendre les livraisons plus fiables et reproductibles, en automatisant les opérations répétitives et en partageant les responsabilités.</p>
       <figure className="classic-infographic"><img src={`${import.meta.env.BASE_URL}devops-classique-architecture.svg?v=2`} width="2400" height="1800" draggable={false} alt="Architecture DevOps classique : équipes, GitHub et GitLab, CI/CD, Docker, Kubernetes, Terraform, Ansible, Prometheus, Grafana, sécurité et amélioration continue."/><figcaption>Un cycle continu : les observations de production alimentent les améliorations suivantes. Les outils sont des exemples, à choisir selon le besoin.</figcaption></figure>
+      <details className="infographic-transcript"><summary>Lire le résumé de l’infographie</summary><ol>
+        <li>Développeurs, administrateurs et sécurité préparent ensemble les changements et les critères de validation.</li>
+        <li>GitHub ou GitLab conserve le code et les configurations. La revue des contributions précède leur intégration.</li>
+        <li>La chaîne CI/CD exécute les tests, construit une version et la conserve dans un dépôt d’artefacts ou un registre d’images avant le déploiement.</li>
+        <li>Docker prépare les conteneurs ; Kubernetes les orchestre lorsque le besoin le justifie. Terraform provisionne l’infrastructure et Ansible configure les serveurs.</li>
+        <li>Les identifiants, les secrets et les autorisations sont contrôlés. Le runner accède uniquement aux dépôts, registres et environnements nécessaires.</li>
+        <li>Prometheus collecte les mesures et Grafana les présente. Les observations et les incidents alimentent le prochain cycle d’amélioration.</li>
+      </ol></details>
       <ol className="classic-cycle-details">{classicCycle.map(step=><li key={step.id}><TechnologyIcon name={step.icon} size={25}/><div><h3>{step.title}</h3><p>{step.detail}</p></div></li>)}</ol>
       <SourceLinks ids={['classic-gitlab','classic-github']}/>
     </section>
