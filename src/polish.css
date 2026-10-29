@@ -122,3 +122,13 @@ button:active,.button:active{filter:brightness(.94)}
 .communication-map[data-ecosystem="microsoft-365"] .hub-title{font-size:26px}
 .communication-map[data-ecosystem="microsoft-365"] .hub-clients{flex-wrap:wrap;justify-content:center;line-height:1.5}
 #m365-communications{margin-bottom:40px}
+
+/* Shared navigation remains available before any category is loaded. */
+/* Five categories need more room than the previous four-link navigation. */
+@media(min-width:951px) and (max-width:1250px){.site-header nav{gap:14px;font-size:13px}.site-header .header-cta{display:none}.site-header .mobile-guides-link{display:flex!important}}
+
+/* Keep the six-category menu readable on tablet and compact desktop widths. */
+@media(min-width:761px) and (max-width:1250px){.site-header{height:auto;min-height:76px}.header-inner{flex-wrap:wrap;gap:4px;padding-block:12px}.site-header nav{width:100%;height:auto;min-height:44px;flex-wrap:wrap;justify-content:flex-start;column-gap:20px;row-gap:0}.site-header nav a{min-height:44px;height:44px}.site-header nav a.active:after{bottom:0}.site-header .header-cta{display:none}html{scroll-padding-top:180px}[id]{scroll-margin-top:180px}}
+
+/* The extra category fits beside the existing brand without squeezing link labels. */
+@media(min-width:1251px){.site-header nav{gap:14px}.site-header .header-cta{display:none}.header-inner{gap:20px}}

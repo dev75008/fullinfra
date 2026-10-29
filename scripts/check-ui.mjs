@@ -23,6 +23,8 @@ const click = async element => {
 };
 try {
   const {default:App} = await server.ssrLoadModule('/src/App.jsx');
+  const { preloadAllRouteContent } = await server.ssrLoadModule('/src/routeContent.jsx');
+  await preloadAllRouteContent();
   const {ecosystems} = await server.ssrLoadModule('/src/data/ecosystems.js');
   await act(async () => {root.render(React.createElement(MemoryRouter,{initialEntries:['/']},React.createElement(App)));});
   assert.match(document.title, /Comprendre/);
@@ -270,6 +272,15 @@ try {
   assert.ok(document.querySelector('.not-found'));
   assert.match(document.title,/Page introuvable/,'A known slug under the wrong category must keep its 404 title');
   assert.equal(errors.length,0,'No React runtime warnings/errors expected');
+  const {RouteContentBoundary}=await server.ssrLoadModule('/src/routeContent.jsx');
+  const expectedFailure=new Error('Simulated route chunk failure');
+  const handled=[];
+  console.error=(...args)=>{if(args.some(arg=>arg===expectedFailure || String(arg).includes('FailedChunk'))) handled.push(args);else errors.push(args);};
+  function FailedChunk() {throw expectedFailure;}
+  await act(async()=>root.render(React.createElement(RouteContentBoundary,null,React.createElement(FailedChunk))));
+  assert.match(document.querySelector('[role="alert"]').textContent,/n’a pas pu être chargée/);
+  assert.equal(document.querySelector('[role="alert"] button').textContent,'Recharger la page');
+  assert.equal(errors.length,0,'No unexpected errors during route recovery');
   console.log('OK UI : navigation, catalogue, filtre, article et menu.');
 } finally {
   await act(async () => root.unmount());

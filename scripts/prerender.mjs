@@ -9,13 +9,34 @@ import { JSDOM } from 'jsdom';
 const server=await createServer({server:{middlewareMode:true,hmr:false,ws:false},appType:'custom'});
 try {
   const {default:App}=await server.ssrLoadModule('/src/App.jsx');
+  const { preloadAllRouteContent, routeEntryKeys } = await server.ssrLoadModule('/src/routeContent.jsx');
+  await preloadAllRouteContent();
   const {contentPaths,getPageMetadata,applyPageMetadata,canonicalPath,siteUrl}=await server.ssrLoadModule('/src/seo.js');
   const {articles}=await server.ssrLoadModule('/src/data/content.js');
   const template=await readFile(resolve('dist/index.html'),'utf8');
+  const manifest=JSON.parse(await readFile(resolve('dist/.vite/manifest.json'),'utf8'));
   async function page(path,file) {
     const metadata=getPageMetadata(path);
     const dom=new JSDOM(template);
     applyPageMetadata(dom.window.document,metadata);
+    const parts=path.split('/').filter(Boolean);
+    const entry=parts.length===1 ? routeEntryKeys[parts[0]] : null;
+    const visited=new Set();
+    function preload(key) {
+      if(visited.has(key) || !manifest[key]) return;
+      visited.add(key);
+      const chunk=manifest[key];
+      for(const asset of [chunk.file,...(chunk.css || [])]) {
+        const href=`${server.config.base}${asset}`;
+        if([...dom.window.document.querySelectorAll('link[href]')].some(link=>link.getAttribute('href')===href)) continue;
+        const link=dom.window.document.createElement('link');
+        link.rel=asset.endsWith('.css') ? 'stylesheet' : 'modulepreload';
+        link.href=href;
+        dom.window.document.head.append(link);
+      }
+      for(const dependency of chunk.imports || []) preload(dependency);
+    }
+    if(entry) preload(entry);
     const root=dom.window.document.getElementById('root');
     root.setAttribute('data-prerendered','true');
     root.setAttribute('data-page-path',path);

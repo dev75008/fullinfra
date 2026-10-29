@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "vite build && node scripts/prerender.mjs",
+    "build": "vite build --manifest && node scripts/prerender.mjs",
     "preview": "vite preview --host 127.0.0.1",
     "start": "vite --host 127.0.0.1",
     "password:ai": "node scripts/seal-ai-tools.mjs",
@@ -14,7 +14,8 @@
     "check:ui": "node scripts/check-ui.mjs",
     "check:sources": "node scripts/check-sources.mjs",
     "check:icons": "node scripts/check-icons.mjs",
-    "check:seo": "node scripts/check-pages.mjs"
+    "check:seo": "node scripts/check-pages.mjs",
+    "check:performance": "node scripts/check-performance.mjs"
   },
   "dependencies": {
     "lucide-react": "^0.468.0",

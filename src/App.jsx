@@ -3,21 +3,10 @@ import { Link, NavLink, Routes, Route, useLocation, useParams, useSearchParams }
 import { ArrowRight, ArrowUpRight, Search, Menu, X, ChevronRight, BookOpen, Clock3, Network } from 'lucide-react';
 import { articles, categories } from './data/content';
 import { Logo, ArticleCard } from './components';
-import WindowsInfographic from './WindowsInfographic';
-import WindowsArchitecture from './WindowsArchitecture';
-import FsmoSection from './FsmoSection';
-import VirtualisationArchitecture from './VirtualisationArchitecture';
-import AzureArchitecture from './AzureArchitecture';
-import DevopsSection from './DevopsSection';
-import DevopsClassicSection from './DevopsClassicSection';
-import TechnologyInfographic from './TechnologyInfographic';
-import { ecosystems } from './data/ecosystems';
+import RouteContent from './routeContent';
 import SourceLinks from './SourceLinks';
 import Home from './Home';
-import AiTools from './AiTools';
 import TechnologyIcon from './TechnologyIcon';
-import VMwareSection from './VMwareSection';
-import Microsoft365Section from './Microsoft365Section';
 import { categoryIconKeys } from './data/technologyIcons';
 import { getPageMetadata, applyPageMetadata } from './seo';
 
@@ -28,12 +17,23 @@ function RouteEffects() {
     applyPageMetadata(document,getPageMetadata(pathname));
     if (previousPath.current !== pathname) document.getElementById('content')?.focus({preventScroll:true});
     previousPath.current = pathname;
-    let target = null;
-    try { target = hash ? document.getElementById(decodeURIComponent(hash.slice(1))) : null; } catch { /* Une ancre mal encodée ne bloque pas la navigation. */ }
-    if (target) {
+    let id = null;
+    try { id = hash ? decodeURIComponent(hash.slice(1)) : null; } catch { /* Une ancre mal encodée ne bloque pas la navigation. */ }
+    function scrollToTarget() {
+      const target = id ? document.getElementById(id) : null;
+      if (!target) return false;
       if (target.tagName === 'DETAILS') target.open = true;
       target.scrollIntoView({block:'start'});
-    } else window.scrollTo(0, 0);
+      return true;
+    }
+    if (scrollToTarget()) return;
+    window.scrollTo(0, 0);
+    if (!id) return;
+    // A category anchor can arrive after its deferred content has loaded.
+    const observer = new window.MutationObserver(() => { if (scrollToTarget()) observer.disconnect(); });
+    observer.observe(document.getElementById('content'), {childList:true,subtree:true});
+    const timeout = setTimeout(() => observer.disconnect(), 10000);
+    return () => { observer.disconnect(); clearTimeout(timeout); };
   }, [pathname, hash]);
   return null;
 }
@@ -104,16 +104,10 @@ function Guides() {
     <nav className="breadcrumb" aria-label="Fil d’Ariane"><Link to="/">Accueil</Link><ChevronRight size={14} aria-hidden="true"/><span aria-current="page">{category?.name || 'Tous les guides'}</span></nav>
     <section className={`page-intro ${category?.color || 'green'}`}><span className="icon-box"><TechnologyIcon name={category ? categoryIconKeys[slug] : 'guides'} size={60}/></span><h1>{category?.name || 'Tous les guides'}</h1><p>{category?.description || 'Recherchez un sujet ou choisissez un environnement pour retrouver un guide.'}</p></section>
     {category && <nav className="section-navigation" aria-label="Dans cette rubrique">{[...sections,['guides-rubrique','Guides pratiques']].map(([id,label]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav>}
-    {slug === 'windows-server' && <><WindowsArchitecture/><FsmoSection/><WindowsInfographic/></>}
-    {slug === 'virtualisation' && <VirtualisationArchitecture/>}
-    {slug === 'azure' && <AzureArchitecture/>}
-    {slug === 'devops' && <DevopsSection/>}
-    {slug === 'devops-classique' && <DevopsClassicSection/>}
-    {ecosystems[slug] && <TechnologyInfographic key={`map-${slug}`} ecosystem={ecosystems[slug]}/>}
-    {slug === 'virtualisation' && <VMwareSection/>}{slug === 'microsoft-365' && <Microsoft365Section/>}
+    <RouteContent slug={slug}/>
     <GuideList key={`guides-${slug || 'all'}`} category={category}/>
   </main>;
 }
 function Article() { const { category: slug, article: articleSlug } = useParams(); const article = articles.find(a => a.slug === articleSlug && a.category === slug); if (!article) return <NotFound/>; const category = categories.find(c => c.slug === slug); return <main className="container article-page"><div className="breadcrumb"><Link to="/">Accueil</Link><ChevronRight size={14}/><Link to={`/${slug}`}>{category.name}</Link><ChevronRight size={14}/><span>Le guide</span></div><div className={`article-title ${category.color}`}><span className="pill">{category.name} / {article.level}</span><h1>{article.title}</h1><p>{article.excerpt}</p><div className="reading-meta"><Clock3 size={15}/> {article.minutes} min de lecture <span>·</span> {new Date(article.date + 'T12:00:00').toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'})}</div></div><div className="article-layout"><aside className="article-aside"><h2>Dans ce guide</h2>{article.sections.map(([title], i) => <a key={title} href={`#etape-${i}`}><span>0{i+1}</span>{title}</a>)}</aside><article className="prose"><div className="note"><BookOpen size={20}/><p>Les fonctionnalités et paramètres dépendent de votre environnement. Consultez les références du guide et testez vos changements avant le déploiement.</p></div>{article.sections.map(([title, text], i) => <section id={`etape-${i}`} key={title}><h2>{title}</h2><p>{text}</p></section>)}<SourceLinks ids={article.sourceIds}/><Link className="button secondary" to={`/${slug}`}>Tous les guides {category.name} <ArrowRight size={17}/></Link></article></div><section className="related"><h2>Explorez aussi</h2><div className="article-grid">{articles.filter(a => a.category === slug && a.slug !== article.slug).map(a => <ArticleCard article={a} key={a.slug}/>)}</div></section></main>; }
 function NotFound() { return <main className="container empty-state not-found"><div className="eyebrow">ERREUR 404</div><h1>Page introuvable.</h1><p>Le lien est incorrect ou la page a été déplacée. Retrouvez les rubriques depuis l’accueil.</p><Link className="button primary" to="/">Retour à l’accueil <ArrowRight size={18}/></Link></main>; }
-export default function App() { return <><RouteEffects/><a href="#content" className="skip-link">Aller au contenu</a><Header/><div id="content" tabIndex={-1}><Routes><Route path="/" element={<main><Home/></main>}/><Route path="/guides" element={<Guides/>}/><Route path="/outils-ia" element={<AiTools/>}/><Route path="/:category" element={<Guides/>}/><Route path="/:category/:article" element={<Article/>}/><Route path="*" element={<NotFound/>}/></Routes></div><Footer/></>; }
+export default function App() { return <><RouteEffects/><a href="#content" className="skip-link">Aller au contenu</a><Header/><div id="content" tabIndex={-1}><Routes><Route path="/" element={<main><Home/></main>}/><Route path="/guides" element={<Guides/>}/><Route path="/outils-ia" element={<RouteContent slug="outils-ia"/>}/><Route path="/:category" element={<Guides/>}/><Route path="/:category/:article" element={<Article/>}/><Route path="*" element={<NotFound/>}/></Routes></div><Footer/></>; }

@@ -37,6 +37,7 @@ jobs:
       - run: node scripts/generate-devops-classic.mjs --check
       - run: node scripts/generate-azure-architecture.mjs --check
       - run: npm run build
+      - run: npm run check:performance
       - run: npm run check:ai
       - run: node scripts/check-pages.mjs
       - uses: actions/configure-pages@v5

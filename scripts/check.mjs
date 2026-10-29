@@ -8,6 +8,8 @@ import { createServer } from 'vite';
 const server = await createServer({ server: { middlewareMode: true, hmr: false, ws: false }, appType: 'custom' });
 try {
   const { default: App } = await server.ssrLoadModule('/src/App.jsx');
+  const { preloadAllRouteContent } = await server.ssrLoadModule('/src/routeContent.jsx');
+  await preloadAllRouteContent();
   const { categories, articles } = await server.ssrLoadModule('/src/data/content.js');
   const { windowsBranches } = await server.ssrLoadModule('/src/data/windowsBranches.js');
   const { communicationNodes, communicationEdges, communicationScenarios, selectCommunicationEdges } = await server.ssrLoadModule('/src/data/windowsCommunications.js');

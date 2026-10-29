@@ -29,6 +29,8 @@ try {
   const { ecosystems } = await server.ssrLoadModule('/src/data/ecosystems.js');
   const { articles } = await server.ssrLoadModule('/src/data/content.js');
   const { default:App } = await server.ssrLoadModule('/src/App.jsx');
+  const { preloadAllRouteContent } = await server.ssrLoadModule('/src/routeContent.jsx');
+  await preloadAllRouteContent();
   const evidence=JSON.parse(await readFile(new URL('../docs/learn-sources-audit.json',import.meta.url),'utf8'));
   const broadcomEvidence=JSON.parse(await readFile(new URL('../docs/broadcom-sources-audit.json',import.meta.url),'utf8'));
   evidence.sources.push(...broadcomEvidence.sources);

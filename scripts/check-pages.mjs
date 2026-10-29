@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
-import { JSDOM, VirtualConsole } from 'jsdom';
+import { JSDOM, VirtualConsole, requestInterceptor } from 'jsdom';
+import { build } from 'vite';
 
 const base=process.env.VITE_BASE_PATH || '/';
 const dist=new URL('../dist/',import.meta.url);
@@ -53,9 +54,16 @@ assert.match(missing.window.document.querySelector('h1').textContent,/introuvabl
 assert.ok(!fallback.includes('location.replace'));
 missing.window.close();
 
-// Execute the production bundle against the actual generated HTML, including hydration.
+// Reassemble production chunks for JSDOM, whose window.eval cannot execute ESM imports.
+// This checks application hydration, not real-browser module loading or rendering.
 const asset=index.match(/src="([^"]+\.js)"/)[1];
-const code=await readFile(new URL(asset.slice(base.length),dist),'utf8');
+const result=await build({configFile:false,publicDir:false,logLevel:'silent',build:{write:false,minify:false,lib:{entry:new URL(asset.slice(base.length),dist).pathname.replace(/^\/([A-Z]:)/,'$1'),name:'FullInfraTest',formats:['iife']},rollupOptions:{output:{inlineDynamicImports:true}}},define:{'import.meta.url':JSON.stringify(`https://fullinfra.duckdns.org${asset}`)}});
+const code=(Array.isArray(result) ? result : [result]).flatMap(item=>item.output || []).find(item=>item.type==='chunk').code;
+const localStyles=requestInterceptor(async request=>{
+  const path=new URL(request.url).pathname;
+  if(path.startsWith(`${base}assets/`) && path.endsWith('.css')) return new Response(await readFile(new URL(path.slice(base.length),dist)),{headers:{'Content-Type':'text/css'}});
+  return new Response('',{status:404}); // Never access the network from a DOM test.
+});
 for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/microsoft-365/','/outils-ia/','/devops/','/devops-classique/','/devops-classique/pipeline-independant-du-cloud/','/devops/comprendre-pipeline-ci-cd/','/windows-server/active-directory-fondations/','/guides/?recherche=Hyper-V','/missing-page/']) {
   const pathname=route.split('?')[0];
   const html=pathname==='/missing-page/' ? fallback : await readFile(new URL(`${pathname.slice(1)}index.html`,dist),'utf8');
@@ -63,12 +71,22 @@ for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/micros
   const virtualConsole=new VirtualConsole();
   virtualConsole.on('error',(...args)=>errors.push(args.join(' ')));
   virtualConsole.on('jsdomError',error=>errors.push(error.message));
-  const dom=new JSDOM(html,{url:`https://fullinfra.duckdns.org${base}${route.slice(1)}`,runScripts:'outside-only',pretendToBeVisual:true,virtualConsole});
+  const dom=new JSDOM(html,{url:`https://fullinfra.duckdns.org${base}${route.slice(1)}`,runScripts:'outside-only',resources:{interceptors:[localStyles]},pretendToBeVisual:true,virtualConsole});
   const w=dom.window;w.scrollTo=()=>{};w.HTMLElement.prototype.scrollIntoView=()=>{};
+  w.fetch=async input=>{
+    const path=new URL(input,w.location.href).pathname;
+    assert.ok(path.startsWith(`${base}assets/`),'DOM tests must not contact external services');
+    return new Response(await readFile(new URL(path.slice(base.length),dist)));
+  };
   w.eval(code);
-  await new Promise(resolve=>setTimeout(resolve,150));
+  await new Promise(resolve=>setTimeout(resolve,300));
   assert.deepEqual(errors,[],`${route}: hydration/runtime errors`);
   assert.equal(w.document.querySelectorAll('h1').length,1);
+  if(route==='/') {
+    w.document.querySelector('.product-shortcuts a[href*="#branche-active-directory"]').click();
+    for(let attempt=0;attempt<80 && !w.document.getElementById('branche-active-directory')?.open;attempt++) await new Promise(resolve=>setTimeout(resolve,25));
+    assert.equal(w.document.getElementById('branche-active-directory')?.open,true,'Cold navigation must load the section and open its anchor');
+  }
   if(route.includes('recherche=')) {assert.equal(w.document.querySelector('#guide-search').value,'Hyper-V');assert.equal(w.document.querySelectorAll('.article-card').length,1);}
   if(route==='/windows-server/') {
     const branch=w.document.getElementById('branche-active-directory');
@@ -81,6 +99,8 @@ for(const route of ['/','/windows-server/','/virtualisation/','/azure/','/micros
     for(let attempt=0;attempt<40 && !w.document.querySelector('link[rel="canonical"]').href.endsWith('/microsoft-365/');attempt++) await new Promise(resolve=>setTimeout(resolve,25));
     assert.equal(w.document.querySelector('link[rel="canonical"]').href,'https://fullinfra.duckdns.org/microsoft-365/');
     assert.equal(w.document.querySelectorAll('script#page-structured-data').length,1);
+    for(let attempt=0;attempt<80 && !w.document.getElementById('m365-topics');attempt++) await new Promise(resolve=>setTimeout(resolve,25));
+    assert.ok(w.document.getElementById('m365-topics'),'Cold category navigation must render its deferred content');
   }
   assert.deepEqual(errors,[],`${route}: interaction errors`);
   dom.window.close();
