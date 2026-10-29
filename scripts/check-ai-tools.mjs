@@ -6,8 +6,8 @@ import { testGroups } from './fixtures/ai-catalog.mjs';
 
 const password=crypto.randomUUID();
 const encrypted=await sealCatalog(testGroups,password);
-test('Chiffrement réel : 88 fiches, 8 domaines, sel et IV uniques',async()=>{
-  assert.equal(testGroups.flatMap(g=>g.skills).length,88);
+test('Chiffrement réel : 91 fiches, 8 domaines, sel et IV uniques',async()=>{
+  assert.equal(testGroups.flatMap(g=>g.skills).length,91);
   assert.equal(testGroups.length,8);
   assert.deepEqual(await openCatalog(encrypted,password),testGroups);
   const second=await sealCatalog(testGroups,password);

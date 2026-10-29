@@ -1,6 +1,10 @@
 # Outils IA sur GitHub Pages
 
-La rubrique `/outils-ia/` fonctionne sans serveur. Elle contient 88 fiches réparties dans huit domaines, dont Ponytail, REA, Graphify et API Anything. Chaque fiche présente sa fonction, les usages, un exemple et les prérequis. Le site décrit ces skills ; il ne les exécute pas.
+La rubrique `/outils-ia/` fonctionne sans serveur. Elle contient 91 fiches réparties dans huit domaines, dont Ponytail, REA, Graphify et API Anything. Chaque fiche présente sa fonction, les usages, un exemple et les prérequis. Le site décrit ces skills ; il ne les exécute pas.
+
+## Complément du 29 octobre 2026
+
+Les 88 fiches précédentes sont conservées. Agency Agents, Prompt Selector et Skill Runtime portent le catalogue à **91 fiches dans huit domaines**. Chaque ajout présente sa fonction, ses usages, un exemple et les prérequis réellement disponibles. Agency Agents est un catalogue de profils destiné à la délégation ; il ne remplace pas les moteurs ni les autorisations nécessaires aux tâches. La rubrique reste un catalogue documentaire : elle n’exécute pas ces skills.
 
 ## Protection du catalogue
 
@@ -24,7 +28,7 @@ Modifier la source privée puis exécuter :
 npm run password:ai
 ```
 
-La commande demande le mot de passe en saisie masquée, vérifie les 88 fiches, chiffre le catalogue puis le déchiffre pour contrôler le résultat. Aucun mot de passe n’est sauvegardé. Un autre fichier source peut être indiqué :
+La commande demande le mot de passe en saisie masquée, vérifie les 91 fiches, chiffre le catalogue puis le déchiffre pour contrôler le résultat. Aucun mot de passe n’est sauvegardé. Un autre fichier source peut être indiqué :
 
 ```powershell
 npm run password:ai -- C:/chemin/prive/ai-skills.mjs
